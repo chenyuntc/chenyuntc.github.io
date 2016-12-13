@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>linux: iptables 使用笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="iptables 使用笔记@refer http://blog.chinaunix.net/uid-26495963-id-3279216.html@refer http://www.linuxso.com/linuxpeixun/10332.html
+前言iptables 是与最新的 3.5 版本 Linux 内核集成的 IP 信息包过滤系统    他们都是工作在用户空间中，定义规则的工具，本身">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux: iptables 使用笔记">
+<meta property="og:url" content="http://yoursite.com/2015/11/13/linux-iptables-使用笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="iptables 使用笔记@refer http://blog.chinaunix.net/uid-26495963-id-3279216.html@refer http://www.linuxso.com/linuxpeixun/10332.html
+前言iptables 是与最新的 3.5 版本 Linux 内核集成的 IP 信息包过滤系统    他们都是工作在用户空间中，定义规则的工具，本身">
+<meta property="og:updated_time" content="2015-11-13T04:57:13.860Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux: iptables 使用笔记">
+<meta name="twitter:description" content="iptables 使用笔记@refer http://blog.chinaunix.net/uid-26495963-id-3279216.html@refer http://www.linuxso.com/linuxpeixun/10332.html
+前言iptables 是与最新的 3.5 版本 Linux 内核集成的 IP 信息包过滤系统    他们都是工作在用户空间中，定义规则的工具，本身">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-linux-iptables-使用笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/13/linux-iptables-使用笔记/" class="article-date">
+  	<time datetime="2015-11-13T03:46:23.000Z" itemprop="datePublished">2015-11-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux: iptables 使用笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="iptables-使用笔记"><a href="#iptables-使用笔记" class="headerlink" title="iptables 使用笔记"></a>iptables 使用笔记</h1><p>@refer <a href="http://blog.chinaunix.net/uid-26495963-id-3279216.html" target="_blank" rel="external">http://blog.chinaunix.net/uid-26495963-id-3279216.html</a><br>@refer <a href="http://www.linuxso.com/linuxpeixun/10332.html" target="_blank" rel="external">http://www.linuxso.com/linuxpeixun/10332.html</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>iptables 是与最新的 3.5 版本 Linux 内核集成的 IP 信息包过滤系统<br>    他们都是工作在用户空间中，定义规则的工具，本身并不算是防火墙。它们定义的规则，可以让在内核空间当中的netfilter来读取，并且实现让防火墙工作。而放入内核的地方必须要是特定的位置，必须是tcp/ip的协议栈经过的地方。而这个tcp/ip协议栈必须经过的地方，可以实现读取规则的地方就叫做 netfilter.(网络过滤器)</p>
+<pre><code>作者一共在内核空间中选择了5个位置，
+1.内核空间中：从一个网络接口进来，到另一个网络接口去的
+2.数据包从内核流入用户空间的
+3.数据包从用户空间流出的
+4.进入/离开本机的外网接口
+5.进入/离开本机的内网接口
+</code></pre><p>从上面的发展我们知道了作者选择了5个位置，来作为控制的地方，但是你有没有发现，其实前三个位置已经基本上能将路径彻底封锁了，但是为什么已经在进出的口设置了关卡之后还要在内部卡呢？ 由于数据包尚未进行路由决策，还不知道数据要走向哪里，所以在进出口是没办法实现数据过滤的。所以要在内核空间里设置转发的关卡，进入用户空间的关卡，从用户空间出去的关卡。那么，既然他们没什么用，那我们为什么还要放置他们呢？因为我们在做NAT和DNAT的时候，目标地址转换必须在路由之前转换。所以我们必须在外网而后内网的接口处进行设置关卡。<br><a id="more"></a><br>     这五个位置也被称为五个钩子函数（hook functions）,也叫五个规则链。<br>        1.PREROUTING (路由前)<br>        2.INPUT (数据包流入口)<br>        3.FORWARD (转发管卡)<br>        4.OUTPUT(数据包出口)<br>        5.POSTROUTING（路由后）<br>        这是NetFilter规定的五个规则链，任何一个数据包，只要经过本机，必将经过这五个链中的其中一个链。</p>
+<p>防火墙策略一般分为两种，一种叫“通”策略，一种叫“堵”策略，通策略，默认门是关着的，必须要定义谁能进。堵策略则是，大门是洞开的，但是你必须有身份认证，否则不能进。所以我们要定义，让进来的进来，让出去的出去，所以通，是要全通，而堵，则是要选择。当我们定义的策略的时候，要分别定义多条功能，其中：定义数据包中允许或者不允许的策略，filter过滤的功能，而定义地址转换的功能的则是nat选项。为了让这些功能交替工作，我们制定出了“表”这个定义，来定义、区分各种不同的工作功能和处理方式。</p>
+<pre><code>我们现在用的比较多个功能有3个：
+    1.filter 定义允许或者不允许的
+    2.nat 定义地址转换的 
+    3.mangle功能:修改报文原数据
+</code></pre><h2 id="具体用法"><a href="#具体用法" class="headerlink" title="具体用法"></a>具体用法</h2><p>iptables定义规则的方式比较复杂:<br>     格式<br>     <strong><code>iptables [-t table] COMMAND chain CRETIRIA -j ACTION</code></strong><br>         <code>-t table</code> ：有3个: filter nat mangle<br>         <code>COMMAND</code>：定义如何对规则进行管理<br>         <code>chain</code>：指定你接下来的规则到底是在哪个链上操作的，当定义策略的时候，是可以省略的<br>         <code>CRETIRIA</code>:指定匹配标准<br>         <code>-j ACTION</code> :指定如何进行处理</p>
+<h3 id="COMMAND参数"><a href="#COMMAND参数" class="headerlink" title="COMMAND参数"></a>COMMAND参数</h3><h4 id="1-链管理命令（这都是立即生效的）"><a href="#1-链管理命令（这都是立即生效的）" class="headerlink" title="1.链管理命令（这都是立即生效的）"></a>1.链管理命令（这都是立即生效的）</h4><ul>
+<li>-P :设置默认策略的（设定默认门是关着的还是开着的）<pre><code>默认策略一般只有两种
+`iptables -P INPUT (DROP|ACCEPT)`  默认是关的/默认是开的
+比如：
+`iptables -P INPUT DROP` 这就把默认规则给拒绝了。并且没有定义哪个动作，所以关于外界连接的所有规则包括Xshell连接之类的，远程连接都被拒绝了。
+</code></pre></li>
+<li><p><code>-F: FLASH</code>，清空规则链的(注意每个链的管理权限)</p>
+<pre><code>` iptables -t nat -F PREROUTING`
+  `iptables -t nat -F` 清空nat表的所有链
+</code></pre></li>
+<li><p><code>-N:NEW</code> 支持用户新建一个链</p>
+<pre><code>`iptables -N inbound_tcp_web` 表示附在tcp表上用于检查web的。
+</code></pre></li>
+<li>-X: 用于删除用户自定义的空链<pre><code>使用方法跟-N相同，但是在删除之前必须要将里面的链给清空昂了
+</code></pre></li>
+<li>-E：用来Rename chain主要是用来给用户自定义的链重命名<pre><code>`  -E oldname newname`
+</code></pre></li>
+<li>-Z：清空链，及链中默认规则的计数器的（有两个计数器，被匹配到多少个数据包，多少个字节）<pre><code>`iptables -Z` :清空
+</code></pre></li>
+</ul>
+<h4 id="2-规则管理命令"><a href="#2-规则管理命令" class="headerlink" title="2.规则管理命令"></a>2.规则管理命令</h4><ul>
+<li>-A：追加，在当前链的最后新增一个规则</li>
+<li>-I num : 插入，把当前规则插入为第几条。<pre><code>-I 3 :插入为第三条
+</code></pre></li>
+<li>-R num：Replays替换/修改第几条规则<pre><code>格式：iptables -R 3 …………
+</code></pre></li>
+<li>-D num：删除，明确指定删除第几条规则</li>
+</ul>
+<h4 id="3-查看管理命令-“-L”"><a href="#3-查看管理命令-“-L”" class="headerlink" title="3.查看管理命令 “-L”"></a>3.查看管理命令 “-L”</h4><p> 附加子命令</p>
+<ul>
+<li><code>-n</code>：以数字的方式显示ip，它会将ip直接显示出来，如果不加-n，则会将ip反向解析成主机名。</li>
+<li><code>-v</code>：显示详细信息</li>
+<li><code>-vv</code></li>
+<li><code>-vvv</code> :越多越详细</li>
+<li><code>-x</code>：在计数器上显示精确值，不做单位换算</li>
+<li><code>--line-numbers</code> : 显示规则的行号</li>
+<li><code>-t nat</code>：显示所有的关卡的信息 </li>
+</ul>
+<h3 id="详解匹配标准"><a href="#详解匹配标准" class="headerlink" title="详解匹配标准"></a>详解匹配标准</h3><h4 id="1-通用匹配：源地址目标地址的匹配"><a href="#1-通用匹配：源地址目标地址的匹配" class="headerlink" title="1.通用匹配：源地址目标地址的匹配"></a>1.通用匹配：源地址目标地址的匹配</h4><ul>
+<li><code>-s</code>：指定作为源地址匹配，这里不能指定主机名称，必须是IP<pre><code>`IP | IP/MASK | 0.0.0.0/0.0.0.0`
+而且地址可以取反，加一个“!”表示除了哪个IP之外
+</code></pre></li>
+<li><code>-d</code>：表示匹配目标地址</li>
+<li><code>-p</code>：用于匹配协议的（这里的协议通常有3种，TCP/UDP/ICMP）</li>
+<li><code>-i eth0</code>：从这块网卡流入的数据<pre><code>流入一般用在INPUT和PREROUTING上
+</code></pre></li>
+<li><code>-o eth0</code>：从这块网卡流出的数据<pre><code>流出一般在OUTPUT和POSTROUTING上
+</code></pre></li>
+</ul>
+<h4 id="2-扩展匹配"><a href="#2-扩展匹配" class="headerlink" title="2.扩展匹配"></a>2.扩展匹配</h4><h5 id="隐藏扩展：对协议的扩展"><a href="#隐藏扩展：对协议的扩展" class="headerlink" title="隐藏扩展：对协议的扩展"></a>隐藏扩展：对协议的扩展</h5><ul>
+<li><p><code>-p tcp</code> :TCP协议的扩展。一般有三种扩展</p>
+<ul>
+<li>–dport XX-XX：指定目标端口,不能指定多个非连续端口,只能指定单个端口，比如<br><code>--dport 21</code>  或者 <code>--dport 21-23</code> (此时表示21,22,23)</li>
+<li>–sport：指定源端口</li>
+<li>–tcp-fiags：TCP的标志位（SYN,ACK，FIN,PSH，RST,URG）</li>
+</ul>
+</li>
+<li><p>-p udp：UDP协议的扩展</p>
+<pre><code>` --dport`
+ `--sport`
+</code></pre></li>
+<li>-p icmp：icmp数据报文的扩展</li>
+</ul>
+<h5 id="2-2显式扩展（-m）"><a href="#2-2显式扩展（-m）" class="headerlink" title="2.2显式扩展（-m）"></a>2.2显式扩展（-m）</h5><p> 扩展各种模块<br>   <code>-m multiport</code>：表示启用多端口扩展<br> 之后我们就可以启用比如 <code>--dports 21,23,80</code><br> 还有诸如<code>state</code>模块等</p>
+<h3 id="ACTION"><a href="#ACTION" class="headerlink" title="ACTION"></a>ACTION</h3><p> 常用的ACTION：</p>
+<ul>
+<li><code>DROP</code>：悄悄丢弃<pre><code>一般我们多用DROP来隐藏我们的身份，以及隐藏我们的链表
+</code></pre></li>
+<li><code>REJECT</code>：明示拒绝</li>
+<li><code>ACCEPT</code>：接受<pre><code>custom_chain：转向一个自定义的链
+</code></pre></li>
+<li><code>DNAT</code></li>
+<li><code>SNAT</code></li>
+<li><code>MASQUERADE</code>：源地址伪装</li>
+<li><code>REDIRECT</code>：重定向：主要用于实现端口重定向</li>
+<li><code>MARK</code>：打防火墙标记的</li>
+<li><code>RETURN</code>：返回<br>在自定义链执行完毕后使用返回，来返回原规则链。</li>
+</ul>
+<h3 id="状态检测"><a href="#状态检测" class="headerlink" title="状态检测"></a>状态检测</h3><p>状态检测是一种显式扩展，用于检测会话之间的连接关系的，有了检测我们可以实现会话间功能的扩展<br>        什么是状态检测？对于整个TCP协议来讲，它是一个有连接的协议，三次握手中，第一次握手，我们就叫NEW连接，而从第二次握手以后的，ack都为1，这是正常的数据传输，和tcp的第二次第三次握手，叫做已建立的连接（ESTABLISHED）,还有一种状态，比较诡异的，比如：SYN=1 ACK=1 RST=1,对于这种我们无法识别的，我们都称之为INVALID无法识别的。还有第四种，FTP这种古老的拥有的特征，每个端口都是独立的，21号和20号端口都是一去一回，他们之间是有关系的，这种关系我们称之为RELATED。<br>    所以我们的状态一共有四种：</p>
+<ul>
+<li>NEW</li>
+<li>ESTABLISHED</li>
+<li>RELATED</li>
+</ul>
+<p>进来的拒绝出去的允许，进来的只允许<code>NEW</code>,<code>ESTABLISHED</code>进来，出去只允许<code>ESTABLISHED</code>出去。默认规则都使用拒绝</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">iptables -R INPUT 2 <span class="_">-s</span> 172.16.0.0/16 <span class="_">-d</span> 172.16.100.1 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT<span class="comment"># -Ｒ　替换</span></div><div class="line">   </div><div class="line"> iptables -R OUTPUT 1 -m state --state ESTABLISHED -j ACCEPT</div></pre></td></tr></table></figure>
+<p>此时如果想再放行一个80端口如何放行呢？<br>  <code>iptables -A INPUT -d 172.16.100.1 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT</code></p>
+<p>假如我们允许自己ping别人，但是别人ping自己ping不通如何实现呢？<br>分析：对于ping这个协议，进来的为8（ping），出去的为0(响应).我们为了达到目的，需要8出去,允许0进来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iptables -A OUTPUT -p icmp --icmp-type 8 -j ACCEPT</div><div class="line"> iptables -A INPUT -p icmp --icmp-type 0 -j ACCEPT</div></pre></td></tr></table></figure></p>
+<p>小扩展：对于127.0.0.1比较特殊，我们需要明确定义它<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT</div><div class="line">iptables -A OUTPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT</div></pre></td></tr></table></figure></p>
+<h2 id="NAT的实现"><a href="#NAT的实现" class="headerlink" title="NAT的实现"></a>NAT的实现</h2><h3 id="1-SNAT基于原地址的转换"><a href="#1-SNAT基于原地址的转换" class="headerlink" title="1. SNAT基于原地址的转换"></a>1. SNAT基于原地址的转换</h3><p>基于原地址的转换一般用在我们的许多内网用户通过一个外网的口上网的时候，这时我们将我们内网的地址转换为一个外网的IP，我们就可以实现连接其他外网IP的功能。<br>所以我们在iptables中就要定义到底如何转换：<br>定义的样式：<br>    比如我们现在要将所有192.168.10.0网段的IP在经过的时候全都转换成172.16.100.1这个假设出来的外网地址：</p>
+<pre><code>iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -j SNAT --to-source 172.16.100.1
+</code></pre><p>这样，只要是来自本地网络的试图通过网卡访问网络的，都会被统统转换成172.16.100.1这个IP.<br>    那么，如果172.16.100.1不是固定的怎么办？<br>    我们都知道当我们使用联通或者电信上网的时候，一般它都会在每次你开机的时候随机生成一个外网的IP，意思就是外网地址是动态变换的。这时我们就要将外网地址换成 MASQUERADE(动态伪装):它可以实现自动寻找到外网地址，而自动将其改为正确的外网地址。所以，我们就需要这样设置：</p>
+<p>  iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -j MASQUERADE<br>         这里要注意：地址伪装并不适用于所有的地方。</p>
+<h3 id="DNAT目标地址转换"><a href="#DNAT目标地址转换" class="headerlink" title="DNAT目标地址转换"></a>DNAT目标地址转换</h3><p>对于目标地址转换，数据流向是从外向内的，外面的是客户端，里面的是服务器端通过目标地址转换，我们可以让外面的ip通过我们对外的外网ip来访问我们服务器不同的服务器，而我们的服务却放在内网服务器的不同的服务器上。</p>
+<p> 如何做目标地址转换呢？：</p>
+<pre><code>iptables -t nat -A PREROUTING -d 192.168.10.18 -p tcp --dport 80 -j DNAT --todestination 172.16.100.2
+</code></pre><p>目标地址转换要做在到达网卡之前进行转换,所以要做在PREROUTING这个位置上</p>
+<h2 id="控制规则的存放以及开启"><a href="#控制规则的存放以及开启" class="headerlink" title="控制规则的存放以及开启"></a>控制规则的存放以及开启</h2><h3 id="centos下的iptables操作"><a href="#centos下的iptables操作" class="headerlink" title="centos下的iptables操作"></a>centos下的iptables操作</h3><p>首先介绍一下指令和相关配置文件</p>
+<pre><code>启动指令:service iptables start   
+重启指令:service iptables restart   
+关闭指令:service iptables stop   
+</code></pre><p>然后是相关配置:<code>/etc/sysconfig/iptables</code><br>如何操作该配置呢？   </p>
+<pre><code>vim /etc/sysconfig/iptables   
+</code></pre><p>然后进去修改即可，修改完了怎么办？这里很多人会想到<code>/etc/rc.d/init.d/iptables save</code>指令，但是一旦你这么干了你刚才的修改内容就白做了。。。<br>具体方法是：<br>只修改<code>/etc/sysconfig/iptables</code> 使其生效的办法是修改好后先<code>service iptables restart</code>，然后才调用<code>/etc/rc.d/init.d/iptables save</code>，<br>因为<code>/etc/rc.d/init.d/iptables save</code>会在iptables服务启动时重新加载，要是在重启之前直接先调用了<code>/etc/rc.d/init.d/iptables save</code>那么你<br>的<code>/etc/sysconfig/iptables</code> 配置就回滚到上次启动服务的配置了，这点必须注意！！！  </p>
+<h3 id="Ubuntu-下的iptables操作"><a href="#Ubuntu-下的iptables操作" class="headerlink" title="Ubuntu    下的iptables操作"></a>Ubuntu    下的iptables操作</h3><p>注意：你所定义的所有内容，当你重启的时候都会失效，要想我们能够生效，需要使用一个命令将它保存起来</p>
+<ol>
+<li><code>service iptables save</code> 命令<pre><code>它会保存在/etc/sysconfig/iptables这个文件中
+</code></pre></li>
+<li><code>iptables-save</code> 命令<pre><code>`iptables-save &gt; /etc/sysconfig/iptables`
+</code></pre></li>
+<li><code>iptables-restore</code> 命令<pre><code>    开机的时候，它会自动加载`/etc/sysconfig/iptabels`
+    如果开机不能加载或者没有加载，而你想让一个自己写的配置文件（假设为iptables.2）手动生效的话：
+`    iptables-restore &lt; /etc/sysconfig/iptables.2`
+</code></pre>则完成了将iptables中定义的规则手动生效</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/23/python-装饰器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          python:装饰器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/11/python-内存管理2-拷贝-参数传递/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python-内存管理2:拷贝,参数传递</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="linux-iptables-使用笔记" data-title="linux: iptables 使用笔记" data-url="http://yoursite.com/2015/11/13/linux-iptables-使用笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

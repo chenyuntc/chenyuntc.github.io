@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>函数式编程范式(3):实战举例 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="快速排序快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+python命令式版本1234567891011121314151617def sub_sort(array,low,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数式编程范式(3):实战举例">
+<meta property="og:url" content="http://yoursite.com/2016/04/06/函数式编程范式-3-实战举例/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="快速排序快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+python命令式版本1234567891011121314151617def sub_sort(array,low,">
+<meta property="og:image" content="http://blog.cleancoder.com/uncle-bob/images/fpvsoo.jpg">
+<meta property="og:updated_time" content="2016-04-06T07:24:58.952Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="函数式编程范式(3):实战举例">
+<meta name="twitter:description" content="快速排序快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+python命令式版本1234567891011121314151617def sub_sort(array,low,">
+<meta name="twitter:image" content="http://blog.cleancoder.com/uncle-bob/images/fpvsoo.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-函数式编程范式-3-实战举例" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/06/函数式编程范式-3-实战举例/" class="article-date">
+  	<time datetime="2016-04-06T06:13:35.000Z" itemprop="datePublished">2016-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      函数式编程范式(3):实战举例
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数式编程/">函数式编程</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+<p>python命令式版本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sub_sort</span><span class="params">(array,low,high)</span>:</span></div><div class="line">    key = array[low]</div><div class="line">    <span class="keyword">while</span> low &lt; high:</div><div class="line">        <span class="keyword">while</span> low &lt; high <span class="keyword">and</span> array[high] &gt;= key:</div><div class="line">            high -= <span class="number">1</span></div><div class="line">        <span class="keyword">while</span> low &lt; high <span class="keyword">and</span> array[high] &lt; key:</div><div class="line">            array[low] = array[high]</div><div class="line">            low += <span class="number">1</span></div><div class="line">            array[high] = array[low]</div><div class="line">    array[low] = key</div><div class="line">    <span class="keyword">return</span> low</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(array,low,high)</span>:</span></div><div class="line">     <span class="keyword">if</span> low &lt; high:</div><div class="line">        key_index = sub_sort(array,low,high)</div><div class="line">        quick_sort(array,low,key_index)</div><div class="line">        quick_sort(array,key_index+<span class="number">1</span>,high)</div></pre></td></tr></table></figure></p>
+<p>python 函数式版本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">q_sort</span><span class="params">(l)</span>:</span></div><div class="line">    <span class="keyword">if</span> l == []: <span class="keyword">return</span> []</div><div class="line">    less = filter(<span class="keyword">lambda</span> x: x &lt; l[<span class="number">0</span>], l[<span class="number">1</span>:])</div><div class="line">    more = filter(<span class="keyword">lambda</span> y: y &gt;= l[<span class="number">0</span>], l[<span class="number">1</span>:])</div><div class="line">    <span class="keyword">return</span> q_sort(less) + [l[<span class="number">0</span>]] + q_sort(more)</div></pre></td></tr></table></figure></p>
+<p>scala 版本</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">quickSort</span></span>(xs: <span class="type">List</span>[<span class="type">Int</span>]): <span class="type">List</span>[<span class="type">Int</span>] = &#123; </div><div class="line">      <span class="keyword">if</span> (xs.isEmpty) xs </div><div class="line">      <span class="keyword">else</span> </div><div class="line">        quickSort(xs.filter(x=&gt;x&lt;xs.head)):::xs.head::quickSort(xs.filter(x=&gt;x&gt;xs.head)) </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>Haskell版本：<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="title">q_sort</span> n=<span class="keyword">case</span> n <span class="keyword">of</span></div><div class="line">    []-&gt;[]</div><div class="line">    (x:xs)-&gt;q_sort [a|a&lt;-xs,a&lt;=x]++[x]++q_sort [a|a&lt;-xs,a&gt;x]</div></pre></td></tr></table></figure></p>
+<p>$${ a| a \in N ,a &lt;10}  $$</p>
+<p>Haskell 版本2<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="title">quicksort</span> :: <span class="type">Ord</span> a =&gt; [a] -&gt; [a]    </div><div class="line"><span class="title">quicksort</span> [] = []    </div><div class="line"><span class="title">quicksort</span> (p:xs) =    </div><div class="line">    (quicksort lesser) ++ [p] ++ (quicksort greater)  </div><div class="line">    <span class="keyword">where</span>  </div><div class="line">        lesser = filter (&lt; p) xs  </div><div class="line">        greater = filter (&gt;= p) xs</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="Memoisation"><a href="#Memoisation" class="headerlink" title="Memoisation"></a>Memoisation</h2><p> 实际上，Memoisation(备忘？装饰器？)是一种用于通过缓存来加速程序的技术，它通过记住输入量的计算结果，例如函数调用结果，来实现其加速目的。如果遇到相同的输入或者具有相同参数的函数调用，那么之前存储的结果就可以被再次使用，从而避免一些不必要的计算。在很多情况下，可以使用一个简单的数组来存储结果，但也可以使用许多其他的数据结构，例如关联数组，它在Perl语言中叫做哈希，在Python语言中称为字典。<br> 我的理解就是缓存，一旦函数被调用，就把参数和结果缓存起来，如果有人再次调用，直接返回结果，不再重新计算。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">F</span><span class="params">(n)</span>:</span></div><div class="line">  <span class="keyword">if</span> n==<span class="number">1</span>:   <span class="keyword">return</span> <span class="number">1</span></div><div class="line">  <span class="keyword">if</span> n==<span class="number">0</span>:   <span class="keyword">return</span> <span class="number">0</span></div><div class="line">  <span class="keyword">else</span>:        <span class="keyword">return</span> F(n<span class="number">-1</span>)+F(n<span class="number">-2</span>)</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">memoize</span><span class="params">(f)</span>:</span></div><div class="line">    memo = &#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">new_f</span><span class="params">(x)</span>:</span></div><div class="line">        <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> memo:            </div><div class="line">            memo[x] = f(x)</div><div class="line">        <span class="keyword">return</span> memo[x]</div><div class="line">    <span class="keyword">return</span> new_f</div><div class="line"></div><div class="line"><span class="keyword">print</span> <span class="string">"旧版本的fib"</span></div><div class="line">%timeit -n <span class="number">10</span> F(<span class="number">30</span>)</div><div class="line">F=memoize(F)</div><div class="line"><span class="keyword">print</span> <span class="string">"新版本的fib"</span> </div><div class="line">%timeit -n  <span class="number">1</span> -r <span class="number">1</span> F(<span class="number">40</span>)</div><div class="line">%timeit -n  <span class="number">1</span>  -r <span class="number">1</span> F(<span class="number">40</span>)</div></pre></td></tr></table></figure>
+<pre><code>旧版本的fib
+10 loops, best of 3: 334 ms per loop
+新版本的fib
+1 loops, best of 1: 243 µs per loop
+1 loops, best of 1: 5.01 µs per loop
+</code></pre><h2 id="并行计算"><a href="#并行计算" class="headerlink" title="并行计算"></a>并行计算</h2><p>不需要任何改动，所有FP程序都是可以并发执行的。由于所有的数据（变量？符号）都是不可变的，根本不需要采用锁机制，因此完全不需要担心死锁或是并发竞争的发生。在FP程序中没有哪个线程可以修改任何数据，更不用说多线程之间了。这使得我们可以轻松的添加线程，至于那些祸害并发程序的老问题，想都不用想！<br>FP关于并行的优势不仅于此。就算某个FP程序本身只是单线程的，编译器也可以将其优化成可以在多CPU上运行的并发程序。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">String s1 = somewhatLongOperation1();</div><div class="line">String s2 = somewhatLongOperation2();</div><div class="line">String s3 = concatenate(s1, s2);</div></pre></td></tr></table></figure></p>
+<p>如果是函数式程序，编译器就可以对代码进行分析，然后可能分析出生成字符串s1和s2的两个函数可能会比较耗时，进而安排它们并行运行。这在指令式编程中是无法做到的，因为每一个函数都有可能修改其外部状态，然后接下来的函数又可能依赖于这些状态的值。在函数式编程中，自动分析代码并找到适合并行执行的函数十分简单，和分析C的内联函数没什么两样。从这个角度来说用FP风格编写的程序是“永不过时”的.。</p>
+<p>硬件厂商已经没办法让CPU运行得再快了。他们只能靠增加CPU核的数量然后用并行来提高运算的速度。这些厂商故意忽略一个事实：只有可以并行的软件才能让你花大价钱买来的这些硬件物有所值。指令式的软件中只有很小一部分能做到跨核运行，而所有的函数式软件都能实现这一目标，因为FP的程序从一开始就是可以并行运行的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span>  Pool</div><div class="line"><span class="comment"># 读取github 用户名单300人</span></div><div class="line"><span class="keyword">with</span> open(<span class="string">'github_users'</span>) <span class="keyword">as</span> f:</div><div class="line">    users=f.readlines()</div><div class="line">    urls=map(<span class="keyword">lambda</span> x:<span class="string">'https://github.com/&#123;0&#125;?tab=repositories'</span>.format(x.strip()),  users)</div><div class="line"></div><div class="line"><span class="comment"># 定义每一个爬虫的小程序</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_count</span><span class="params">(url)</span>:</span></div><div class="line">    <span class="keyword">try</span>:           <span class="keyword">return</span> requests.get(url,timeout=<span class="number">10</span>).text.count(<span class="string">"public source"</span>)</div><div class="line">    <span class="keyword">except</span>   :  <span class="keyword">return</span> <span class="number">-1</span>    </div><div class="line"></div><div class="line"><span class="comment">#多线程爬取</span></div><div class="line">pool=Pool(<span class="number">100</span>)</div><div class="line">results=pool.map(get_count,urls)</div><div class="line">pool.close()</div><div class="line">pool.join()</div></pre></td></tr></table></figure>
+<h1 id="函数式编程之设计模式"><a href="#函数式编程之设计模式" class="headerlink" title="函数式编程之设计模式"></a>函数式编程之设计模式</h1><blockquote>
+<h3 id="Functional-languages-have-plenty-of-best-practice-rules-of-the-form-“when-you-encounter-problem-X-use-code-that-looks-like-Y”-which-is-basically-what-a-design-pattern-is"><a href="#Functional-languages-have-plenty-of-best-practice-rules-of-the-form-“when-you-encounter-problem-X-use-code-that-looks-like-Y”-which-is-basically-what-a-design-pattern-is" class="headerlink" title="Functional languages have plenty of best practice rules of the form “when you encounter problem X, use code that looks like Y”, which is basically what a design pattern is."></a><em>Functional languages have plenty of best practice rules of the form “when you encounter problem X, use code that looks like Y”, which is basically what a design pattern is.</em></h3></blockquote>
+<p><img src="http://blog.cleancoder.com/uncle-bob/images/fpvsoo.jpg" alt="oo vs fp"></p>
+<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>函数式编程语言中的一个常见特性是一等（first-class）（或高阶）函数，它允许函数充当任何其他数据结构。多亏这一特性，我可以轻松创建基于一些条件返回其他函数的函数，这就是工厂的精髓。例如，如果您有一个将两个数字相加的通用函数，您可以将局部套用用作一个工厂来创建总是将其参数加 1 的函数，即一个增量器</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">adder</span></span>(x:<span class="type">Int</span>)(y:<span class="type">Int</span>)  =  x+y </div><div class="line"><span class="keyword">val</span> incrememnter=adder(<span class="number">1</span>)_</div></pre></td></tr></table></figure>
+<p>currying 被构建到语言或运行时中，因此函数工厂的概念是生来就有的，且不需要额外的结构。<br>设计模式（很大程度上依赖于结构来解决问题，因而需要大量开销来实现）似乎是一个针对大问题的解决方案。</p>
+<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Strategy</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compute</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Add</span> <span class="keyword">implements</span> <span class="title">Strategy</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compute</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123; <span class="keyword">return</span> a + b; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Multiply</span> <span class="keyword">implements</span> <span class="title">Strategy</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compute</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123; <span class="keyword">return</span> a * b; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Context</span>  </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Strategy strategy;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Context</span><span class="params">(Strategy strategy)</span> </span>&#123; <span class="keyword">this</span>.strategy = strategy; &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">use</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123; strategy.compute(a, b); &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">new</span> Context(<span class="keyword">new</span> Multiply()).use(<span class="number">2</span>, <span class="number">3</span>);</div><div class="line">``` </div><div class="line"></div><div class="line"></div><div class="line">  在Scala中，函数是头等公民，可以直接实现如下 。</div><div class="line"></div><div class="line"> ```scala</div><div class="line"></div><div class="line">type Strategy = (Int, Int) =&gt; <span class="function">Int </span></div><div class="line"></div><div class="line">class <span class="title">Context</span><span class="params">(computer: Strategy)</span> &#123;</div><div class="line">  <span class="function">def <span class="title">use</span><span class="params">(a: Int, b: Int)</span>  </span>&#123; computer(a, b) &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">val add: Strategy = _ + _</div><div class="line">val multiply: Strategy = _ * <span class="function">_</span></div><div class="line"></div><div class="line">new <span class="title">Context</span><span class="params">(multiply)</span>.<span class="title">use</span><span class="params">(<span class="number">2</span>, <span class="number">3</span>)</span></div></pre></td></tr></table></figure>
+<p> 假如策略包含很多方法的话，我们可以使用元组或者样例类把所有方法封装在一起。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/06/傻瓜函数式编程/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          傻瓜函数式编程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/06/函数式编程范式-2-特点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数式编程范式(2):特点</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="函数式编程范式-3-实战举例" data-title="函数式编程范式(3):实战举例" data-url="http://yoursite.com/2016/04/06/函数式编程范式-3-实战举例/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

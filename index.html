@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/13/hello-world/" class="article-date">
+  	<time datetime="2016-12-13T07:12:42.710Z" itemprop="datePublished">2016-12-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Attention-Model" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/13/Attention-Model/" class="article-date">
+  	<time datetime="2016-12-13T03:21:07.000Z" itemprop="datePublished">2016-12-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/Attention-Model/">Attention_Model</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Attention-Model"><a href="#Attention-Model" class="headerlink" title="Attention Model"></a>Attention Model</h2><p>Attention Mechanism 是近两年深度学习前沿的一个研究方向 传统的深度学习模型的主要不同,  attend 模型在网络会在网络运行时, 会关注图像或文字中的某个区域, 作为判断的上下文 本次选取的论文是过去一年引用最多的一篇文章 <strong><em><a href="http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf" target="_blank" rel="external">Show, attend and tell: Neural image caption generation with visual attention</a></em></strong> . 这篇论文首次提供了关于attend 机制如何地用于 Caption(为图像生成文本描述)的详细介绍(如图1), 并取得了当时的最佳效果(state-of-the-art). 现在attention 机制已经越来越多地引用到了各个方面之中, 在CS231n 课程中, karpathy 十分推崇这个模型, 为attentin机制用与现有模型总会取得更好的效果. 并推荐在几乎所有的深度学习模型中使用(just using it everywhere)</p>
+<p><div align="center"><br><img src="https://dn-cyfall.qbox.me/bupt/as4544001352321" alt="main"></div></p>
+<p></p><p align="center">图1 Words/Image alignment model</p><div><p></p>
+<h3 id="概述-背景-目标"><a href="#概述-背景-目标" class="headerlink" title="概述  背景 目标"></a>概述  背景 目标</h3><p>这篇论文主要介绍的是如何利用attention 机制, 图片生成自然准确地语言描述.  深度学习流行之前, 传统的图像学者使用了一些图像识别, 位置判定等方法, 效果十分之差. 几年前, 深度学习开始用于了captioning, 主流的方法是利用 R-CNN 进行图像检测和定位, RNN进行语言生成, 两部分的网络之间的训练相对独立,   karpathy和FeifeiLi 的BRNN是Attention Model<br>之前最佳模型, 就是由R-CNN 和 Bi-RNN相结合  . </p>
+<h3 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h3><p>Attention Model 构建在LSTM(RNN的一个改进版)和VGG(经典CNN网络) 之上, 但整个网络结构更像是一个RNN, 而不是传统的线性结构的CNN. RNN网络的每一个单元结构如图2: </p>
+<p><div align="center"><br><img src="https://dn-cyfall.qbox.me/bupt/as1185101172321" alt="enter image description here"></div></p>
+<p></p><p align="center">图2 网络的Computation Graph</p><div><p></p>
+<p>网络前向传播的算法如下: </p>
+<ol>
+<li>将图片输入训练好的VGG 网络, 提取图片特征<strong>a</strong>: 论文中提取的低层的卷积层的输出 <strong>a</strong>,  属于比较浅层的特征. <strong>a</strong>是一个向量的集合, 每一个向量表征图片的不同特征. </li>
+<li>根据系统状态, 决定attention区域:  一个专门的Attention function 根据上一个时刻的状态($h_{t-1}$)和图像特征 <strong>a</strong>, 计算<strong>α</strong>, <strong>α</strong>是一个向量, 和<strong>a</strong>的形状一致. $\alpha_i$用来表征网络当前状态下对图片的某一个特征($α_i$)的关注程度.</li>
+<li>将<strong>α</strong>和<strong>a</strong>通过一个函数$\phi$, 算得到了网络的上下文$z_t$: $\phi$函数在论文中有两个不同的选择.</li>
+<li>将$z<em>t$, $c</em>{t-1}$, h_{t-1}$通过LSTM 计算得到$h_t$和$c_t$：　  $h_t$和$c_t$是LSTM中的两个输出, 分别表示memory 和hidden state.</li>
+<li>将$h_t$ 传入translate单元, 计算词向量$y_t$,</li>
+<li>把$h_t$和$c_t$ 传入下一个单元, 返回第二步 继续生成词向量. </li>
+</ol>
+<p>显然这篇论文的最大改进之处就在于用Attention Model 生成的<strong>α</strong>反复的查看图片<strong>I</strong>, 这样每次生成每个单词的描述的时候, 网络的关注点都不一样. 这种多次并且有侧重的关注, 得模型相对与传统的网络结构能更好地提取特征. </p>
+<h3 id="Soft-Attention-和Hard-Attention"><a href="#Soft-Attention-和Hard-Attention" class="headerlink" title="Soft Attention 和Hard Attention"></a><strong>Soft Attention</strong> 和<strong>Hard Attention</strong></h3><p>   在算法的第三步之中, 提到过函数$\phi$有不同的选取, 在论文中讲了两个不同的选取方法:<br>第一种选取方法 :<br>$$<br>\begin{align}<br>    p(&amp;s<em>{t, } = 1 \mid s</em>{j&lt;t}, a ) = \alpha_{t, } \<br>   \phi(&amp;\alpha,a )= \hat{z}_t = \sum<em>i {s}</em>{t, }a_{i}.<br>\end{align}<br>$$<br>也就是对每一个区域$a_i$要么关注, 要么不关注, 关注与否按概率$\alpha_i$来取舍, 类似于采样.  这种方法称之为 <strong>Hard Attention</strong>. </p>
+<p>第二种选取方法:<br> $$\phi(\alpha, a)= \mathbb{E}_{p(s_t|a)}[\hat{z}<em>t] =  \sum</em>{i=1}^L \alpha<em>{t, } a</em>{i} $$.<br>对每个图像子区域都关注, 每个子区域加权之后的结果作为图像的上下文, 这种方法称之为<strong>Soft Attention</strong>.</p>
+<p>相比较与<strong>Hard Attention</strong>, <strong>Soft Attention</strong> 效果不差太多, 但在训练时可以直接求导, 利用梯度的反向传播, 工程上更容易实现. 而<strong>Hard Attention</strong> 方法, 无法使用梯度下降方法, 需要利用<strong>强化学习(reinforcement learning!)</strong>, 文中还用到了蒙特卡罗方法用于采样. </p>
+<h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p>效果很好, 如图三所示. 论文提供了源代码, 验证了模型(<strong>Hard-Attention</strong>和<strong>Soft-Attention</strong>)在三个最基准数据集 : Flickr9k, Flickr30k 和 MS COCO 都取得了当时(2015)最佳结果(state-of-the-art performance ), </p>
+<p><div align="center"><br><img src="https://dn-cyfall.qbox.me/bupt/as1263201232321" alt="论文效果"></div></p>
+<p></p><p align="center">图3 模型效果</p><div><p></p>
+<h3 id="总结感想"><a href="#总结感想" class="headerlink" title="总结感想"></a>总结感想</h3><p>Attention Model 这个想法特别的新奇:</p>
+<p>一方面, 这种模型与人脑的工作机制极其相似, 人在看东西的时候在不同的时候会关注不同的地方, Attention Model也是如此, 这种模型使得神经网络离人脑更进了一步.</p>
+<p>另一方面, 与之前caption做法不一样的是, 论文采用了一种端到端(end-to-end)的学习方式, 图像部分和自然语言处理部分直接相联, 通过缩减人工预处理和后续处理，尽可能使模型从原始输入到最终输出，给模型更多可以根据数据自动调节的空间，增加模型的整体契合度。 </p>
+<p>Attention Mechanism并不是这篇论文首创, 但是这篇论文却是Attention Model 的代表之作, 除了这篇论文详细清晰的思路之外, 最主要的还是因为这篇论文证明了Attention Model 在工程上所具有的巨大优势. 现在Attention Model 已经被用到了深度学习的方法面面, 可以预见, 未来几年Attention Model 会是一个重要的研究方向. </p>
+</div></div></div>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deepLearning/">deepLearning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machineLearning/">machineLearning</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-android反编译技术总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/16/android反编译技术总结/" class="article-date">
+  	<time datetime="2016-05-16T12:17:30.000Z" itemprop="datePublished">2016-05-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/16/android反编译技术总结/">android反编译技术总结</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="android-apk-破解技术总结"><a href="#android-apk-破解技术总结" class="headerlink" title="android apk  破解技术总结"></a>android apk  破解技术总结</h1><h2 id="1-反编译得到java代码"><a href="#1-反编译得到java代码" class="headerlink" title="1 反编译得到java代码"></a>1 反编译得到java代码</h2><p>首先要下载两个工具：dex2jar和JD-GUI<br>前者是将apk中的classes.dex转化成Jar文件，而JD-GUI是一个反编译工具，可以直接查看Jar包的源代码。</p>
+<ul>
+<li>首先将apk文件，将后缀改为zip，解压，得到其中的<code>classes.dex</code>，它就是java文件编译再通过dx工具打包而成的；</li>
+<li><p>利用dex2jar 将classes.dex 转为jar包:   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">path/to/dex2jar.sh  ./com.hf_5.1.6_56.apk_FILES/classes.dex</div></pre></td></tr></table></figure>
+</li>
+<li><p>利JD-GUI查看并保存成java源代码<br>用jd-gui打开jar包，然后全部另存为java文件，绝大多数应该都能生成java代码，但是有部分可能无法反编译成java代码。利用JD-GUI可以查看jar包中到代码，但是查找功能有限。</p>
+</li>
+</ul>
+<p>此外还有APKTool，但是apktool 反编译得到的是smali代码。Android采用的是java语言 进行开发，但是Android系统有自己的虚拟机Dalvik,代码编译最终不是采用的java的class，而是使用的smali，smali不易读，因此一般不适用apktool反编译成smali</p>
+<h2 id="2-阅读源代码"><a href="#2-阅读源代码" class="headerlink" title="2 阅读源代码"></a>2 阅读源代码</h2><p>阅读源代码主要分为两个部分</p>
+<ol>
+<li><p>关键字查找： 将java源代码的文件夹用sublime 或java IDE打开，利用正则表达式，查找所需的关键字，在本次项目中是要寻找RESTful接口，因此把url作为关键字，可以找到与此RESTful接口相关到java处理代码。</p>
+</li>
+<li><p>追踪方法或类的使用情况。 由于代码的加密和混淆的原因，利用IDE自身的功能，难以查找某一个方法在那些地方被使用，往往需要根据字符串匹配来实现。<br>比如 查找包 <code>com.a.b.b</code> 中的某个类<code>c</code>的方法 <code>d</code>的使用情况，直接点击d方法，IDE一般无法找到所有d的使用地方。因此可以尝试下面两种方法</p>
+<ol>
+<li>搜索 <code>import com.a.b.b.c</code> 在找到的java文件中查看d方法的使用情况</li>
+<li>在com/a/b/b/ 目录下 的java文件寻找<code>c.d(</code>(如果d是静态方法)，或者寻找<code>new c(</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="3-利用jar包编写程序"><a href="#3-利用jar包编写程序" class="headerlink" title="3 利用jar包编写程序"></a>3 利用jar包编写程序</h2><p>一般来说，我们需要使用apk中某些方法，因此在找到我们所需要的方法之后，我们</p>
+<ul>
+<li>新建一个项目，把jar包加入到项目的library中</li>
+<li>把android.jar 也加入到项目的libray中。 因为作为android apk，项目中的文件经常会使用到android的一些类，虽然android的类一般不会直接作用与这个函数，但是当java 文件中出现<code>import android.app.Application</code>时就会报错，所以为了方便省事，还是应该把android.jar 加入到项目的libray中。</li>
+<li>有些时候我们想要修改jar包中的某些函数， 比如某个函数在执行的时候需要获取android 的Context 对象，但是这个对象却不是我们所关心的，因此我们需要修改这个函数，以便我们使用。但是修改完java代码却无法将其重新编译回jar包，因此备选的做法时，把需要修改的那部分代码全部拷贝出来，新建一个包。</li>
+</ul>
+<p>我们经常需要尝试jar包中的某些函数的功能，但是为每一个函数都写一个测试文件又显得麻烦，而且在弄清楚jar包中函数的参数，类的方法之前，测试类也不好写。因此建议利用<code>REPL</code>来测试。java目前还不支持<code>REPL</code> ,但是有如下三种解决方法</p>
+<ul>
+<li>利用groovy ，Groovy是一种基于JVM（Java虚拟机）的敏捷开发语言，可以很方便的读取jar包，并访问其中的函数和类</li>
+<li>利用scala</li>
+<li>安装jdk9 ，利用jdk9中带的 <code>jshell</code>，<code>jshell</code>是java自带的REPL，不过还不成熟</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反编译/">反编译</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-傻瓜函数式编程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/06/傻瓜函数式编程/" class="article-date">
+  	<time datetime="2016-04-06T07:15:50.000Z" itemprop="datePublished">2016-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/06/傻瓜函数式编程/">傻瓜函数式编程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>很古老的一片文章，但是真的写的很好</p>
+<p>傻瓜函数式编程<br>from : <a href="https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn/blob/master/FunctionalProgrammingForTheRestOfUs.cn.md">https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn/blob/master/FunctionalProgrammingForTheRestOfUs.cn.md</a></p>
+<p>2006年6月19日，星期一</p>
+<p>[toc]</p>
+<h3 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h3><p>我们这些码农做事都是很拖拉的。每天例行报到后，先来点咖啡，看看邮件还有RSS订阅的文章。然后翻翻新闻还有那些技术网站上的更新，再过一遍编程论坛口水区里那些无聊的论战。最后从头把这些再看一次以免错过什么精彩的内容。然后就可以吃午饭了。饭饱过后，回来盯着IDE发一会呆，再看看邮箱，再去搞杯咖啡。光阴似箭，可以回家了……<br>（在被众人鄙视之前）我唯一想说的是，在这些拖拉的日子里总会时不时读到一些<a href="http://www.baike.com/wiki/%E4%B8%8D%E6%98%8E%E8%A7%89%E5%8E%89">不明觉厉</a>的文章。如果没有打开不应该打开的网站，每隔几天你都可以看到至少一篇这样的东西。它们的共性：难懂，耗时，于是这些文章就慢慢的堆积成山了。很快你就会发现自己已经累积了一堆的收藏链接还有数不清的PDF文件，此时你只希望隐入一个杳无人烟的深山老林里什么也不做，用一年半载好好的消化这些私藏宝贝。当然，我是说最好每天还是能有人来给送吃的顺带帮忙打扫卫生倒垃圾，哇哈哈。   </p>
+<p>我不知道你都收藏了些什么，我的阅读清单里面相当大部分都是函数式编程相关的东东：基本上是最难啃的。这些文章充斥着无比枯燥的教科书语言，我想就连那些在华尔街浸淫10年以上的大牛都无法搞懂这些函数式编程（简称FP）文章到底在说什么。你可以去花旗集团或者德意志银行找个项目经理来问问<sup>1</sup>：你们为什么要选JMS而不用Erlang？答案基本上是：我认为这个学术用的语言还无法胜任实际应用。可是，现有的一些系统不仅非常复杂还需要满足十分严苛的需求，它们就都是用函数式编程的方法来实现的。这，就说不过去了。<br>关于FP的文章确实比较难懂，但我不认为一定要搞得那么晦涩。有一些历史原因造成了这种知识断层，可是FP概念本身并不难理解。我希望这篇文章可以成为一个“FP入门指南”，帮助你从<a href="http://zh.wikipedia.org/zh/%E6%8C%87%E4%BB%A4%E5%BC%8F%E7%B7%A8%E7%A8%8B">指令式编程</a>走向<a href="http://zh.wikipedia.org/zh/%E5%87%BD%E6%95%B8%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80">函数式编程</a>。先来点咖啡，然后继续读下去。很快你对FP的理解就会让同事们刮目相看了。      </p>
+<p>什么是函数式编程（Functional Programming，FP）？它从何而来？可以吃吗？倘若它真的像那些鼓吹FP的人说的那么好，为什么实际应用中那么少见？为什么只有那些在读博士的家伙想要用它？而最重要的是，它母亲的怎么就那么难学？那些所谓的closure、continuation，currying，lazy evaluation还有no side effects都是什么东东（译者：本着保留专用术语的原则，此处及下文类似情形均不译）？如果没有那些大学教授的帮忙怎样把它应用到实际工程里去？为什么它和我们熟悉的万能而神圣的指令式编程那么的不一样？<br>我们很快就会解开这些谜团。刚才我说过实际工程和学术界之间的知识断层是有其历史原因的，那么就先让我来解释一下这个问题。答案，就在接下来的一次公园漫步中：<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数式编程/">函数式编程</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/06/傻瓜函数式编程/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-函数式编程范式-3-实战举例" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/06/函数式编程范式-3-实战举例/" class="article-date">
+  	<time datetime="2016-04-06T06:13:35.000Z" itemprop="datePublished">2016-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/06/函数式编程范式-3-实战举例/">函数式编程范式(3):实战举例</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+<p>python命令式版本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sub_sort</span><span class="params">(array,low,high)</span>:</span></div><div class="line">    key = array[low]</div><div class="line">    <span class="keyword">while</span> low &lt; high:</div><div class="line">        <span class="keyword">while</span> low &lt; high <span class="keyword">and</span> array[high] &gt;= key:</div><div class="line">            high -= <span class="number">1</span></div><div class="line">        <span class="keyword">while</span> low &lt; high <span class="keyword">and</span> array[high] &lt; key:</div><div class="line">            array[low] = array[high]</div><div class="line">            low += <span class="number">1</span></div><div class="line">            array[high] = array[low]</div><div class="line">    array[low] = key</div><div class="line">    <span class="keyword">return</span> low</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(array,low,high)</span>:</span></div><div class="line">     <span class="keyword">if</span> low &lt; high:</div><div class="line">        key_index = sub_sort(array,low,high)</div><div class="line">        quick_sort(array,low,key_index)</div><div class="line">        quick_sort(array,key_index+<span class="number">1</span>,high)</div></pre></td></tr></table></figure></p>
+<p>python 函数式版本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">q_sort</span><span class="params">(l)</span>:</span></div><div class="line">    <span class="keyword">if</span> l == []: <span class="keyword">return</span> []</div><div class="line">    less = filter(<span class="keyword">lambda</span> x: x &lt; l[<span class="number">0</span>], l[<span class="number">1</span>:])</div><div class="line">    more = filter(<span class="keyword">lambda</span> y: y &gt;= l[<span class="number">0</span>], l[<span class="number">1</span>:])</div><div class="line">    <span class="keyword">return</span> q_sort(less) + [l[<span class="number">0</span>]] + q_sort(more)</div></pre></td></tr></table></figure></p>
+<p>scala 版本</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">quickSort</span></span>(xs: <span class="type">List</span>[<span class="type">Int</span>]): <span class="type">List</span>[<span class="type">Int</span>] = &#123; </div><div class="line">      <span class="keyword">if</span> (xs.isEmpty) xs </div><div class="line">      <span class="keyword">else</span> </div><div class="line">        quickSort(xs.filter(x=&gt;x&lt;xs.head)):::xs.head::quickSort(xs.filter(x=&gt;x&gt;xs.head)) </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>Haskell版本：<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="title">q_sort</span> n=<span class="keyword">case</span> n <span class="keyword">of</span></div><div class="line">    []-&gt;[]</div><div class="line">    (x:xs)-&gt;q_sort [a|a&lt;-xs,a&lt;=x]++[x]++q_sort [a|a&lt;-xs,a&gt;x]</div></pre></td></tr></table></figure></p>
+<p>$${ a| a \in N ,a &lt;10}  $$</p>
+<p>Haskell 版本2<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="title">quicksort</span> :: <span class="type">Ord</span> a =&gt; [a] -&gt; [a]    </div><div class="line"><span class="title">quicksort</span> [] = []    </div><div class="line"><span class="title">quicksort</span> (p:xs) =    </div><div class="line">    (quicksort lesser) ++ [p] ++ (quicksort greater)  </div><div class="line">    <span class="keyword">where</span>  </div><div class="line">        lesser = filter (&lt; p) xs  </div><div class="line">        greater = filter (&gt;= p) xs</div></pre></td></tr></table></figure></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数式编程/">函数式编程</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/06/函数式编程范式-3-实战举例/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-函数式编程范式-2-特点" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/06/函数式编程范式-2-特点/" class="article-date">
+  	<time datetime="2016-04-06T06:13:24.000Z" itemprop="datePublished">2016-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/06/函数式编程范式-2-特点/">函数式编程范式(2):特点</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="函数式编程的特点"><a href="#函数式编程的特点" class="headerlink" title="函数式编程的特点"></a>函数式编程的特点</h1><h2 id="1-函数是一等公民"><a href="#1-函数是一等公民" class="headerlink" title="1 函数是一等公民"></a>1 函数是一等公民</h2><p>在函数式编程中，函数而是指数学中的函数，即自变量的映射，其输出仅取决于输入的参数，而和调用函数的次序无关。在函数式语言中，函数作为一等公民，可以在任何地方定义，在函数内或函数外，可以作为函数的参数和返回值，可以对<em>函数</em>进行组合。为了和命令式编程中的函数区分开来，通常这种函数通常称为<strong>纯函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">pure_function</span><span class="params">(x)</span>:</span></div><div class="line">    <span class="string">'''</div><div class="line">    纯函数，输入只和输出有关</div><div class="line">    '''</span></div><div class="line">    <span class="keyword">return</span> x+<span class="number">2</span></div><div class="line"></div><div class="line">y=<span class="number">2</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">usual_function</span><span class="params">(x)</span>:</span></div><div class="line">    <span class="keyword">return</span> x+y</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">print</span> <span class="string">u'纯函数的输出 %s，%s'</span> %(pure_function(<span class="number">0</span>),pure_function(<span class="number">0</span>))</div><div class="line"><span class="keyword">print</span> <span class="string">u'有副作用的函数 %s'</span> %usual_function(<span class="number">0</span>)</div><div class="line">y=<span class="number">0</span></div><div class="line"><span class="keyword">print</span> <span class="string">u'有副作用的函数 %s'</span> %usual_function(<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<pre><code>纯函数的输出 2，2
+有副作用的函数 2
+有副作用的函数 0
+</code></pre><h3 id="1-1-高阶函数"><a href="#1-1-高阶函数" class="headerlink" title="1.1 高阶函数"></a>1.1 高阶函数</h3><p>函数是函数式编程的第一型,我们在函数式编程中<strong>努力用函数来表达所有的概念</strong>，完成所有的操作。<br>在面向对象编程中，我们把对象传来传去，那在函数式编程中，我们要做的是把函数传来传去，而这个，说成术语，我们把他叫做高阶函数。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数式编程/">函数式编程</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/06/函数式编程范式-2-特点/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-函数式变成范例-1-历史与概述" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/06/函数式变成范例-1-历史与概述/" class="article-date">
+  	<time datetime="2016-04-06T06:08:40.000Z" itemprop="datePublished">2016-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/06/函数式变成范例-1-历史与概述/">函数式编程范式(1):历史与概述</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@author <a href="http://xight.top">chenyun</a></p>
+<p><strong>草稿</strong></p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>函数式编程（英语：functional programming）或称函数程序设计，又称泛函编程，是一种编程范型，它将电脑运算视为数学上的函数计算，并且避免使用程序状态以及易变对象。函数编程语言最重要的基础是λ演算（lambda calculus）。而且λ演算的函数可以接受函数当作输入和输出。</p>
+<h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>函数式编程中最古老的例子莫过于1958年被创造出来的LISP了。但是要提及函数式编程的例子却不得不从更早的λ演算说起。</p>
+</blockquote>
+<p><img src="http://dn-cyfall.qbox.me/b/%E5%9B%BE%E7%89%871.png" alt="图灵和阿隆佐·邱奇"><br>   是否存在一个通用模型来解决一切计算任务？1936年，阿隆佐·邱奇设计了一个名为lambda演算的形式系统。这个系统实质上是为一个超级机器设计的编程语言。在这种语言里面，函数的参数是函数，返回值也是函数。这种函数用希腊字母lambda（λ），这种系统因此得名。<br>    除了阿隆佐，艾伦·图灵也在进行类似的研究。他设计了一种完全不同的系统（后来被称为图灵机），并用这种系统得出了和阿隆佐相似的答案。到了后来人们证明了图灵机和lambda演算的能力是一样的。有关lambda演算的支持请查阅<a href="https://zh.wikipedia.org/wiki/%CE%9B%E6%BC%94%E7%AE%97">维基百科</a></p>
+<p>1949年第一台电子离散变量自动计算机诞生并取得了巨大的成功。它是冯·诺伊曼设计架构的第一个实例，也是一台现实世界中实现的图灵机。到了50年代末，一个叫John McCarthy的MIT教授（他也是普林斯顿的硕士）对阿隆佐的成果产生了兴趣。1958年他发明了一种列表处理语言（Lisp），这种语言是一种阿隆佐lambda演算在现实世界的实现，而且它能在冯·诺伊曼计算机上运行！很多计算机科学家都认识到了Lisp强大的能力。1973年在MIT人工智能实验室的一些程序员研发出一种机器，并把它叫做Lisp机。于是阿隆佐的lambda演算也有自己的硬件实现了！</p>
+<h3 id="特点概述"><a href="#特点概述" class="headerlink" title="特点概述"></a>特点概述</h3><p>在函数式语言中，函数(lambda 演算)作为一等公民，可以在任何地方定义，在函数内或函数外，可以作为函数的参数和返回值，可以对函数进行组合。</p>
+<p>函数式编程中的函数这个术语不是指计算机中的函数（实际上是Subroutine 子程序），而是指数学中的函数，即自变量的映射。也就是说一个函数的值仅决定于函数参数的值，不依赖其他状态。比如sqrt(x)函数计算x的平方根，只要x不变，不论什么时候调用，调用几次，值都是不变的。</p>
+<p>与函数式编程对应的是命令式编程，命令式编程是面向计算机硬件的抽象，有变量（对应着存储单元），赋值语句（获取，存储指令），表达式（内存引用和算术运算）和控制语句（跳转指令）.</p>
+<p>命令式程序就是一个冯诺依曼机的指令序列.<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数式编程/">函数式编程</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/06/函数式变成范例-1-历史与概述/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-用docker搭建spark集群" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/25/用docker搭建spark集群/" class="article-date">
+  	<time datetime="2016-03-25T04:49:50.000Z" itemprop="datePublished">2016-03-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/25/用docker搭建spark集群/">用docker搭建spark集群</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一步 从docker官方仓库下载docker镜像</p>
+<blockquote>
+<p>docker pull epahomov/docker-spark</p>
+</blockquote>
+<p>第二步 启动master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">bash# docker run -d -t -P  -i --name spark_master epahomov/docker-spark</div><div class="line"></div><div class="line">bash# docker attach spark_master</div><div class="line">#编辑 docker 的master 启动脚本</div><div class="line">root@40defc1fa605:/# vi spark-shell.sh</div><div class="line">----172.17.0.3 为本机的ip</div><div class="line">#!/usr/bin/env bash</div><div class="line">export SPARK_LOCAL_IP=`awk &apos;NR==1 &#123;print $1&#125;&apos; /etc/hosts`</div><div class="line">/remove_alias.sh # problems with hostname alias, see https://issues.apache.org/jira/browse/SPARK-6680</div><div class="line">cd /usr/local/spark</div><div class="line">./bin/spark-shell \</div><div class="line">        --master spark://172.17.0.3:7077  \</div><div class="line">        -i 172.17.0.3 \</div><div class="line">        --properties-file /spark-defaults.conf \</div><div class="line">        &quot;$@&quot; </div><div class="line">-----</div><div class="line"># 启动master</div><div class="line">root@3746e21dff30:/# ./start-master.sh</div></pre></td></tr></table></figure></p>
+<p>第三步 启动worker<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">docker run -d -t -P  -i --name spark_worker1 epahomov/docker-spark</div><div class="line">docker attach spark_worker1</div></pre></td></tr></table></figure></p>
+<p>配置master-ip  172.17.0.4 为本机ip，172.17.0.3为master ip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">root@40defc1fa605:/# cat ./start-worker.sh </div><div class="line">#!/usr/bin/env bash</div><div class="line">cd /usr/local/spark</div><div class="line">export SPARK_LOCAL_IP=`awk &apos;NR==1 &#123;print $1&#125;&apos; /etc/hosts`</div><div class="line">./bin/spark-class org.apache.spark.deploy.worker.Worker \</div><div class="line">spark://172.17.0.3:7077 \</div><div class="line">        --properties-file /spark-defaults.conf \</div><div class="line">        -i 172.17.0.4  \</div><div class="line">        &quot;$@&quot;</div></pre></td></tr></table></figure></p>
+<p>启动worker<br><code>./start-worker.sh</code></p>
+<p>可以启动多台worker</p>
+<p>打开master：8080 可以查看集群部署情况<br> <img src="http://dn-cyfall.qbox.me/b/Screenshot%20-%202016%E5%B9%B403%E6%9C%8825%E6%97%A5%20-%2013%E6%97%B605%E5%88%8609%E7%A7%92.png" alt="enter image description here"></p>
+<p>在master 中打开spark-shell 就可以进行编程了</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-python-闭包" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/23/python-闭包/" class="article-date">
+  	<time datetime="2015-11-23T14:44:56.000Z" itemprop="datePublished">2015-11-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/23/python-闭包/">python:闭包</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>简单说,闭包就是根据不同的配置信息得到不同的结果</p>
+<p>再来看看专业的解释:闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，<br>即使已经离开了创造它的环境也不例外。所以，<strong>有另一种说法认为闭包是由函数和与其相关的引用环境组合而成的实体。</strong><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数式编程/">函数式编程</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/23/python-闭包/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-python-装饰器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/23/python-装饰器/" class="article-date">
+  	<time datetime="2015-11-23T14:26:21.000Z" itemprop="datePublished">2015-11-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/23/python-装饰器/">python:装饰器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@refer <a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014318435599930270c0381a3b44db991cd6d858064ac0000">廖雪峰</a><br>@refer <a href="http://python.jobbole.com/81107/">xianhu  </a></p>
+<h2 id="装饰器基础"><a href="#装饰器基础" class="headerlink" title="装饰器基础"></a>装饰器基础</h2><p>装饰器的定义<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></div><div class="line">        print(<span class="string">'call %s():'</span> % func.__name__)</div><div class="line">        <span class="keyword">return</span> func(*args, **kw)</div><div class="line">    <span class="keyword">return</span> wrapper</div></pre></td></tr></table></figure></p>
+<p>装饰器的使用<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@log</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></div><div class="line">     print(<span class="string">'2015-3-25'</span>)</div></pre></td></tr></table></figure></p>
+<p>@log 相当于返回<code>log(now)</code> 这也是一个函数,对象, 具有和now相同的参数</p>
+<p><strong>本质上，decorator就是一个返回函数的高阶函数。</strong><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/23/python-装饰器/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

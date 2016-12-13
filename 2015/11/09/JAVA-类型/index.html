@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JAVA:类型 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java的数据类型有两种： 
+
+基本数据类型
+普通数据类型(引用数据类型)
+
+基本数据类型8种基本类型 
+4种整型
+byte      1字节           -128——127 
+short     2 字节         -32,768 —— 32,767 
+int       4 字节          -2,147,483,648 ——2,147,483,647（超过20亿） 
+lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA:类型">
+<meta property="og:url" content="http://yoursite.com/2015/11/09/JAVA-类型/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Java的数据类型有两种： 
+
+基本数据类型
+普通数据类型(引用数据类型)
+
+基本数据类型8种基本类型 
+4种整型
+byte      1字节           -128——127 
+short     2 字节         -32,768 —— 32,767 
+int       4 字节          -2,147,483,648 ——2,147,483,647（超过20亿） 
+lo">
+<meta property="og:image" content="http://images.cnitblog.com/blog/413416/201303/31232316-9ceb14006ae34b97b3fbefaafccc9f80.png">
+<meta property="og:updated_time" content="2015-11-12T02:35:57.427Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA:类型">
+<meta name="twitter:description" content="Java的数据类型有两种： 
+
+基本数据类型
+普通数据类型(引用数据类型)
+
+基本数据类型8种基本类型 
+4种整型
+byte      1字节           -128——127 
+short     2 字节         -32,768 —— 32,767 
+int       4 字节          -2,147,483,648 ——2,147,483,647（超过20亿） 
+lo">
+<meta name="twitter:image" content="http://images.cnitblog.com/blog/413416/201303/31232316-9ceb14006ae34b97b3fbefaafccc9f80.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-JAVA-类型" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/09/JAVA-类型/" class="article-date">
+  	<time datetime="2015-11-09T08:03:10.000Z" itemprop="datePublished">2015-11-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JAVA:类型
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java的数据类型有两种： </p>
+<ul>
+<li>基本数据类型</li>
+<li>普通数据类型(引用数据类型)</li>
+</ul>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p>8种基本类型 </p>
+<h3 id="4种整型"><a href="#4种整型" class="headerlink" title="4种整型"></a>4种整型</h3><ul>
+<li>byte      1字节           -128——127 </li>
+<li>short     2 字节         -32,768 —— 32,767 </li>
+<li>int       4 字节          -2,147,483,648 ——2,147,483,647（超过20亿） </li>
+<li>long      8 字节   -9,223,372,036,854,775,808——9,223,372,036854,775,807 </li>
+</ul>
+<a id="more"></a>
+<pre><code>注释：java中所有的数据类所占据的字节数量与平台无关，java也没有任何无符号类型 
+</code></pre><h3 id="2种浮点类型"><a href="#2种浮点类型" class="headerlink" title="2种浮点类型"></a>2种浮点类型</h3><ul>
+<li>float    4 字节         32位IEEE 754单精度（有效位数 6 – 7位） </li>
+<li>double   8 字节         64位IEEE 754双精度（有效位数15位） </li>
+</ul>
+<h3 id="1种Unicode编码的字符单元"><a href="#1种Unicode编码的字符单元" class="headerlink" title="1种Unicode编码的字符单元"></a>1种Unicode编码的字符单元</h3><ul>
+<li>char    2 字节          整个Unicode字符集 </li>
+</ul>
+<h3 id="1种真值类型"><a href="#1种真值类型" class="headerlink" title="1种真值类型"></a>1种真值类型</h3><ul>
+<li>boolean    1 位             True或者false </li>
+</ul>
+<h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h2><p>有3种引用类型 </p>
+<ul>
+<li>类class </li>
+<li>接口interface </li>
+<li>数组array </li>
+</ul>
+<h3 id="类-Class-引用"><a href="#类-Class-引用" class="headerlink" title="类(Class)引用"></a>类(Class)引用</h3><p>几个比较重要的类: </p>
+<p>Object: Object是类层次结构的根类，每个类都使用Object作为超类，所有对象（包括数组）都实现这个类的方法。用Object可以定义所有的类   如： </p>
+<pre><code>Object object= new Integer(1); 来定义一个Interger类 
+Integer i=(Integer) object;     在来把这个Object强制转换成Interger类 
+</code></pre><p>Void ：Void 类是一个不可实例化的占位符类，它保持一个对代表 Java 关键字 void 的 Class 对象的引用。</p>
+<p>每个普通类型同时也有对应的Class如：Integer  Long  Boolean  Byte  Character  Double  Float   Short </p>
+<h3 id="接口-interface-引用"><a href="#接口-interface-引用" class="headerlink" title="接口(interface)引用"></a>接口(interface)引用</h3><p>List&lt; E >就是各接口, 其它常用的类比如ArrayList都是实现了这个接口, 相当于List的子类: 所以我们可以这么来定义:</p>
+<pre><code>List&lt;String&gt; l =  new ArrayList&lt;String&gt;()
+</code></pre><h3 id="数组-array"><a href="#数组-array" class="headerlink" title="数组(array)"></a>数组(array)</h3><p>数组元素不为基本原生数据类型时，存放的是引用类型，而不是对象本身。当生成对象之后，引用才指向对象，否则引用为null</p>
+<h2 id="内存空间"><a href="#内存空间" class="headerlink" title="内存空间"></a>内存空间</h2><p>基本类型经常被使用，且所占据内存空间不大，所以在Java中，为了效率起见，这些基本类型与普通的类型(也就是自定义的类)的内存管理方式不同。比如，基本类型一旦声明就会被分配内存空间，而普通类型需要使用new关键字来分配内存空间。<br>Java为每个基本类型提供了相应的普通类型。比如int基本类型对应Integer类型。如果将基本类型的对象转成相应的普通类型变量，所谓的基本类型也就成为了一般意义上的类型(不再有内存管理上的不同)。</p>
+<pre><code>Human aPerson = new Human(160);
+</code></pre><p>创建了一个Human类的对象aPerson。 </p>
+<p>上面是一个非常简单的表述，但我们有许多细节需要深入:</p>
+<p>首先看等号的右侧。new是在内存中为对象开辟空间。具体来说，new是在内存的堆(heap)上为对象开辟空间。这一空间中，保存有对象的数据和方法。<br>再看等号的左侧。aPerson指代一个Human对象，被称为对象引用(reference)。<strong>实际上，aPerson并不是对象本身，而是类似于一个指向对象的指针。aPerson存在于内存的栈(stack)中。</strong><br>当我们用等号赋值时，是将右侧new在堆中创建对象的地址赋予给对象引用。<br>这里的内存，指的是JVM (Java Virtual Machine)虚拟出来的Java进程内存空间<br><img src="http://images.cnitblog.com/blog/413416/201303/31232316-9ceb14006ae34b97b3fbefaafccc9f80.png" alt="enter image description here"><br>栈的读取速度比堆快，但栈上存储的数据受到有效范围的限制。在C语言中，当一次函数调用结束时，相应的栈帧(stack frame)要删除，栈帧上存储的参量和自动变量就消失了。Java的栈也受到同样的限制，当一次方法调用结束，该方法存储在栈上的数据将清空。在 Java中，所有的(普通)对象都储存在堆上。因此，new关键字的完整含义是，在堆上创建对象。</p>
+<p>基本类型(primitive type)的对象，比如int, double，保存在栈上。当我们声明基本类型时，不需要new。一旦声明，Java将在栈上直接存储基本类型的数据。<strong>所以，基本类型的变量名表示的是数据本身，不是引用。</strong></p>
+<p>尽管引用和对象是分离的，但我们所有通往对象的访问必须经过引用这个“大门”，比如以 引用.方法() 的方式访问对象的方法。在Java中，我们不能跳过引用去直接接触对象。<strong>再比如，对象a的数据成员如果是一个普通对象b，a的数据成员保存的是指向对象b的引用 (如果是基本类型变量，那么a的数据成员保存的是基本类型变量本身了)。</strong></p>
+<p>在Java中，引用起到了指针的作用，但我们不能直接修改指针的值，比如像C语言那样将指针值加1。我们只能通过引用执行对对象的操作。这样的设计避免了许多指针可能引起的错误。</p>
+<p>一个对象可以有多个引用 (一个人可以放多个风筝)。当程序通过某个引用修改对象时，通过其他引用也可以看到该修改。 </p>
+<p>@author <a href="http://xight.top" target="_blank" rel="external">chenyun</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/09/python-内存管理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          python:内存管理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/09/Linux-IP-命令使用详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux IP 命令使用详解</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JAVA-类型" data-title="JAVA:类型" data-url="http://yoursite.com/2015/11/09/JAVA-类型/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

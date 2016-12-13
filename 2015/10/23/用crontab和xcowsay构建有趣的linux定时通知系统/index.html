@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>用crontab和xcowsay构建有趣的linux定时通知系统 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="crontabcrond是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
+Linux下的任务调度分为两类，系统任务调度和用户任务调度。
+
+系统任务调度：系统周期性所要执行的工作，比">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用crontab和xcowsay构建有趣的linux定时通知系统">
+<meta property="og:url" content="http://yoursite.com/2015/10/23/用crontab和xcowsay构建有趣的linux定时通知系统/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="crontabcrond是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
+Linux下的任务调度分为两类，系统任务调度和用户任务调度。
+
+系统任务调度：系统周期性所要执行的工作，比">
+<meta property="og:image" content="https://dn-cyfall.qbox.me/xcowsay.png">
+<meta property="og:image" content="https://dn-cyfall.qbox.me/xdogsay.png">
+<meta property="og:image" content="https://dn-cyfall.qbox.me/russel.png">
+<meta property="og:updated_time" content="2015-11-12T02:35:56.399Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用crontab和xcowsay构建有趣的linux定时通知系统">
+<meta name="twitter:description" content="crontabcrond是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
+Linux下的任务调度分为两类，系统任务调度和用户任务调度。
+
+系统任务调度：系统周期性所要执行的工作，比">
+<meta name="twitter:image" content="https://dn-cyfall.qbox.me/xcowsay.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-用crontab和xcowsay构建有趣的linux定时通知系统" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/10/23/用crontab和xcowsay构建有趣的linux定时通知系统/" class="article-date">
+  	<time datetime="2015-10-23T11:02:53.000Z" itemprop="datePublished">2015-10-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      用crontab和xcowsay构建有趣的linux定时通知系统
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tips/">tips</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a>crontab</h2><p>crond是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。</p>
+<p>Linux下的任务调度分为两类，系统任务调度和用户任务调度。</p>
+<ul>
+<li>系统任务调度：系统周期性所要执行的工作，比如写缓存数据到硬盘、日志清理等。在/etc目录下有一个crontab文件，这个就是系统任务调度的配置文件。</li>
+<li>用户任务调度：用户定期要执行的工作，比如用户数据备份、定时邮件提醒等。用户可以使用 crontab 工具来定制自己的计划任务。所有用户定义的crontab 文件都被保存在 /var/spool/cron目录中。其文件名与用户名一致。</li>
+</ul>
+<p>创建用户任务调度的命令是</p>
+<pre><code>crontab -e
+</code></pre><p>用户调度任务的格式如下</p>
+<pre><code>m h  dom mon dow   command
+</code></pre><p>在以上各个字段中，还可以使用以下特殊字符：</p>
+<ul>
+<li>星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</li>
+<li>逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”</li>
+<li>中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”</li>
+<li>正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。</li>
+</ul>
+<h3 id="crontab-命令"><a href="#crontab-命令" class="headerlink" title="crontab 命令"></a>crontab 命令</h3><ul>
+<li>-e：编辑某个用户的crontab文件内容。如果不指定用户，则表示编辑当前用户的crontab文件。</li>
+<li>-l：显示某个用户的crontab文件内容，如果不指定用户，则表示显示当前用户的crontab文件内容。</li>
+<li>-r：从/var/spool/cron目录中删除某个用户的crontab文件，如果不指定用户，则默认删除当前用户的crontab文件。</li>
+<li>-i：在删除用户的crontab文件时给确认提示。</li>
+</ul>
+<p>如果不小心误删了<code>crontab</code>文件，假设你在自己的$ H O M E目录下还有一个备份，那么可以将其拷贝到<code>/var/spool/cron/&lt;username&gt;</code>，其中<code>&lt;username&gt;</code>是用户名。如果由于权限问题无法完成拷贝，可以用：</p>
+<pre><code>$ crontab &lt;filename&gt;
+</code></pre><p>   其中，<code>&lt;filename&gt;</code>是你在<code>$ H O M E</code>目录中副本的文件名。<br>我建议你在自己的$ H O M E目录中保存一个该文件的副本。我就有过类似的经历，有数次误删了crontab文件（因为r键紧挨在e键的右边）。这就是为什么有些系统文档建议不要直接编辑crontab文件，而是编辑该文件的一个副本，然后重新提交新的文件<br><a id="more"></a></p>
+<h3 id="使用注意事项"><a href="#使用注意事项" class="headerlink" title="使用注意事项"></a>使用注意事项</h3><ul>
+<li><p>注意环境变量问题<br>有时我们创建了一个crontab，但是这个任务却无法自动执行，而手动执行这个任务却没有问题，这种情况一般是由于在crontab文件中没有配置环境变量引起的。<br>在crontab文件中定义多个调度任务时，需要特别注意的一个问题就是环境变量的设置，因为我们手动执行某个任务时，是在当前shell环境下进行的，程序当然能找到环境变量，而系统自动执行任务调度时，是不会加载任何环境变量的，因此，就需要在crontab文件中指定任务运行所需的所有环境变量，这样，系统执行任务调度时就没有问题了。<br>不要假定cron知道所需要的特殊环境，它其实并不知道。所以你要保证在shelll脚本中提供所有必要的路径和环境变量，除了一些自动设置的全局变量。所以注意如下3点：<br>1）脚本中涉及文件路径时写全局路径；<br>2）脚本执行要用到java或其他环境变量时，通过source命令引入环境变量，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cat start_cbp.sh</div><div class="line">#!/bin/sh</div><div class="line">source /etc/profile</div><div class="line">export RUN_CONF=/home/d139/conf/platform/cbp/cbp_jboss.conf</div><div class="line">/usr/local/jboss-4.0.5/bin/run.sh -c mev &amp;</div></pre></td></tr></table></figure>
+</li>
+<li><p>注意清理系统用户的邮件日志<br>每条任务调度执行完毕，系统都会将任务输出信息通过电子邮件的形式发送给当前系统用户，这样日积月累，日志信息会非常大，可能会影响系统的正常运行，因此，将每条任务进行重定向处理非常重要。<br>例如，可以在crontab文件中设置如下形式，忽略日志输出：<br>0 <em>/3 </em> <em> </em> /usr/local/apache2/apachectl restart &gt;/dev/null 2&gt;&amp;1<br>“/dev/null 2&gt;&amp;1”表示先将标准输出重定向到/dev/null，然后将标准错误重定向到标准输出，由于标准输出已经重定向到了/dev/null，因此标准错误也会重定向到/dev/null，这样日志输出问题就解决了。</p>
+</li>
+</ul>
+<ul>
+<li>新创建的cron job，不会马上执行，至少要过2分钟才执行。如果重启cron则马上执行。<br>当crontab突然失效时，可以尝试/etc/init.d/crond restart解决问题。或者查看日志看某个job有没有执行/报错tail -f /var/log/cron。<br>千万别乱运行crontab -r。它从Crontab目录（/var/spool/cron）中删除用户的Crontab文件。删除了该用户的所有crontab都没了。<br>在crontab中%是有特殊含义的，表示换行的意思。如果要用的话必须进行转义\%，如经常用的date ‘+%Y%m%d’在crontab里是不会执行的，应该换成date ‘+\%Y\%m\%d’。</li>
+</ul>
+<h2 id="xcowsay"><a href="#xcowsay" class="headerlink" title="xcowsay"></a>xcowsay</h2><p>直接上效果图</p>
+<p><img src="https://dn-cyfall.qbox.me/xcowsay.png" alt="enter image description here"></p>
+<p>安装</p>
+<pre><code>suao apt-get install xcowsay
+</code></pre><p>xcowsay 功能很强大 , 是cowsay的加强版, 还支持显示图片, 和<code>fortune</code>联合起来使用效果更好</p>
+<p>xcowsay的选项不多,但是都很有用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">-h, --help      显示帮助</div><div class="line">-v, --version       显示版本</div><div class="line">-t, --time=SECONDS   设置显示时间</div><div class="line"> -r, --reading-speed=N   一个字一个字的说, 每个字之间的延迟(ms)</div><div class="line"> -f, --font=FONT    字体</div><div class="line"> -d, --dream=FILE   显示图片 许需指定图片</div><div class="line">     --think        xcowthink 和xcowsay差不多</div><div class="line">     --daemon       把xcowsay开为守护进程, 没必要  </div><div class="line">     --cow-size=SIZE    羊的大小</div><div class="line">     --image=FILE   自己设计一只羊</div><div class="line">     --monitor=N    Display cow on monitor N.</div><div class="line">     --at=X,Y       显示坐标</div><div class="line">     --bubble-at=X,Y    Change relative position of bubble.</div><div class="line">     --config=FILE  Specify alternative config file.</div><div class="line">     --debug        Keep daemon attached to terminal.</div></pre></td></tr></table></figure>
+<p>放上我的crontab</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">0 * * * *  export DISPLAY=:0.0 &amp;&amp;/usr/games/xcowsay -t 5 &apos;主人,别太劳累了哦,劳逸结合&apos;</div><div class="line">30-50/5 11-22/5 * * * export DISPLAY=:0.0 &amp;&amp;/usr/games/xcowsay -t 3 &apos;主人, 要吃饭了!!! 身体要紧&apos;</div><div class="line">50-55/2 23 * * * export DISPLAY=:0.0 &amp;&amp;/usr/games/xcowsay  -t 8 &apos;主人, 马上就要关机了,别丢东西哦&apos;</div><div class="line">55-59/2 23 * * * export DISPLAY=:0.0 &amp;&amp;/usr/games/xcowsay --image=/home/cy/pictures/dog.png --cow-size=big -t 8 &apos;傻逼,要关机了, 还不快保存文件&apos;</div></pre></td></tr></table></figure>
+<p>root的crontab 如下</p>
+<pre><code>55 23 * * * /sbin/shutdown -h 00:01
+</code></pre><p><img src="https://dn-cyfall.qbox.me/xdogsay.png" alt="enter image description here"><br>图标下载地址如下<br><a href="https://dn-cyfall.qbox.me/russel.png" target="_blank" rel="external"><img src="https://dn-cyfall.qbox.me/russel.png" alt="enter image description here"></a><br>@author <a href="http://xight.top" target="_blank" rel="external">chenyun</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/23/用meld代替默认的diff工具/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          用meld代替默认的diff工具
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/23/git中文乱码/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git中文乱码</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="用crontab和xcowsay构建有趣的linux定时通知系统" data-title="用crontab和xcowsay构建有趣的linux定时通知系统" data-url="http://yoursite.com/2015/10/23/用crontab和xcowsay构建有趣的linux定时通知系统/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

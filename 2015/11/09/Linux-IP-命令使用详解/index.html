@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Linux IP 命令使用详解 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Linux IP命令使用详解简介作用ip是iproute2软件包里面的一个强大的网络配置工具，它能够替代一些传统的网络管理工具，例如ifconfig、route等，使用权限为超级用户。几乎所有的Linux发行版本都支持该命令。
+格式ip [OPTIONS] OBJECT [COMMAND [ARGUMENTS]]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux IP 命令使用详解">
+<meta property="og:url" content="http://yoursite.com/2015/11/09/Linux-IP-命令使用详解/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Linux IP命令使用详解简介作用ip是iproute2软件包里面的一个强大的网络配置工具，它能够替代一些传统的网络管理工具，例如ifconfig、route等，使用权限为超级用户。几乎所有的Linux发行版本都支持该命令。
+格式ip [OPTIONS] OBJECT [COMMAND [ARGUMENTS]]">
+<meta property="og:updated_time" content="2015-11-09T07:10:25.939Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux IP 命令使用详解">
+<meta name="twitter:description" content="Linux IP命令使用详解简介作用ip是iproute2软件包里面的一个强大的网络配置工具，它能够替代一些传统的网络管理工具，例如ifconfig、route等，使用权限为超级用户。几乎所有的Linux发行版本都支持该命令。
+格式ip [OPTIONS] OBJECT [COMMAND [ARGUMENTS]]">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Linux-IP-命令使用详解" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/09/Linux-IP-命令使用详解/" class="article-date">
+  	<time datetime="2015-11-09T07:08:37.000Z" itemprop="datePublished">2015-11-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux IP 命令使用详解
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux-IP命令使用详解"><a href="#Linux-IP命令使用详解" class="headerlink" title="Linux IP命令使用详解"></a>Linux IP命令使用详解</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>ip是iproute2软件包里面的一个强大的网络配置工具，它能够替代一些传统的网络管理工具，例如<code>ifconfig</code>、<code>route</code>等，使用权限为超级用户。几乎所有的Linux发行版本都支持该命令。</p>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p><code>ip [OPTIONS] OBJECT [COMMAND [ARGUMENTS]]</code></p>
+<a id="more"></a> 
+<p>####　options</p>
+<p> OPTIONS是一些修改ip行为或者改变其输出的选项。所有的选项都是以<code>-</code>字符开头，分为 长、短两种形式。目前，ip支持如下选项：<br><code>-V</code>,<code>-Version</code>打印ip的版本并退出。<code>-s</code>,<code>-stats</code>,<code>-statistics</code>输出更为详 尽的信息。如果这个选项出现两次或者多次，输出的信息将更为详尽。<code>-f,-family</code>这个选项后面接协议种类，包括：<code>inet、inet6</code>或者 <code>link</code>，强调使用的协议种类。如果没有足够的信息告诉ip使用的协议种类，ip就会使用默认值inet或者any。link比较特殊，它表示不涉及任何 网络协议。<code>-4</code>是-family inet的简写。<code>-6</code>是<code>-family inet6</code>的简写。-0是-family link的简写。-o,-oneline对每行记录都使用单行输出，回行用字符代替。如果你需要使用wc、grep等工具处理ip的输出，会用到这个选 项。-r,-resolve查询域名解析系统，用获得的主机名代替主机IP地址。</p>
+<h4 id="OBJECT"><a href="#OBJECT" class="headerlink" title="OBJECT"></a>OBJECT</h4><p>OBJECT是你要管理或者获取信息的对象。目前ip认识的 对象包括：<br><code>link</code>: 网络设备, <code>address</code>:一个设备的协议（IP或者IPV6）地址,<code>neighbourARP</code>:或者<code>NDISC</code>:缓冲区条目, <code>route</code>: 路由表条目, <code>rule</code>:路由策略数据库中的规则, <code>maddress</code>:多播地址, <code>mroute</code>:多播路由缓冲区条目, <code>tunnelIP</code>:上的通道<br>　　另外，<strong>所有的对象名都可以简写</strong>，例如：address可以简写为addr，甚至是a。</p>
+<h4 id="command"><a href="#command" class="headerlink" title="command"></a>command</h4><p>COMMAND设置针对指 定对象执行的操作，它和对象的类型有关。一般情况下，ip支持对象的增加(add)、删除(delete)和展示(show或 者list)。有些对象不支持所有这些操作，或者有其它的一些命令。对于所有的对象，用户可以使用help命令获得帮助。这 个命令会列出这个对象支持的命令和参数的语法。如果没有指定对象的操作命令，ip会使用默认的命令。一般情况下，默认命令是list，如果对象不能列出， 就会执行help命令。</p>
+<h4 id="ARGUMENTS"><a href="#ARGUMENTS" class="headerlink" title="ARGUMENTS"></a>ARGUMENTS</h4><p><code>ARGUMENTS</code> 是命令的一些参数，它们倚赖于对象和命令。ip支持两种类型的参数：flag和parameter。flag由一个关键词组成；parameter由一个关键词加一个数值组成。为了方便，每个命令都有一个可以忽略的默认参数。例如，参数dev是ip link命令的默认参数，因此ip link ls eth0等于ip link ls dev eth0。我们将在后面的详细介绍每个命令的使用，命令的默认参数将使用default标出。</p>
+<h3 id="ip-错误"><a href="#ip-错误" class="headerlink" title="ip 错误"></a>ip 错误</h3><p>　　ip的所有操作都是原子操作。例如，如果ip执行失败，它不会修改系统的任何东西，ip link command例外，它会修改某些设备参数。</p>
+<h2 id="举例详解"><a href="#举例详解" class="headerlink" title="举例详解"></a>举例详解</h2><h3 id="ip-link–配置网络设备"><a href="#ip-link–配置网络设备" class="headerlink" title="ip link–配置网络设备"></a>ip link–配置网络设备</h3><p>对象link由网络设备，对应的命令显示以及设备的状态变化组成。命令set和 show(或者list)</p>
+<h4 id="ip-link-set–改变设备的属性"><a href="#ip-link-set–改变设备的属性" class="headerlink" title="ip link set–改变设备的属性"></a>ip link set–改变设备的属性</h4><p>缩写：set、s</p>
+<pre><code>ip link set dev eth0 up arp on/off
+</code></pre><h4 id="ip-link-show–显示设备属性"><a href="#ip-link-show–显示设备属性" class="headerlink" title="ip link show–显示设备属性"></a>ip link show–显示设备属性</h4><p>缩写：show、list、lst、sh、ls、l<br>参数<br>dev NAME(default)NAME指定网络设备名称，例如：eth0。如果省略了这个参数，所有的设备属性就都会被列出。up只显示处于活动状态网络接 口的信息。</p>
+<pre><code>ip link show up
+</code></pre><p>或</p>
+<pre><code>ip l ls up
+</code></pre><h4 id="统计信息"><a href="#统计信息" class="headerlink" title="统计信息"></a>统计信息</h4><p>　　使用-statistics选项，ip命令会打印出网络接口的统计信息，例如：
+　　</p>
+<pre><code>ip -s link ls eth0
+</code></pre><h3 id="ip-address–协议地址管理"><a href="#ip-address–协议地址管理" class="headerlink" title="ip address–协议地址管理"></a>ip address–协议地址管理</h3><p>缩写 address、addr、a<br>对象 这里的地址是绑定到网络设备上的协议 (IP或者IPv6)地址。每个网络设备至少应该有一个协议地址。而且，一个网络设备可以绑定多个协议地址。<br>ip addr命令能够显示网络设备的协议地址及其性质，添加新的地址，删除旧的地址。命令add、delete、flush和show(或者 list)</p>
+<h4 id="ip-address-add–添加一个新的协议地址"><a href="#ip-address-add–添加一个新的协议地址" class="headerlink" title="ip address add–添加一个新的协议地址"></a>ip address add–添加一个新的协议地址</h4><pre><code>ip addr add local 192.168.1.1/24
+</code></pre><p>在以太网接口eth0上增加一个地址10.0.0.1，掩码长度为24位(155.155.155.0)，标准广播地址，标签为 eth0:Alias：<br><code>#ip addr add 10.0.0.1/24 brd + dev eth0 label eth0:Alias</code></p>
+<p>scope SCOPE_VALUE(注2) 设置地址的有效范围，它用于内核为数据包设置源地址。有效的范围在/etc/iproute2/tr_scopes文件列 出，系统预先设定了一些范围值：</p>
+<ul>
+<li>global 这个地址全局有效。</li>
+<li>site 这个地址是局部连接，也就是只有目标地址是这个设备地址时，才有效。</li>
+<li>site (只适用于IPv6)地址在站点内部有效。</li>
+<li>host 地址在主机内部有效。<h4 id="ip-address-delete–删除一个协议地址"><a href="#ip-address-delete–删除一个协议地址" class="headerlink" title="ip address delete–删除一个协议地址"></a>ip address delete–删除一个协议地址</h4>这个命令的参数 和ip addr add命令的参数一致。其中，只有设备名是必需的参数，其它都是可选的。如果没有给定除设备名之外的其它参数，ip就会删除这个设备的第一个地址。</li>
+</ul>
+<h4 id="ip-address-show–显示协议地址"><a href="#ip-address-show–显示协议地址" class="headerlink" title="ip address show–显示协议地址"></a>ip address show–显示协议地址</h4><p>与ip link show 一样</p>
+<h4 id="ip-address-flush–清除协议地址"><a href="#ip-address-flush–清除协议地址" class="headerlink" title="ip address flush–清除协议地址"></a>ip address flush–清除协议地址</h4><p>缩写：flush、f<br>简介<br>　　这个命令可以清除按照某种条件选 择的协议地址。<br>参数<br>　　这个命令的参数和ip address show相同。唯一的区别是，如果不给定参数它什么都不会做。<br>警告<br>　　这个命令(和后面讨论的所有flush命令)非常危险。如果出现错误，将无法恢复，它会清除被操作的地址。<br>　　删除属于私网10.0.0.0/8的所有地址：<br><code>netadm@amber:~ # ip -s -s a f to 10/8</code><br>取消所有以太网卡的IP地址</p>
+<pre><code>netadm@amber:~ # ip -4 addr flush label &quot;eth0&quot;
+</code></pre><h4 id="statistics-选项"><a href="#statistics-选项" class="headerlink" title="statistics 选项"></a>statistics 选项</h4><p>同ip Link</p>
+<h3 id="ip-neighbour"><a href="#ip-neighbour" class="headerlink" title="ip neighbour"></a>ip neighbour</h3><p>缩写 neighbour、neighbor、neigh、n<br>对象 邻接(neighbour)对象实现同一网段协议地址和链路层地址的绑定。在内核中，这些条目被组织到表中。IPv4的相邻表也被叫做ARP 表。<br>ip neighbour命令支持对条目及其属性的显示、添加和删除。命令add、change、replace、delete、fulsh、 show(或者list)<br>此处不进行详解</p>
+<h3 id="ip-router-路由表管理"><a href="#ip-router-路由表管理" class="headerlink" title="ip router .路由表管理"></a>ip router .路由表管理</h3><p>　路由条目保存在内核的路由表中，它们包含寻找到其它网络节点的路径信息。路由表条目都包括一对网络地址/掩码长度以及可选的TOS值等信息。 如果数据包目的地址位于属于路由条目的的范围，以及路由的TOS等于0或者等于数据包的TOS，它就匹配路由条目。如果一个数据包匹配多个路由条目，系统 内核将按照以下规则决定选择哪个路由：<br>　<br>范围最小的优先匹配，较大的放弃；<br>路由TOS等于数据包TOS的匹配，不等于的放弃；<br>如果经过上面两步的选择，还有数个路由，就选择优先值最高的路由；<br>如果还有数个路由可供选择，就重复进行第一步。<br>路由条目提供IP数据包投递所需的路由信息、数据(例如：输出设备、下一跳的路由器)和一些可选属性(例如：路径的最大传输单元MTU或者源 地址等)。这些属性将在后面的章节详细介绍。 </p>
+<h4 id="ip-route-add"><a href="#ip-route-add" class="headerlink" title="ip route add"></a>ip route add</h4><p>设置到网络10.0.0/24的路由经过网关193.233.7.65</p>
+<pre><code>ip route add 10.0.0/24 via 193.233.7.65
+</code></pre><p>修改到网络10.0.0/24的直接路由，使其经过设备dummy</p>
+<pre><code>ip route chg 10.0.0/24 dev dummy
+</code></pre><p>加入缺省多路径路由，让ppp0和ppp1分担负载(注意：scope值并非必需，它只不过是告诉内核，这个路由要经过网关而不是直连 的。实际上，如果你知道远程端点的地址，使用via参数来设置就更好了)。</p>
+<pre><code>ip route add default scope global nexthop dev ppp0
+                                  nexthop dev ppp1
+</code></pre><p>设置NAT路由。在转发来自192.203.80.144的数据包之前，先进行网络地址转换，把这个地址转换为 193.233.7.83（回来的转换将会在后面的章节路由策略中介绍）。</p>
+<pre><code>ip route add nat 192.203.80.142 via 193.233.7.83
+</code></pre><h4 id="ip-route-delete–-删除路由"><a href="#ip-route-delete–-删除路由" class="headerlink" title="ip route delete– 删除路由"></a>ip route delete– 删除路由</h4><p>　ip route del使用和ip route add相同的参数，不过语法稍有不同。这个命令使用关键词（to、tos、preference和table）选择要删除的路由。<strong>如果命令中使用 了可选属性，ip命令会校验这个属性和要删除的路由是否一致；如果没有给定关键词或者属性不一致，ip route del会执行失败。</strong> </p>
+<p>删除上一节命令加入的多路径路由</p>
+<pre><code>ip route del default scope global nexthop dev ppp0
+                                  nexthop dev ppp1
+</code></pre><h4 id="ip-route-get-–-获得单个路由"><a href="#ip-route-get-–-获得单个路由" class="headerlink" title="ip route get – 获得单个路由"></a>ip route get – 获得单个路由</h4><p>使用这个命令可以获得到达目的地址的一个路由以及它的确切内容。<br>参数 to ADDRESS(default)目标地址 from ADDRESS源地址 tos TOS或者dsfield TOS服务类型 iif NAME数据包进来的设备 oif NAME数据包出去的设备 connectedip route get命令至少要有参数to ADDRESS。使用connected参数，如果没有给出源地址(from ADDRESS)，ip就会重新在路由表中查询能够到达目的地址的源地址，给出获得的第一个源地址到目的地址的路由。如果使用了策略路由，会有所 不同。<br>　　ip route get命令和ip route show命令执行的操作是不同的。ip route show命令只是显示现有的路由，而ip route get命令在必要时会派生出新的路由。<br>搜索目的地址是193.233.7.82，来自193.233.7.82，从eth0设备到达的路由（这条命令会产生一条非常有意思的 路由，这是一条到193.233.7.82的回环路由）</p>
+<pre><code>kuznet@amber:~ $ ip r g 193.233.7.82 from 193.233.7.82 iif eth0
+193.233.7.82 from 193.233.7.82 dev eth0  src 193.233.7.65 
+  realms inr.ac/inr.ac 
+    cache   mtu 1500 rtt 300 iif eth0
+</code></pre><h3 id="ip-route-–-路由策略数据库管理命令"><a href="#ip-route-–-路由策略数据库管理命令" class="headerlink" title="ip route – 路由策略数据库管理命令"></a>ip route – 路由策略数据库管理命令</h3><p>略</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/09/JAVA-类型/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JAVA:类型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/06/SSD装ubuntu及优化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SSD装ubuntu及优化</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Linux-IP-命令使用详解" data-title="Linux IP 命令使用详解" data-url="http://yoursite.com/2015/11/09/Linux-IP-命令使用详解/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

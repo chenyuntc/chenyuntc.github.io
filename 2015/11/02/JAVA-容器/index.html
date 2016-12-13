@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JAVA:容器 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java中有一些对象被称为容器(container)。容器中可以包含多个对象，每个对象称为容器中的一个元素。容器是用对象封装的数据结构(data structure)。123456789101112ArrayCollection ├-List │ ├-LinkedList │ ├-ArrayList │ └-Vector │　 └Stack └-Set Map ├-Hashtable ├-Hash">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA:容器">
+<meta property="og:url" content="http://yoursite.com/2015/11/02/JAVA-容器/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Java中有一些对象被称为容器(container)。容器中可以包含多个对象，每个对象称为容器中的一个元素。容器是用对象封装的数据结构(data structure)。123456789101112ArrayCollection ├-List │ ├-LinkedList │ ├-ArrayList │ └-Vector │　 └Stack └-Set Map ├-Hashtable ├-Hash">
+<meta property="og:image" content="http://pic002.cnblogs.com/images/2012/305856/2012062417074359.jpg">
+<meta property="og:updated_time" content="2015-12-01T08:12:23.687Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA:容器">
+<meta name="twitter:description" content="Java中有一些对象被称为容器(container)。容器中可以包含多个对象，每个对象称为容器中的一个元素。容器是用对象封装的数据结构(data structure)。123456789101112ArrayCollection ├-List │ ├-LinkedList │ ├-ArrayList │ └-Vector │　 └Stack └-Set Map ├-Hashtable ├-Hash">
+<meta name="twitter:image" content="http://pic002.cnblogs.com/images/2012/305856/2012062417074359.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-JAVA-容器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/02/JAVA-容器/" class="article-date">
+  	<time datetime="2015-11-02T08:46:19.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JAVA:容器
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java中有一些对象被称为<code>容器(container)</code>。<em>容器中可以包含多个对象，每个对象称为容器中的一个<strong>元素</strong></em>。容器是用对象封装的数据结构(data structure)。<br><img src="http://pic002.cnblogs.com/images/2012/305856/2012062417074359.jpg" alt="java容器"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Array</div><div class="line">Collection </div><div class="line">├-List </div><div class="line">│ ├-LinkedList </div><div class="line">│ ├-ArrayList </div><div class="line">│ └-Vector </div><div class="line">│　 └Stack </div><div class="line">└-Set </div><div class="line">Map </div><div class="line">├-Hashtable </div><div class="line">├-HashMap </div><div class="line">└-WeakHashMap</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组(array)是最常见的数据结构。数组是相同类型元素的有序集合，并有固定的大小(可容纳固定数目的元素)。数组可以根据下标(index)来随机存取(random access)元素。在内存中，数组通常是一段连续的存储单元。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Human[] persons = <span class="keyword">new</span> Human[<span class="number">2</span>];   </div><div class="line">String[] names = &#123;<span class="string">"Tom"</span>, <span class="string">"Jerry"</span>, <span class="string">"Luffy"</span>&#125;;</div></pre></td></tr></table></figure></p>
+<p>在说明类型时</p>
+<ol>
+<li>在类型说明(Human)后面增加一个[]，来说明是一个数组。</li>
+<li>使用new创建容器时，需要说明数组的大小。</li>
+<li>我们可以使用 数组名[下标] 的方式来调用某个元素。</li>
+<li>我们可以逐个的初始化数组的元素，</li>
+<li>也可以在声明的同时使用{}初始化数组。</li>
+</ol>
+<p>对于非基本类型的数组，比如Human[]，数组中存储的是对象的引用。</p>
+<p> 我们可以调用System.arraycopy()方法来有效的复制数组</p>
+<h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><p>Collection只是一个<strong>接口(Interface), 不是类(Class)</strong><br>表(List)和集合(Set)是java.util中定义的两个接口(interface)。这两个接口都继承自Collection接口。通过实施接口，我们可以获得相应的容器。接口不能实例化, 必须通过类实施(implements   )接口才可以. </p>
+<p>Collection是最基本的集合接口，一个Collection代表一组Object，即Collection的元素（Elements）。一些 Collection允许相同的元素而另一些不行。一些能排序而另一些不行。Java SDK不提供直接继承自Collection的类，Java SDK提供的类都是继承自Collection的“子接口”如List和Set<br>我们之前都是使用类(class)来说明引用的类型。事实上，我们也可以用接口(interface)来说明引用的类型。<strong>该类型引用所指向的对象必须实施了该接口。</strong></p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>List是有序的元素集合，所以可以使用下标来说明元素的位置。集合中的元素可以相等;<br>List主要分成两类</p>
+<ul>
+<li>LinkedList实现了List接口，允许null元素。此外LinkedList提供额外的get，remove，insert方法在 LinkedList的首部或尾部。这些操作使LinkedList可被用作堆栈（stack），队列（queue）或双向队列（deque）。     <code>List&lt;Integer&gt; l1 = new ArrayList&lt;Integer&gt;();</code></li>
+<li>　ArrayList实现了可变大小的数组。它允许所有元素，包括null。ArrayList没有同步。 size，isEmpty，get，set方法运行时间为常数。但是add方法开销为分摊的常数，添加n个元素需要O(n)的时间。其他的方法运行时间为线性。<br>　　每个ArrayList实例都有一个容量（Capacity），即用于存储元素的数组的大小。这个容量可随着不断添加新元素而自动增加，但是增长算法并没有定义。当需要插入大量元素时，在插入前可以调用ensureCapacity方法来增加ArrayList的容量以提高插入效率。 </li>
+</ul>
+<h3 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h3><p>　　Set是一种不包含重复的元素的Collection，即任意的两个元素e1和e2都有e1.equals(e2)=false，Set最多有一个null元素。<br>　　很明显，Set的构造函数有一个约束条件，传入的Collection参数不能包含重复的元素。<br>　　请注意：必须小心操作可变对象（Mutable Object）。如果一个Set中的可变元素改变了自身状态导致Object.equals(Object)=true将导致一些问题。<br>　　<strong>常用的Set是HashSet</strong><br>    <code>Set&lt;Integer&gt; s1 = new HashSet&lt;Integer&gt;();</code><br>HashSet利用Hash函数进行了查询效率上的优化，其<code>contain（）</code>方法经常被使用，以用于判断相关元素是否已经被添加过。</p>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p>Map是键值对的集合。Map中的每个元素是一个键值对，即一个键(key)和它对应的对象值(value)。对于Map容器，我们可以通过键来找到对应的对象。</p>
+<pre><code>Map&lt;String, Integer&gt; m1 = new HashMap&lt;String, Integer&gt;();
+</code></pre><p>Map中提供了产生Collection的方法，以支持方便的对键值对的值域进行操作。</p>
+<pre><code>Collection&lt;V&gt; values()   Returns:a collection view of the values contained in this map.
+</code></pre><h2 id="接口和实施分离"><a href="#接口和实施分离" class="headerlink" title="接口和实施分离"></a>接口和实施分离</h2><p>Java中，容器的接口与实施分离。<br>    <code>Set&lt;Integer&gt; s1 = new HashSet&lt;Integer&gt;();</code><br>接口为我们提供了合法的操作。在效果层面上看，不同的实施都有相同的效果。当然，不同的情境下，实施的细节将决定运行效率。</p>
+<p>由于多态的缘故, s1在执行的时候还是会调用HashSet的对象方法</p>
+<h2 id="Collection的iterator"><a href="#Collection的iterator" class="headerlink" title="Collection的iterator"></a>Collection的iterator</h2><h3 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h3><h4 id="Interator"><a href="#Interator" class="headerlink" title="Interator"></a>Interator</h4><p>我们经常用到遍历容器对象的功能，用于访问、或者删除等，使用迭代器和多态可以在不使用容器真实类型的情况下遍历容器对象。</p>
+<p>迭代器是一个对象，它的工作是遍历并选择序列中的对象，而客户端程序员不必知道或关心该序列底层的结构。此外，迭代器通常被称为轻量级对象：创建它的代价小。因此，经常可以见到对迭代器有些奇怪的限制；例如，Java的Iterator只能单向移动，这个Iterator只能用来：</p>
+<ol>
+<li>使用方法iterator()要求容器返回一个Iterator。Iterator将准备好返回序列的第一个元素。</li>
+<li>使用next()获得序列中的下一个元素。</li>
+<li>使用hasNext()检查序列中是否还有元素。</li>
+<li>使用remove()将迭代器新近返回的元素删除。</li>
+</ol>
+<p>Iterator仅用于遍历集合，Iterator本身并不提供盛装对象的能力，如果需要创建Iterator对象，则必须有一个被迭代的集合。</p>
+<p>Iterator必须依附于Collection对象，有一个Iterator对象，则必然有一个怀之关联的Collection对象。Iterator提供了2个方法来迭代访问Collection集合里的元素。</p>
+<p>结论：当使用Iterator对集合元素进行迭代时，Iterator并不是把集合元素本身传给了迭代变量，而是把集合元素的值传给了迭代变量，所以修改迭代变量的值对集合元素本身没有任何改变。</p>
+<h4 id="ListIterator"><a href="#ListIterator" class="headerlink" title="ListIterator"></a>ListIterator</h4><p>ListIterator是一个更加强大的Iterator的子类型，它只能用于各种List类的访问。尽管Iterator只能向前移动，但是ListIterator可以双向移动。它还可以产生相对于迭代器在列表中指向的当前位置的前一个和后一个元素的索引，并且可以使用set()方法替换它访问过的最后一个元素。你可以通过调用listIterator()方法产生一个指向List开始处的ListInterator，并且还可以通过调用listInterator(n)方法创建一个一开始就指向列表索引为n的元素处的ListIterator。</p>
+<p>不论Collection的实际类型如何，它都支持一个iterator()的方法，该方法返回一个迭代子，使用该迭代子即可逐一访问Collection中每一个元素。典型的用法如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">　　　　Iterator it = collection.iterator(); <span class="comment">// 获得一个迭代子 </span></div><div class="line">　　　　<span class="keyword">while</span>(it.hasNext()) &#123; </div><div class="line">　　　　　　Object obj = it.next(); <span class="comment">// 得到下一个元素 </span></div><div class="line">　　　　&#125;</div></pre></td></tr></table></figure></p>
+<p>此外不同的容器还涉及同步和异步的信息<br>详情参考 <a href="http://www.cnblogs.com/dolphin0520/p/3933404.html" target="_blank" rel="external">同步容器</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/02/JAVA-IO详解/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JAVA:IO详解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/02/JAVA-内存管理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JAVA:内存管理</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JAVA-容器" data-title="JAVA:容器" data-url="http://yoursite.com/2015/11/02/JAVA-容器/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

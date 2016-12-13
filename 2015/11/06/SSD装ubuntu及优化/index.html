@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SSD装ubuntu及优化 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="憋了好久终于趁着双十一去京东买了块东芝的固态硬盘（240G）， 然后把旧的那块硬盘给丢到一边，尽情享受SSD带来的极速体验
+装系统我的计划是单系统， 放弃一直以来的双系统。SSD一个很重要的概念就是4K对齐， 这个对linux来说根本不是问题， 在用U盘装系统时，选择自己分区， 自动会4K对齐。 至于ahck这个一般也是默认开启的， 自己开机的时候去bios看一下。这里要注意， 装系统时要选择自己">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSD装ubuntu及优化">
+<meta property="og:url" content="http://yoursite.com/2015/11/06/SSD装ubuntu及优化/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="憋了好久终于趁着双十一去京东买了块东芝的固态硬盘（240G）， 然后把旧的那块硬盘给丢到一边，尽情享受SSD带来的极速体验
+装系统我的计划是单系统， 放弃一直以来的双系统。SSD一个很重要的概念就是4K对齐， 这个对linux来说根本不是问题， 在用U盘装系统时，选择自己分区， 自动会4K对齐。 至于ahck这个一般也是默认开启的， 自己开机的时候去bios看一下。这里要注意， 装系统时要选择自己">
+<meta property="og:updated_time" content="2015-12-04T08:00:56.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSD装ubuntu及优化">
+<meta name="twitter:description" content="憋了好久终于趁着双十一去京东买了块东芝的固态硬盘（240G）， 然后把旧的那块硬盘给丢到一边，尽情享受SSD带来的极速体验
+装系统我的计划是单系统， 放弃一直以来的双系统。SSD一个很重要的概念就是4K对齐， 这个对linux来说根本不是问题， 在用U盘装系统时，选择自己分区， 自动会4K对齐。 至于ahck这个一般也是默认开启的， 自己开机的时候去bios看一下。这里要注意， 装系统时要选择自己">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-SSD装ubuntu及优化" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/06/SSD装ubuntu及优化/" class="article-date">
+  	<time datetime="2015-11-06T11:44:27.000Z" itemprop="datePublished">2015-11-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SSD装ubuntu及优化
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>憋了好久终于趁着双十一去京东买了块东芝的固态硬盘（240G）， 然后把旧的那块硬盘给丢到一边，尽情享受SSD带来的极速体验</p>
+<h2 id="装系统"><a href="#装系统" class="headerlink" title="装系统"></a>装系统</h2><p>我的计划是单系统， 放弃一直以来的双系统。<br>SSD一个很重要的概念就是<code>4K</code>对齐， 这个对linux来说根本不是问题， 在用U盘装系统时，选择自己分区， 自动会4K对齐。 至于<code>ahck</code>这个一般也是默认开启的， 自己开机的时候去bios看一下。<br>这里要注意， 装系统时要选择自己分区， 不然ubuntu会自动的只给你分了一个swap的交换空间， 然后全部的空间都分配给<code>/</code>， 这样使用linux很不应该， 因为这样重装系统是很麻烦<br><a id="more"></a></p>
+<h2 id="硬盘优化"><a href="#硬盘优化" class="headerlink" title="硬盘优化"></a>硬盘优化</h2><p>下面是我的<code>/etc/fstab</code>的配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">UUID=ca27d8c3-a572-4c81-9d7a-ffcbcd3afa12 /               ext4   noatime,discard,errors=remount-ro 0       1</div><div class="line"># /boot was on /dev/sda1 during installation</div><div class="line">UUID=ecccb054-de0c-4a90-b2ef-1b11d72cd1b0 /boot           ext4    noatime,discard,defaults        0       2</div><div class="line"># /home was on /dev/sda5 during installation</div><div class="line">UUID=eccb1720-0af7-43bc-8e63-47d96dec201a /home           ext4   noatime,discard,defaults        0       2</div><div class="line"># /storage was on /dev/sda</div><div class="line">UUID=77a63891-de5c-4846-9b12-d704177179de /media/cy/storage ext4 noatime,discard,defaults 0 2</div><div class="line"></div><div class="line"># swap was on /dev/sda6 during installation</div><div class="line">UUID=15c56286-4568-4b67-b248-cf243604a8bb none            swap    sw              0       0</div><div class="line"></div><div class="line">tmpfs   /tmp            tmpfs   defaults,noatime,mode=1777      0       0</div><div class="line">tmpfs   /var/tmp        tmpfs   defaults,noatime,mode=1777      0       0</div><div class="line">tmpfs   /var/log        tmpfs   defaults,noatime,mode=1777      0       0</div></pre></td></tr></table></figure></p>
+<p>主要有两点</p>
+<ul>
+<li><code>noatime,discard</code>参数， 分别代表使用noatime和开启trim， 可以减少对sshd的写操作， 提高硬盘的寿命</li>
+<li>把常写的文件的/tmp 分区等挂载到内存上， 减少对硬盘的读写， 而且这样做速度比固态硬盘还快， 要注意<code>/var/log</code>这个是很多软件的日志记录， 一旦关机里面的日志旧都没了， 所以千万确定你是否不要相关日志信息再决定是否把它放到内存中 。另外要确保你的内存比较大， 像我有8Gb内存， 完全能够接受这个</li>
+</ul>
+<p>此外还有交换空间， 交换空间相当于第二块内存，也会频繁读取，极易损坏， 最好就是把他挂载到普通的机械硬盘上， 然而既然挂载到了SSD上了， 还是应该想法子减少读写，从而提高寿命。 </p>
+<p>  在<code>/etc/sysctl.cnf</code>末尾加入<code>vm.swappiness=1</code>， 代表着尽量不使用交换空间， 除非是内存已经用完了。 </p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="写入测试"><a href="#写入测试" class="headerlink" title="写入测试"></a>写入测试</h3><p>利用强大的<code>dd</code>命令：</p>
+<pre><code>dd if=/dev/zero of=./largefile bs=1M count=1024
+</code></pre><p>代表着写入 ./largefile 块为1M， 共有1024块</p>
+<p>的大小实际上是相当大的。你可以尝试用更小的尺寸如 64K 甚至是 4K 的。</p>
+<h3 id="读取速度"><a href="#读取速度" class="headerlink" title="读取速度"></a>读取速度</h3><p>现在读回这个文件。但是，得首先清除内存的缓存，以确保这个文件确实是从驱动盘读取的。</p>
+<p>运行下面的命令来清除内存缓存</p>
+<pre><code>$ sudo sh -c &quot;sync &amp;&amp; echo 3 &gt; /proc/sys/vm/drop_caches&quot;
+</code></pre><p>现在读取此文件</p>
+<pre><code>$ dd if=./largefile of=/dev/null bs=4k
+</code></pre><p>@author <a href="http://xight.top" target="_blank" rel="external">chenyun</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/09/Linux-IP-命令使用详解/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Linux IP 命令使用详解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/02/JAVA-IO详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JAVA:IO详解</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="SSD装ubuntu及优化" data-title="SSD装ubuntu及优化" data-url="http://yoursite.com/2015/11/06/SSD装ubuntu及优化/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

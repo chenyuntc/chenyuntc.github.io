@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python-面向对象高级编程 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能。我们会讨论多重继承、定制类、元类等概念。
+动态绑定动态绑定属性直接1234&amp;gt;&amp;gt;&amp;gt; s = Student()&amp;gt;&amp;gt;&amp;gt; s.name = &apos;Michael&apos; # 动态给实例绑定一个属性&amp;gt;&amp;gt;&amp;gt; print(s.name)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python-面向对象高级编程">
+<meta property="og:url" content="http://yoursite.com/2015/08/10/python-面向对象高级编程/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能。我们会讨论多重继承、定制类、元类等概念。
+动态绑定动态绑定属性直接1234&amp;gt;&amp;gt;&amp;gt; s = Student()&amp;gt;&amp;gt;&amp;gt; s.name = &apos;Michael&apos; # 动态给实例绑定一个属性&amp;gt;&amp;gt;&amp;gt; print(s.name)">
+<meta property="og:updated_time" content="2016-07-15T10:59:21.567Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python-面向对象高级编程">
+<meta name="twitter:description" content="数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能。我们会讨论多重继承、定制类、元类等概念。
+动态绑定动态绑定属性直接1234&amp;gt;&amp;gt;&amp;gt; s = Student()&amp;gt;&amp;gt;&amp;gt; s.name = &apos;Michael&apos; # 动态给实例绑定一个属性&amp;gt;&amp;gt;&amp;gt; print(s.name)">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/IO编程/" style="font-size: 11.43px;">IO编程</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/deepLearning/" style="font-size: 10px;">deepLearning</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 12.86px;">git</a> <a href="/tags/java/" style="font-size: 14.29px;">java</a> <a href="/tags/linux/" style="font-size: 18.57px;">linux</a> <a href="/tags/machineLearning/" style="font-size: 10px;">machineLearning</a> <a href="/tags/markdown/" style="font-size: 12.86px;">markdown</a> <a href="/tags/math/" style="font-size: 12.86px;">math</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 11.43px;">pandas</a> <a href="/tags/pandoc/" style="font-size: 10px;">pandoc</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/spark/" style="font-size: 10px;">spark</a> <a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/内存管理/" style="font-size: 11.43px;">内存管理</a> <a href="/tags/函数式编程/" style="font-size: 15.71px;">函数式编程</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/多进程/" style="font-size: 10px;">多进程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 17.14px;">机器学习</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面向对象编程/" style="font-size: 11.43px;">面向对象编程</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/vamei">vamei博客园</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">亦正亦邪</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenyuntc" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cloudfall" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:i@knew.be" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="python-python-面向对象高级编程" class="article article-type-python" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/10/python-面向对象高级编程/" class="article-date">
+  	<time datetime="2015-08-10T13:45:29.000Z" itemprop="datePublished">2015-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python-面向对象高级编程
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象编程/">面向对象编程</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数据封装、继承和多态只是面向对象程序设计中最基础的3个概念。在Python中，面向对象还有很多高级特性，允许我们写出非常强大的功能。<br>我们会讨论多重继承、定制类、元类等概念。</p>
+<h2 id="动态绑定"><a href="#动态绑定" class="headerlink" title="动态绑定"></a>动态绑定</h2><h3 id="动态绑定属性"><a href="#动态绑定属性" class="headerlink" title="动态绑定属性"></a>动态绑定属性</h3><p>直接<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = Student()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s.name = <span class="string">'Michael'</span> <span class="comment"># 动态给实例绑定一个属性</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(s.name)</div><div class="line">Michael</div></pre></td></tr></table></figure></p>
+<h3 id="动态绑定方法"><a href="#动态绑定方法" class="headerlink" title="动态绑定方法"></a>动态绑定方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">set_age</span><span class="params">(self, age)</span>:</span> <span class="comment"># 定义一个函数作为实例方法</span></div><div class="line"><span class="meta">... </span>    self.age = age</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> types <span class="keyword">import</span> MethodType</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s.set_age = MethodType(set_age, s) <span class="comment"># 给实例绑定一个方法</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s.set_age(<span class="number">25</span>) <span class="comment"># 调用实例方法</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s.age <span class="comment"># 测试结果</span></div><div class="line"><span class="number">25</span></div></pre></td></tr></table></figure>
+<p>为了给所有实例都绑定方法，可以给class绑定方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>Student.set_score = MethodType(set_score, Student)</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="slots"><a href="#slots" class="headerlink" title="__slots__"></a>__slots__</h3><p>但是，如果我们想要限制实例的属性怎么办？比如，只允许对Student实例添加name和age属性。</p>
+<p>为了达到限制的目的，Python允许在定义class的时候，定义一个特殊的<strong>slots</strong>变量，来限制该class实例能添加的属性：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line">    __slots__ = (<span class="string">'name'</span>, <span class="string">'age'</span>) <span class="comment"># 用tuple定义允许绑定的属性名称</span></div></pre></td></tr></table></figure></p>
+<p>使用<code>__slots__</code>要注意<code>__slots__</code>定义的属性仅对当前类实例起作用，对继承的子类是不起作用的：除非在子类中也定义<code>__slots__</code>，这样，子类实例允许定义的属性就是自身的<code>__slots__</code>加上父类的<code>__slots__</code>。</p>
+<h3 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h3><p>有没有既能检查参数，又可以用类似属性这样简单的方式来访问类的变量呢？对于追求完美的Python程序员来说，这是必须要做到的！</p>
+<p>还记得装饰器（decorator）可以给函数动态加上功能吗？对于类的方法，装饰器一样起作用。Python内置的<code>@property</code>装饰器就是负责把一个方法变成属性调用的：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line"><span class="meta">    @property</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self._score</div><div class="line"></div><div class="line"><span class="meta">    @score.setter</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self, value)</span>:</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> isinstance(value, int):</div><div class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'score must be an integer!'</span>)</div><div class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span> <span class="keyword">or</span> value &gt; <span class="number">100</span>:</div><div class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'score must between 0 ~ 100!'</span>)</div><div class="line">        self._score = value</div></pre></td></tr></table></figure></p>
+<p><code>@property</code>的实现比较复杂，我们先考察如何使用。把一个<code>getter</code>方法变成属性，只需要加上<code>@property</code>就可以了，此时，<code>@property</code>本身又创建了另一个装饰器<code>@score.setter</code>，负责把一个<code>setter</code>方法变成属性赋值，于是，我们就拥有一个可控的属性操作：<br>注意到这个神奇的@property，我们在对实例属性操作的时候，就知道该属性很可能不是直接暴露的，而是通过getter和setter方法来实现的。</p>
+<p><strong>还可以定义只读属性，只定义getter方法，不定义setter方法就是一个只读属性：</strong></p>
+<h2 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bat</span><span class="params">(Mammal, Flyable)</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
+<p>在设计类的继承关系时，通常，主线都是单一继承下来的，例如，Ostrich继承自Bird。但是，如果需要“混入”额外的功能，通过多重继承就可以实现，比如，让Ostrich除了继承自Bird外，再同时继承Runnable。这种设计通常称之为MixIn。</p>
+<h2 id="定制类"><a href="#定制类" class="headerlink" title="定制类"></a>定制类</h2><p>看到类似<code>__slots__</code>这种形如<code>__xxx__</code>的变量或者函数名就要注意，这些在Python中是有特殊用途的。</p>
+<p><code>__slots__</code>我们已经知道怎么用了，<code>__len__</code>()方法我们也知道是为了能让class作用于len()函数。</p>
+<p>除此之外，Python的class中还有许多这样有特殊用途的函数，可以帮助我们定制类</p>
+<h3 id="str"><a href="#str" class="headerlink" title="__str__"></a>__str__</h3><p>print 某一个类的时候自动调用str()<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></div><div class="line"><span class="meta">... </span>        self.name = name</div><div class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></div><div class="line"><span class="meta">... </span>        <span class="keyword">return</span> <span class="string">'Student object (name: %s)'</span> % self.name</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(Student(<span class="string">'Michael'</span>))</div><div class="line">Student object (name: Michael)</div></pre></td></tr></table></figure></p>
+<p> 直接显示变量调用的不是<code>__str__</code>()，而是<code>__repr__</code>()，两者的区别是<code>__str__</code>()返回用户看到的字符串，而<code>__repr__</code>()返回程序开发者看到的字符串，也就是说，<code>__repr__</code>()是为调试服务的。<br> 解决办法是再定义一个<strong>repr</strong>()。但是通常<strong>str</strong>()和<strong>repr</strong>()代码都是一样的，所以，有个偷懒的写法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></div><div class="line">        self.name = name</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> <span class="string">'Student object (name=%s)'</span> % self.name</div><div class="line">    __repr__ = __str__</div></pre></td></tr></table></figure></p>
+<h3 id="iter和-next"><a href="#iter和-next" class="headerlink" title="__iter和\next__"></a>__iter<strong>和\</strong>next__</h3><p>如果一个类想被用于for … in循环，类似list或tuple那样，就必须实现一个<code>__iter__()</code>方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的<code>__next__()</code>方法拿到循环的下一个值，直到遇到StopIteration错误时退出循环。</p>
+<p>我们以斐波那契数列为例，写一个Fib类，可以作用于for循环：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fib</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.a, self.b = <span class="number">0</span>, <span class="number">1</span> <span class="comment"># 初始化两个计数器a，b</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self <span class="comment"># 实例本身就是迭代对象，故返回自己</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></div><div class="line">        self.a, self.b = self.b, self.a + self.b <span class="comment"># 计算下一个值</span></div><div class="line">        <span class="keyword">if</span> self.a &gt; <span class="number">100000</span>: <span class="comment"># 退出循环的条件</span></div><div class="line">            <span class="keyword">raise</span> StopIteration();</div><div class="line">        <span class="keyword">return</span> self.a <span class="comment"># 返回下一个值</span></div></pre></td></tr></table></figure></p>
+<h3 id="getitem"><a href="#getitem" class="headerlink" title="__getitem__"></a>__getitem__</h3><p>Fib实例虽然能作用于for循环，看起来和list有点像，但是，把它当成list来使用还是不行 .要表现得像list那样按照下标取出元素，需要实现<code>__getitem__</code>()方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fib</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, n)</span>:</span></div><div class="line">        a, b = <span class="number">1</span>, <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(n):</div><div class="line">            a, b = b, a + b</div><div class="line">        <span class="keyword">return</span> a</div></pre></td></tr></table></figure></p>
+<p>但是list有个神奇的切片方法：</p>
+<p>对于Fib却报错。原因是<code>__getitem__</code>()传入的参数可能是一个int，也可能是一个切片对象slice，所以要做判断：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fib</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, n)</span>:</span></div><div class="line">        <span class="keyword">if</span> isinstance(n, int): <span class="comment"># n是索引</span></div><div class="line">            a, b = <span class="number">1</span>, <span class="number">1</span></div><div class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> range(n):</div><div class="line">                a, b = b, a + b</div><div class="line">            <span class="keyword">return</span> a</div><div class="line">        <span class="keyword">if</span> isinstance(n, slice): <span class="comment"># n是切片</span></div><div class="line">            start = n.start</div><div class="line">            stop = n.stop</div><div class="line">            <span class="keyword">if</span> start <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">                start = <span class="number">0</span></div><div class="line">            a, b = <span class="number">1</span>, <span class="number">1</span></div><div class="line">            L = []</div><div class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> range(stop):</div><div class="line">                <span class="keyword">if</span> x &gt;= start:</div><div class="line">                    L.append(a)</div><div class="line">                a, b = b, a + b</div><div class="line">            <span class="keyword">return</span> L</div></pre></td></tr></table></figure></p>
+<p>但是没有对step参数作处理：</p>
+<p>也没有对负数作处理，所以，要正确实现一个<code>__getitem__()</code>还是有很多工作要做的。</p>
+<p>此外，如果把对象看成dict，<code>__getitem__()</code>的参数也可能是一个可以作key的object，例如str。</p>
+<p>与之对应的是<code>__setitem__()</code>方法，把对象视作list或dict来对集合赋值。最后，还有一个<code>__delitem__()</code>方法，用于删除某个元素。</p>
+<p>总之，通过上面的方法，我们自己定义的类表现得和Python自带的list、tuple、dict没什么区别，这完全归功于动态语言的“鸭子类型”，不需要强制继承某个接口。</p>
+<h3 id="getattr"><a href="#getattr" class="headerlink" title="__getattr__"></a>__getattr__</h3><p>当调用不存在的属性时，比如score，Python解释器会试图调用<code>__getattr__(self, &#39;score&#39;)</code>来尝试获得属性 </p>
+<p>定制类</p>
+<p>阅读: 2327<br>看到类似<strong>slots</strong>这种形如<strong>xxx</strong>的变量或者函数名就要注意，这些在Python中是有特殊用途的。</p>
+<p><strong>slots</strong>我们已经知道怎么用了，<strong>len</strong>()方法我们也知道是为了能让class作用于len()函数。</p>
+<p>除此之外，Python的class中还有许多这样有特殊用途的函数，可以帮助我们定制类。</p>
+<p><strong>str</strong></p>
+<p>我们先定义一个Student类，打印一个实例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></div><div class="line"><span class="meta">... </span>        self.name = name</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(Student(<span class="string">'Michael'</span>))</div><div class="line">&lt;__main__.Student object at <span class="number">0x109afb190</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>打印出一堆<__main__.student object="" at="" 0x109afb190="">，不好看。</__main__.student></p>
+<p>怎么才能打印得好看呢？只需要定义好<strong>str</strong>()方法，返回一个好看的字符串就可以了：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></div><div class="line"><span class="meta">... </span>        self.name = name</div><div class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></div><div class="line"><span class="meta">... </span>        <span class="keyword">return</span> <span class="string">'Student object (name: %s)'</span> % self.name</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(Student(<span class="string">'Michael'</span>))</div><div class="line">Student object (name: Michael)</div></pre></td></tr></table></figure></p>
+<p>这样打印出来的实例，不但好看，而且容易看出实例内部重要的数据。</p>
+<p>但是细心的朋友会发现直接敲变量不用print，打印出来的实例还是不好看：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = Student(<span class="string">'Michael'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s</div><div class="line">&lt;__main__.Student object at <span class="number">0x109afb310</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>这是因为直接显示变量调用的不是<strong>str</strong>()，而是<strong>repr</strong>()，两者的区别是<strong>str</strong>()返回用户看到的字符串，而<strong>repr</strong>()返回程序开发者看到的字符串，也就是说，<strong>repr</strong>()是为调试服务的。</p>
+<p>解决办法是再定义一个<strong>repr</strong>()。但是通常<strong>str</strong>()和<strong>repr</strong>()代码都是一样的，所以，有个偷懒的写法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></div><div class="line">        self.name = name</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> <span class="string">'Student object (name=%s)'</span> % self.name</div><div class="line">    __repr__ = __str__</div><div class="line">__iter__</div></pre></td></tr></table></figure></p>
+<p>如果一个类想被用于for … in循环，类似list或tuple那样，就必须实现一个<strong>iter</strong>()方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的<strong>next</strong>()方法拿到循环的下一个值，直到遇到StopIteration错误时退出循环。</p>
+<p>我们以斐波那契数列为例，写一个Fib类，可以作用于for循环：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fib</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.a, self.b = <span class="number">0</span>, <span class="number">1</span> <span class="comment"># 初始化两个计数器a，b</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self <span class="comment"># 实例本身就是迭代对象，故返回自己</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></div><div class="line">        self.a, self.b = self.b, self.a + self.b <span class="comment"># 计算下一个值</span></div><div class="line">        <span class="keyword">if</span> self.a &gt; <span class="number">100000</span>: <span class="comment"># 退出循环的条件</span></div><div class="line">            <span class="keyword">raise</span> StopIteration();</div><div class="line">        <span class="keyword">return</span> self.a <span class="comment"># 返回下一个值</span></div></pre></td></tr></table></figure></p>
+<p>现在，试试把Fib实例作用于for循环：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> n <span class="keyword">in</span> Fib():</div><div class="line"><span class="meta">... </span>    print(n)</div><div class="line">...</div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">2</span></div><div class="line"><span class="number">3</span></div><div class="line"><span class="number">5</span></div><div class="line">...</div><div class="line"><span class="number">46368</span></div><div class="line"><span class="number">75025</span></div></pre></td></tr></table></figure></p>
+<p>__getitem__</p>
+<p>Fib实例虽然能作用于for循环，看起来和list有点像，但是，把它当成list来使用还是不行，比如，取第5个元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; Fib()[5]</div><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</div><div class="line">TypeError: &apos;Fib&apos; object does not support indexing</div></pre></td></tr></table></figure></p>
+<p>要表现得像list那样按照下标取出元素，需要实现<strong>getitem</strong>()方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fib</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, n)</span>:</span></div><div class="line">        a, b = <span class="number">1</span>, <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(n):</div><div class="line">            a, b = b, a + b</div><div class="line">        <span class="keyword">return</span> a</div></pre></td></tr></table></figure></p>
+<p>现在，就可以按下标访问数列的任意一项了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; f = Fib()</div><div class="line">&gt;&gt;&gt; f[0]</div><div class="line">1</div><div class="line">&gt;&gt;&gt; f[1]</div><div class="line">1</div><div class="line">&gt;&gt;&gt; f[2]</div><div class="line">2</div><div class="line">&gt;&gt;&gt; f[3]</div><div class="line">3</div><div class="line">&gt;&gt;&gt; f[10]</div><div class="line">89</div><div class="line">&gt;&gt;&gt; f[100]</div><div class="line">573147844013817084101</div></pre></td></tr></table></figure></p>
+<p>但是list有个神奇的切片方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; list(range(100))[5:10]</div><div class="line">[5, 6, 7, 8, 9]</div></pre></td></tr></table></figure></p>
+<p>对于Fib却报错。原因是<strong>getitem</strong>()传入的参数可能是一个int，也可能是一个切片对象slice，所以要做判断：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">class Fib(object):</div><div class="line">    def __getitem__(self, n):</div><div class="line">        if isinstance(n, int): # n是索引</div><div class="line">            a, b = 1, 1</div><div class="line">            for x in range(n):</div><div class="line">                a, b = b, a + b</div><div class="line">            return a</div><div class="line">        if isinstance(n, slice): # n是切片</div><div class="line">            start = n.start</div><div class="line">            stop = n.stop</div><div class="line">            if start is None:</div><div class="line">                start = 0</div><div class="line">            a, b = 1, 1</div><div class="line">            L = []</div><div class="line">            for x in range(stop):</div><div class="line">                if x &gt;= start:</div><div class="line">                    L.append(a)</div><div class="line">                a, b = b, a + b</div><div class="line">            return L</div></pre></td></tr></table></figure></p>
+<p>现在试试Fib的切片：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; f = Fib()</div><div class="line">&gt;&gt;&gt; f[0:5]</div><div class="line">[1, 1, 2, 3, 5]</div><div class="line">&gt;&gt;&gt; f[:10]</div><div class="line">[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]</div></pre></td></tr></table></figure></p>
+<p>但是没有对step参数作处理：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; f[:10:2]</div><div class="line">[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</div></pre></td></tr></table></figure></p>
+<p>也没有对负数作处理，所以，要正确实现一个<strong>getitem</strong>()还是有很多工作要做的。</p>
+<p>此外，如果把对象看成dict，<strong>getitem</strong>()的参数也可能是一个可以作key的object，例如str。</p>
+<p>与之对应的是<strong>setitem</strong>()方法，把对象视作list或dict来对集合赋值。最后，还有一个<strong>delitem</strong>()方法，用于删除某个元素。</p>
+<p>总之，通过上面的方法，我们自己定义的类表现得和Python自带的list、tuple、dict没什么区别，这完全归功于动态语言的“鸭子类型”，不需要强制继承某个接口。</p>
+<p><strong>getattr</strong></p>
+<p>正常情况下，当我们调用类的方法或属性时，如果不存在，就会报错。比如定义Student类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class Student(object):</div><div class="line"></div><div class="line">    def __init__(self):</div><div class="line">        self.name = &apos;Michael&apos;</div></pre></td></tr></table></figure></p>
+<p>调用name属性，没问题，但是，调用不存在的score属性，就有问题了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; s = Student()</div><div class="line">&gt;&gt;&gt; print(s.name)</div><div class="line">Michael</div><div class="line">&gt;&gt;&gt; print(s.score)</div><div class="line">Traceback (most recent call last):</div><div class="line">  ...</div><div class="line">AttributeError: &apos;Student&apos; object has no attribute &apos;score&apos;</div></pre></td></tr></table></figure></p>
+<p>错误信息很清楚地告诉我们，没有找到score这个attribute。</p>
+<p>要避免这个错误，除了可以加上一个score属性外，Python还有另一个机制，那就是写一个<strong>getattr</strong>()方法，动态返回一个属性。修改如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.name = <span class="string">'Michael'</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self, attr)</span>:</span></div><div class="line">        <span class="keyword">if</span> attr==<span class="string">'score'</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">99</span></div></pre></td></tr></table></figure></p>
+<p>当调用不存在的属性时，比如score，Python解释器会试图调用<strong>getattr</strong>(self, ‘score’)来尝试获得属性，这样，我们就有机会返回score的值：</p>
+<p>返回函数也是完全可以的：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self, attr)</span>:</span></div><div class="line">        <span class="keyword">if</span> attr==<span class="string">'age'</span>:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">lambda</span>: <span class="number">25</span></div></pre></td></tr></table></figure></p>
+<p>只是调用方式要变为：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>s.age()</div><div class="line"><span class="number">25</span></div></pre></td></tr></table></figure></p>
+<p>注意，只有在没有找到属性的情况下，才调用<code>__getattr__</code>，已有的属性，比如name，不会在<code>__getattr__</code>中查找。</p>
+<p>此外，注意到任意调用如s.abc都会返回None，这是因为我们定义的<code>__getattr__</code>默认返回就是<code>None</code>。要让class只响应特定的几个属性，我们就要按照约定，抛出AttributeError的错误：如果要写SDK，给每个URL对应的API都写一个方法，那得累死，而且，API一旦改动，SDK也要改。</p>
+<p>利用完全动态的<strong>getattr</strong>，我们可以写出一个链式调用：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chain</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, path=<span class="string">''</span>)</span>:</span></div><div class="line">        self._path = path</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self, path)</span>:</span></div><div class="line">        <span class="keyword">return</span> Chain(<span class="string">'%s/%s'</span> % (self._path, path))</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self._path</div><div class="line"></div><div class="line">    __repr__ = __str__</div></pre></td></tr></table></figure></p>
+<p>试试：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>Chain().status.user.timeline.list</div><div class="line"><span class="string">'/status/user/timeline/list'</span></div></pre></td></tr></table></figure></p>
+<p>这样，无论API怎么变，SDK都可以根据URL实现完全动态的调用，而且，不随API的增加而改变！</p>
+<p>还有些REST API会把参数放到URL中，比如GitHub的API：</p>
+<pre><code>GET /users/:user/repos
+</code></pre><p>调用时，需要把:user替换为实际用户名。如果我们能写出这样的链式调用：</p>
+<pre><code>Chain().users(&apos;michael&apos;).repos
+</code></pre><h3 id="call"><a href="#call" class="headerlink" title="__call__"></a>__call__</h3><p><strong>call</strong></p>
+<p>一个对象实例可以有自己的属性和方法，当我们调用实例方法时，我们用instance.method()来调用。能不能直接在实例本身上调用呢？在Python中，答案是肯定的。</p>
+<p>任何类，只需要定义一个<code>__call__()</code>方法，就可以直接对实例进行调用。请看示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></div><div class="line">        self.name = name</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self)</span>:</span></div><div class="line">        print(<span class="string">'My name is %s.'</span> % self.name)</div></pre></td></tr></table></figure></p>
+<p>调用方式如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = Student(<span class="string">'Michael'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s() <span class="comment"># self参数不要传入</span></div><div class="line">My name <span class="keyword">is</span> Michael.</div></pre></td></tr></table></figure></p>
+<p><code>__call__()</code>还可以定义参数。对实例进行直接调用就好比对一个函数进行调用一样，所以你<strong>完全可以把对象看成函数，把函数看成对象，因为这两者之间本来就没啥根本的区别</strong>。</p>
+<p>那么，怎么判断一个变量是对象还是函数呢？其实，更多的时候，我们需要判断一个对象是否能被调用，能被调用的对象就是一个Callable对象，比如函数和我们上面定义的带有<strong>call</strong>()的类实例：</p>
+<p>更多定制方法<a href="https://docs.python.org/3/reference/datamodel.html#special-method-names" target="_blank" rel="external">定制类</a></p>
+<h2 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h2><p>更好的方法是为这样的枚举类型定义一个class类型，然后，每个常量都是class的一个唯一实例。Python提供了Enum类来实现这个功能：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum</div><div class="line"></div><div class="line">Month = Enum(<span class="string">'Month'</span>, (<span class="string">'Jan'</span>, <span class="string">'Feb'</span>, <span class="string">'Mar'</span>, <span class="string">'Apr'</span>, <span class="string">'May'</span>, <span class="string">'Jun'</span>, <span class="string">'Jul'</span>, <span class="string">'Aug'</span>, <span class="string">'Sep'</span>, <span class="string">'Oct'</span>, <span class="string">'Nov'</span>, <span class="string">'Dec'</span>))</div></pre></td></tr></table></figure></p>
+<p>这样我们就获得了Month类型的枚举类，可以直接使用<code>Month.Jan</code>来引用一个常量，或者枚举它的所有成员：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> name, member <span class="keyword">in</span> Month.__members__.items():</div><div class="line">    print(name, <span class="string">'=&gt;'</span>, member, <span class="string">','</span>, member.value)</div></pre></td></tr></table></figure></p>
+<p>value属性则是自动赋给成员的int常量，默认从1开始计数。</p>
+<p>如果需要更精确地控制枚举类型，可以从Enum派生出自定义类：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</div><div class="line"><span class="meta">@unique</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Weekday</span><span class="params">(Enum)</span>:</span></div><div class="line">    Sun = <span class="number">0</span> <span class="comment"># Sun的value被设定为0</span></div><div class="line">    Mon = <span class="number">1</span></div><div class="line">    Tue = <span class="number">2</span></div><div class="line">    Wed = <span class="number">3</span></div><div class="line">    Thu = <span class="number">4</span></div><div class="line">    Fri = <span class="number">5</span></div><div class="line">    Sat = <span class="number">6</span></div></pre></td></tr></table></figure></p>
+<p>@unique装饰器可以帮助我们检查保证没有重复值。</p>
+<h2 id="元类"><a href="#元类" class="headerlink" title="元类"></a>元类</h2><h3 id="type"><a href="#type" class="headerlink" title="type()"></a>type()</h3><p>动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。<br>要创建一个class对象，type()函数依次传入3个参数：</p>
+<ol>
+<li>class的名称；</li>
+<li>继承的父类集合，注意Python支持多重继承，如果只有一个父类，别忘了tuple的单元素写法；</li>
+<li>class的方法名称与函数绑定，这里我们把函数fn绑定到方法名hello上。<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hello = type(<span class="string">'Hello'</span>, (object,), dict(hello=fn)) <span class="comment"># 创建Hello class</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>通过type()函数创建的类和直接写class是完全一样的，因为Python解释器遇到class定义时，仅仅是扫描一下class定义的语法，然后调用type()函数创建出class。</p>
+<p>正常情况下，我们都用class Xxx…来定义类，但是，type()函数也允许我们动态创建出类来，也就是说，动态语言本身支持运行期动态创建类，这和静态语言有非常大的不同，要在静态语言运行期创建类，必须构造源代码字符串再调用编译器，或者借助一些工具生成字节码实现，本质上都是动态编译，会非常复杂。</p>
+<h3 id="metaclass"><a href="#metaclass" class="headerlink" title="metaclass"></a>metaclass</h3><p>当我们定义了类以后，就可以根据这个类创建出实例，所以：先定义类，然后创建实例。</p>
+<p>但是如果我们想创建出类呢？那就必须根据metaclass创建出类，所以：先定义metaclass，然后创建类。</p>
+<p>连接起来就是：先定义metaclass，就可以创建类，最后创建实例。</p>
+<p>所以，metaclass允许你创建类或者修改类。<strong>换句话说，你可以把类看成是metaclass创建出来的“实例”。</strong></p>
+<p>metaclass是Python面向对象里最难理解，也是最难使用的魔术代码。正常情况下，你不会碰到需要使用metaclass的情况，所以，以下内容看不懂也没关系，因为基本上你不会用到。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/10/python-面向对象编程/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          python-面向对象编程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/08/10/python-模块/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模块</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="python-面向对象高级编程" data-title="python-面向对象高级编程" data-url="http://yoursite.com/2015/08/10/python-面向对象高级编程/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
