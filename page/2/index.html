@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>Xight</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Xight">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Xight">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Xight">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Xight" type="application/atom+xml">
   
   
     <link rel="icon" href="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.png">
@@ -32,7 +32,7 @@
 		</a>
 
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Yun Chen</a></h1>
 		</hgroup>
 
 		
@@ -140,7 +140,7 @@
       <nav id="mobile-nav">
   	<div class="overlay">
   		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  		<h1 class="header-author js-mobile-header hide">Yun Chen</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
@@ -148,7 +148,7 @@
 				<img lazy-src="http://dn-cyfall.qbox.me/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author">John Doe</h1>
+			  <h1 class="header-author">Yun Chen</h1>
 			</hgroup>
 			
 			<nav class="header-menu">
@@ -178,72 +178,6 @@
 	</div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-linux-iptables-使用笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/13/linux-iptables-使用笔记/" class="article-date">
-  	<time datetime="2015-11-13T03:46:23.000Z" itemprop="datePublished">2015-11-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/13/linux-iptables-使用笔记/">linux: iptables 使用笔记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="iptables-使用笔记"><a href="#iptables-使用笔记" class="headerlink" title="iptables 使用笔记"></a>iptables 使用笔记</h1><p>@refer <a href="http://blog.chinaunix.net/uid-26495963-id-3279216.html">http://blog.chinaunix.net/uid-26495963-id-3279216.html</a><br>@refer <a href="http://www.linuxso.com/linuxpeixun/10332.html">http://www.linuxso.com/linuxpeixun/10332.html</a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>iptables 是与最新的 3.5 版本 Linux 内核集成的 IP 信息包过滤系统<br>    他们都是工作在用户空间中，定义规则的工具，本身并不算是防火墙。它们定义的规则，可以让在内核空间当中的netfilter来读取，并且实现让防火墙工作。而放入内核的地方必须要是特定的位置，必须是tcp/ip的协议栈经过的地方。而这个tcp/ip协议栈必须经过的地方，可以实现读取规则的地方就叫做 netfilter.(网络过滤器)</p>
-<pre><code>作者一共在内核空间中选择了5个位置，
-1.内核空间中：从一个网络接口进来，到另一个网络接口去的
-2.数据包从内核流入用户空间的
-3.数据包从用户空间流出的
-4.进入/离开本机的外网接口
-5.进入/离开本机的内网接口
-</code></pre><p>从上面的发展我们知道了作者选择了5个位置，来作为控制的地方，但是你有没有发现，其实前三个位置已经基本上能将路径彻底封锁了，但是为什么已经在进出的口设置了关卡之后还要在内部卡呢？ 由于数据包尚未进行路由决策，还不知道数据要走向哪里，所以在进出口是没办法实现数据过滤的。所以要在内核空间里设置转发的关卡，进入用户空间的关卡，从用户空间出去的关卡。那么，既然他们没什么用，那我们为什么还要放置他们呢？因为我们在做NAT和DNAT的时候，目标地址转换必须在路由之前转换。所以我们必须在外网而后内网的接口处进行设置关卡。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/13/linux-iptables-使用笔记/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
   
     <article id="post-python-内存管理2-拷贝-参数传递" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -820,6 +754,86 @@
 
 
   
+    <article id="post-linux感悟二三事" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/02/linux感悟二三事/" class="article-date">
+  	<time datetime="2015-11-02T07:08:06.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/linux感悟二三事/">linux感悟二三事</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@author <a href="http://xight.top" target="_blank" rel="external">chenyun</a></p>
+<ul>
+<li><p>Linux是用户易用型系统,但要成为他的用户很难.</p>
+<blockquote>
+<p>Linux is user-friendly. It’s just very selective about who its friends are</p>
+</blockquote>
+</li>
+<li><p>Linux和Windows二者最重要的区别乃是它们对自己的用户所做的假设。对于 Linux，这个假设是：用户知道自己想要什么，也明白自己在做什么，并且会为自己的行为负责。而 Windows 则恰好相反：用户不知道自己想要什么，也不明白自己在做什么，更不打算为自己的行为负责。<br>造成的结果就是<a href="http://baike.baidu.com/link?url=cID4DMSIRQMhFHuy8aMCwi4A-tIeMjTdQFy2LxwEXFK7ZngFW7Rv07-k9NgFAmtVzhHMkoHRUdRTGpOfXOf9-4d6unS0FPqeQq1Lv6BM_8fQPLLuGWeybeAPyByr37p555Vp2ypAiGlvZY2XImBZfiXzB_WyL5FOHUr__TaCbSDqT-1S9eobc8BgEjduWXfI" target="_blank" rel="external">皮格马利翁效应</a></p>
+</li>
+<li><p>用户是机器的主人，操作系统只是用户请来的助手；用户知道自己想要什么，明白自己在做什么，也会为自己的行为负责；操作系统尽量少说话，更不要下命令</p>
+</li>
+<li><p>Linux怎么读?<a href="http://safalra.com/other/linux-pronunciation/" target="_blank" rel="external">看这里</a><br>还有Linus Torvalds本人的一段录音：<br>“hello,this is linus torvalds and i pronounce linux as linux[‘li:nэks]”<br>但是</p>
+<blockquote>
+<p>Linux is free include its pronunciation</p>
+</blockquote>
+</li>
+<li><p>命令行是最高效的方式</p>
+</li>
+<li><p>条条大路通罗马, 但是不走Linux这条路, 大多数人甚至都不知道有罗马</p>
+</li>
+<li><p>结束语: Linux真心让人爽</p>
+<blockquote>
+<p>Liberty means responsibility. That is why most men dread it.  —  George Bernard Shaw<br>   Unless a man has talents to make something of himself, freedom is an irksome burden.  —  Eric Hoffer</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -830,7 +844,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 John Doe
+    		&copy; 2016 Yun Chen
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
