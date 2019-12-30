@@ -95,7 +95,7 @@ hr {
 	/* background-color: #000; */
 	background-color: #000000;
 	border-radius: 0px;
-	padding: 10px 0;
+	padding: 1px 0;
 }
 .navbar-custom a {
 	color: #555;
@@ -174,12 +174,12 @@ hr {
 	margin-top: 20px;
 }
 header .intro-text {
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 /* About Section */
 #about {
-	padding: 120px 0;
+	padding: 60px 0;
 	background: #050505;
 }
 #about .about-text {
@@ -199,13 +199,13 @@ img{
 	max-height: 100%;	
 }
 #about p {
-	margin-top: 40px;
-	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	line-height: 22px;
 }
 /* Portfolio Section */
 #portfolio {
-	padding: 120px 0;
+	padding: 60px 0;
 	background: #101010;
 }
 .categories {
