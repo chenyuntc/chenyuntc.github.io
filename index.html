@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yun Chen - Uber ATG</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <script type="text/javascript">
+      var int=self.setInterval("clock()",2718.281828459045);
+      function clock()
+      {
+        if(document.getElementById("head_image").getAttribute("src") == "img/head_matrix.png")
+        {head_image.src='img/head.png';}
+        else{head_image.src='img/head_matrix.png';}
+      }
+      </script>
+<!-- Header -->
+<!-- <header id="header">
+  <div class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text">
+          <h1>Yun Chen</h1>
+          <hr>
+          <p>Hacker • Researcher • Geek</p>
+          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+      </div>
+    </div>
+  </div>
+</header> -->
+<!-- Navigation -->
+<div id="nav">
+  <nav class="navbar navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+      </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden"> <a href="#page-top"></a> </li>
+          <li> <a class="page-scroll" href="#about">About</a> </li>
+          <li> <a class="page-scroll" href="#portfolio">Project</a> </li>
+          <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+  
+  </nav>
+</div>
+<!-- About Section -->
+<div id="about" >
+  <div class="container">
+    <div class="section-title text-center center" >
+      <h2>Yun Chen 陈云</h2>
+      <!-- <h2>Yun Chen</h2> -->
+
+      <hr>
+      
+      <p>Hacker • Researcher • Engineer</p>
+    </div>
+    <div class="row" >
+      <div class="col-md-12 text-center">
+          <img class="img-responsive" id="head_image" alt="" src="img/head.png"
+          onmouseover="this.src='img/head_matrix.png'" onmouseout="this.src='img/head.png'"
+         >
+      </div>
+        <!-- <img src="img/head2.png" class="img-responsive"></div> -->
+      <div class="sss" >
+        <div class="about-text">
+          <p  align="left" >I'm a research scientist at <a href="https://www.uber.com/ca/en/atg/research-and-development/">Uber ATG R&D</a> lead by <a href="http://www.cs.toronto.edu/~urtasun/">Prof. Raquel Urtasun</a>. My research involves self-driving vehicles, computer vision, and robotics.
+            <br>            <br>
+            I'm a follower of <a href="https://en.wikipedia.org/wiki/Unix_philosophy">Unix philosophy</a>,  an enthusiastic of Linux, a geek of Android,the author of the PyTorch best-seller, and open-source contributor. 
+            <br>            <br>
+            I've set new state-of-the-art for several tasks (including Autonomy/NLP/Vision), reviewer for CVPR and RA-L.
+          <br><br>
+          My Resume (1 page) and longer resume (2 pages)
+          </p>
+
+          <a href="#portfolio" class="btn btn-default btn-lg page-scroll">My Work</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Projects</h2>
+      <hr>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type" style="line-height:36pt;">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".pub">Publications</a></li>
+            <li><a href="#" data-filter=".open">Open Source Projects</a></li>
+            <li><a href="#" data-filter=".other">Others</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+
+        <!-- pytorch book -->
+        <div class="col-sm-6 col-md-3 col-lg-3 pub open">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="https://github.com/chenyuntc/pytorch-book/blob/master/README_EN.md" title="PyTorch: Introduction and Practice" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>PyTorch Book</h4>
+              </div>
+              <img src="img/portfolio/pytorch_book.png" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+
+        <!-- fusenet -->
+        <div class="col-sm-6 col-md-3 col-lg-3 pub">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="p/fusenet/" title="Learning Joint 2D-3D representations for Depth Completion" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Depth Completion (ICCV 2019)</h4>
+              </div>
+              <img src="img/portfolio/fusenet.png" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+
+        <!-- MMF -->
+        <div class="col-sm-6 col-md-3 col-lg-3 pub">
+          <div class="portfolio-item">
+            <div  class="hover-bg"> <a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Liang_Multi-Task_Multi-Sensor_Fusion_for_3D_Object_Detection_CVPR_2019_paper.html" title="Multi-Task Multi-Sensor Fusion for 3D Object Detection" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>3D detection (CVPR 2019)</h4>
+              </div>
+              <img src="img/portfolio/mmf.gif" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+
+        <!-- VRCNN -->
+        <div class="col-sm-6 col-md-3 col-lg-3 pub">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Medical Imaging (ISBI 2019)</h4>
+              </div>
+              <img src="img/portfolio/vrcnn.png" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+
+        <!-- Simple Faster R-CNN -->
+        <div class="col-sm-6 col-md-3 col-lg-3 open">
+          <div class="portfolio-item">
+            <div class="hover-bg" style="vertical-align: middle;">
+              <a href="img/portfolio/04-large.jpg" title="A minimal and elegant implementation of Faster R-CNN" data-lightbox-gallery="gallery1">
+              <div class="hover-text" style="vertical-align: middle;">
+                <h4>Simple Faster R-CNN</h4>
+              </div>
+              <img  src="img/portfolio/visdom-fasterrcnn.png" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+
+         <!-- Neural Style -->
+         <div class="col-sm-6 col-md-3 col-lg-3 open">
+          <div class="portfolio-item">
+            <div class="hover-bg" style="vertical-align: middle;">
+              <a href="https://github.com/chenyuntc/pytorch-book/blob/master/chapter8-%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB(Neural%20Style)/README_EN.MD" title="A minimal and elegant implementation of Fast Neural Style" data-lightbox-gallery="gallery1">
+              <div class="hover-text" style="vertical-align: middle;">
+                <h4>Simple Fast Neural Style</h4>
+              </div>
+              <img  src="img/portfolio/neural-style-results.png" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<!-- Contact Section -->
+<div id="contact" class="text-center" style="background-color: black;">
+
+  </div>
+</div>
+<div id="footer" style="background-color: black;">
+  <div class="container text-center">
+    <div class="fnav">
+      <p style="color:  #003B00; font-size: medium;">Copyleft &#127279; 2019 Yun Chen. Happy ^_^ Coding. &nbsp </p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

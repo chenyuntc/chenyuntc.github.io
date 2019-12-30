@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+                               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Learning Joint 2D-3D Representations for Depth Completion</title>
+
+    </head>
+    <body class="container" style="max-width:780px;background-color: #101010;color: #eeeeee;">
+
+        <!-- Title -->
+        <div>
+            <div class='row mt-5 mb-3'>
+                <div class='col text-center'>
+                    <p class="h2 font-weight-normal">Learning Joint 2D-3D Representations for Depth Completion                    </p>
+                </div>
+            </div>
+
+            <!-- authors -->
+            <div class='row text-center h5 font-weight-bold pl-4 pr-4 mb-4'>
+                <a class="col-md-3 col-xs-6" href="../../"><span>Yun Chen</span></a>
+                <a class="col-md-3 col-xs-6" href="http://www.cs.toronto.edu/~byang/"><span>Bin Yang</span></a>
+                <a class="col-md-3 col-xs-6" href="#"><span>Ming Liang</span></a>
+                <a class="col-md-3 col-xs-6" href="http://www.cs.toronto.edu/~urtasun/"><span>Raquel Urtasun</span></a>
+            </div>
+
+
+            <!-- affiliations -->
+            <div class='row mt-1 mt-2' >
+                <div class='col text-center'>
+                    <p class="h5 font-weight-light">
+                     <span>University of Toronto, &nbsp; Uber ATG</span> 
+                    </p>
+                </div>
+            </div>
+
+          
+ 
+
+        <!-- Paper section -->
+        <div>
+            <hr>
+            <div class='row'>
+                <div class='col-md-3 col-sm-3 col-xs-12 text-center col-sm-3'>
+                    <div class="row mt-4">
+                        <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Learning_Joint_2D-3D_Representations_for_Depth_Completion_ICCV_2019_paper.pdf" style="max-width:200px; margin-left:auto; margin-right:auto">
+                            <img src="pdf_thumb.png" alt="paper-snapshot" class="img-thumbnail" width="70%" style="box-shadow: 10px 10px 5px grey;">
+                        </a>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <a class="h5" href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Learning_Joint_2D-3D_Representations_for_Depth_Completion_ICCV_2019_paper.pdf" style="margin-right:10px">
+                                <span>[PDF]</span>
+                            </a>
+                            <a class="h5" href="./poster.pdf" target="_blank">
+                                <span>[Poster]</span>
+                            </a>
+                            <a class="h5" href="./bibtex.txt" target="_blank">
+                                <span>[BibTeX]</span>
+                            </a>
+                
+                            <!-- <a class="h5" href="http://www.cvlibs.net/datasets/kitti/eval_depth_detail.php?benchmark=depth_completion&result=2882263473c3cd37953f4e40f83f3c5aef84e920" target="_blank">
+                                <span>[KITTI]</span>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-9 col-sm-9 col-xs-12'>
+                    <p class='h4 font-weight-bold '><b>Abstract</b> </p>
+                    <p style='line-height:1.1;'> 
+                            In this paper, we tackle the problem of depth completion from RGBD data. Towards this goal, we design a simple yet effective neural network block that learns to extract joint 2D and 3D features. Specifically, the block consists of two domain-specific sub-networks that apply 2D convolution on image pixels and continuous convolution on 3D points, with their output features fused in image space. We build the depth completion network simply by stacking the proposed block, which has the advantage of learning hierarchical representations that are fully fused between 2D and 3D spaces at multiple levels. We demonstrate the effectiveness of our approach on the challenging KITTI depth completion benchmark and show that our approach outperforms the state-of-the-art.
+
+                    </p>
+                    <p><strong style="color:red;">1st place on KITTI Depth Completion</strong></p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h4 align="center"><b>Method Overview</b> </h4>
+        <br>
+        <div style="text-align: center;">
+			<img src="fusenet.svg" width="600">
+		</div>
+<br> 
+        <p>  The proposed <i>2D-3D Fuse Block</i>  can fully exploit both 2D appearance and 3D geometric features. It contains 3 components:</p>
+
+        <li><b>2D Branch</b> : exctract multi-scale 2D convolution on RGBD feature map.</li>
+        <li><b>3D Branch</b>: index point features from the image with projection matrix and then adopt continuous convoluton to extract 3D geometric features.</li>
+        <li><b>Fusion</b>: fuse the point features back to image plane using unprojection and sum all features.</li>
+        <br>
+        <p>      FuseNet is built with proposed blocks plus a few 2D convolution layers at the input and output stages. It is trained from scratch without using any additional data or pretrain    weight.</p>
+  
+        <br><br>
+
+        <div id="footer">
+            <div class="container text-center">
+              <div class="fnav">
+                <p style="font-size: medium;">Copyleft &#127279; 2019 Yun Chen. Happy ^_^ Coding. &nbsp </p>
+              </div>
+            </div>
+          </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
