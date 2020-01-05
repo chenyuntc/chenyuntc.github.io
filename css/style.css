@@ -31,7 +31,7 @@ p.intro {
 	line-height: 24px;
 }
 a {
-	color: #003B00;
+	color: rgb(2, 169, 34);
 }
 a:hover, a:focus {
 	text-decoration: none;
