@@ -5,12 +5,43 @@
     <link>https://tmux.top/post/</link>
       <atom:link href="https://tmux.top/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://tmux.top/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://tmux.top/post/</link>
     </image>
+    
+    <item>
+      <title>Summary of My projects on 3D Vision.</title>
+      <link>https://tmux.top/post/summary/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/post/summary/</guid>
+      <description>&lt;p&gt;Here is a short summary of my project on 3D vision.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Camera Simulation&lt;/strong&gt; for self-driving: Combine 3D reconstruction, Image-Based Rendering and Depth completion to create photo-realistic and geometrically consistent videos  (Under Review)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://x.i3c.xyz/public/paper_imagesim.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[PDF]&lt;/a&gt; &lt;a href=&#34;https://x.i3c.xyz/public/geosim.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Video (4K Resolution)]&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://x.i3c.xyz/tmp/a.gif&#34; alt=&#34;Geosim Teaser&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Depth Completion&lt;/strong&gt; by joint-learning of appearance feature and geometry feature. (ICCV 2019)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Learning_Joint_2D-3D_Representations_for_Depth_Completion_ICCV_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[PDF]&lt;/a&gt;  &lt;a href=&#34;http://x.i3c.xyz/public/depth_qual.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Qualitative Video]&lt;/a&gt; [&lt;a href=&#34;https://tmux.top/publication/fusenet/iccv2019-fusenet-poster.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Poster&lt;/a&gt;]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://yun.sfo2.digitaloceanspaces.com/cloud/homepage/image-20201219153358788.png&#34; alt=&#34;Featured&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Texture Reconstruction&lt;/strong&gt; [WIP]&lt;/p&gt;
+&lt;p&gt;Self-supervised texture reconstruction with symmetry, inpainting and differential-rendering.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://yun.sfo2.digitaloceanspaces.com/cloud/homepage/tex_rec.gif&#34; alt=&#34;tex_rec&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Please contact me if you want to talk in more detail.&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
