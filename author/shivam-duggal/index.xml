@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shivam Duggal* | Yun Chen</title>
+    <title>Shivam Duggal# | Yun Chen</title>
     <link>https://tmux.top/author/shivam-duggal/</link>
       <atom:link href="https://tmux.top/author/shivam-duggal/index.xml" rel="self" type="application/rss+xml" />
-    <description>Shivam Duggal*</description>
+    <description>Shivam Duggal#</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://tmux.top/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Shivam Duggal*</title>
+      <title>Shivam Duggal#</title>
       <link>https://tmux.top/author/shivam-duggal/</link>
     </image>
     
@@ -34,6 +34,8 @@
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/). --&gt;

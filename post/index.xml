@@ -21,14 +21,14 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Camera Simulation&lt;/strong&gt; for self-driving: Combine 3D reconstruction, image-based rendering and depth completion to create photo-realistic and geometrically consistent videos  (Under Review)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://x.i3c.xyz/public/paper_imagesim.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[PDF]&lt;/a&gt; &lt;a href=&#34;https://x.i3c.xyz/public/geosim.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Video (4K Resolution)]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://yun.sfo2.digitaloceanspaces.com/public/geosim-arxiv.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[PDF]&lt;/a&gt; &lt;a href=&#34;https://x.i3c.xyz/public/geosim.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Video (4K Resolution)]&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;http://x.i3c.xyz/tmp/a.gif&#34; alt=&#34;Geosim Teaser&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Depth Completion&lt;/strong&gt; by joint-learning of appearance feature and geometry feature. (ICCV 2019)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Learning_Joint_2D-3D_Representations_for_Depth_Completion_ICCV_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[PDF]&lt;/a&gt;  &lt;a href=&#34;http://x.i3c.xyz/public/depth_qual.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Qualitative Video]&lt;/a&gt; [&lt;a href=&#34;https://tmux.top/publication/fusenet/iccv2019-fusenet-poster.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Poster&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Learning_Joint_2D-3D_Representations_for_Depth_Completion_ICCV_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[PDF]&lt;/a&gt;  &lt;a href=&#34;http://x.i3c.xyz/public/depth_qual.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Qualitative Video]&lt;/a&gt; [&lt;a href=&#34;https://tmux.top/publication/fusenet/iccv2019-fusenet-poster.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;http://yun.sfo2.digitaloceanspaces.com/cloud/homepage/image-20201219153358788.png&#34; alt=&#34;Featured&#34;&gt;&lt;/p&gt;
