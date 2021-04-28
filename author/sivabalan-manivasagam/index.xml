@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>GeoSim: Photorealistic Image Simulation with Geometry-Aware Composition for Self-Driving</title>
+      <title>GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving</title>
       <link>https://tmux.top/publication/geosim/</link>
       <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
       <guid>https://tmux.top/publication/geosim/</guid>
@@ -34,8 +34,6 @@
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
-
-
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/). --&gt;
