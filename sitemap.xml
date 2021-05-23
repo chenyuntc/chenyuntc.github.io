@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tmux.top/publication-type/3/</loc>
+    <loc>https://tmux.top/publication-type/1/</loc>
     <lastmod>2020-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tmux.top/authors/</loc>
@@ -46,9 +46,6 @@
   </url><url>
     <loc>https://tmux.top/author/yun-chen/</loc>
     <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tmux.top/publication-type/1/</loc>
-    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tmux.top/author/bin-yang/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
