@@ -1,19 +1,15 @@
 <!DOCTYPE html><html lang="en-us" >
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
   
   
-  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
-  
-
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
   
 
-  
   
 
   
@@ -27,40 +23,40 @@
   
   
 
-  <meta name="author" content="Yun Chen">
+  <meta name="author" content="Yun Chen" />
 
   
   
   
     
   
-  <meta name="description" content="\[ISBI 2019\] Accurate and Efficient 3D Nodule detection with 3D R-CNN.">
+  <meta name="description" content="\[ISBI 2019\] Accurate and Efficient 3D Nodule detection with 3D R-CNN." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://tmux.top/publication/vrcnn/">
-
-  
-
-
-
-
-
-
+  <link rel="alternate" hreflang="en-us" href="https://tmux.top/publication/vrcnn/" />
 
   
 
 
 
 
+
+
+
+  
+
+
+
+
   
   
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   
 
   
   
   
-  <meta name="theme-color" content="#2962ff">
+    <meta name="theme-color" content="#1565c0" />
   
 
   
@@ -75,7 +71,16 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
 
     
     
@@ -86,25 +91,21 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
         
       
     
 
     
+    
+    
 
     
 
     
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -113,12 +114,6 @@
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -127,12 +122,6 @@
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -141,12 +130,6 @@
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -155,12 +138,6 @@
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -169,21 +146,6 @@
       
     
       
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
-      
-    
       
 
       
@@ -192,12 +154,62 @@
       
     
       
+      
 
       
       
 
       
     
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
       
 
       
@@ -208,12 +220,6 @@
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -221,7 +227,14 @@
 
       
     
+      
+      
 
+      
+      
+
+      
+    
   
 
   
@@ -229,8 +242,8 @@
   
     
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
     
   
 
@@ -238,7 +251,16 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.min.d33df0c5371b7f29edd3b8f3da774e3c.css">
+  
+  <link rel="stylesheet" href="/css/wowchemy.7145a9a307b7b6e0cf40149bdecd66b5.css" />
+
+  
+
+
+
+  
+
+  
 
   
 
@@ -246,21 +268,21 @@
 
 
   
-
-  
-
-
   
   
 
   
 
-  <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
 
-  <link rel="canonical" href="https://tmux.top/publication/vrcnn/">
+  <link rel="icon" type="image/png" href="/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_180x180_fill_lanczos_center_2.png" />
 
+  <link rel="canonical" href="https://tmux.top/publication/vrcnn/" />
+
+  
   
   
   
@@ -271,16 +293,19 @@
     
   
   
-  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:card" content="summary_large_image" />
   
-  <meta property="og:site_name" content="Yun Chen">
-  <meta property="og:url" content="https://tmux.top/publication/vrcnn/">
-  <meta property="og:title" content="Volume R-CNN: Unified Framework for CT Object Detection and Instance Segmentation | Yun Chen">
-  <meta property="og:description" content="\[ISBI 2019\] Accurate and Efficient 3D Nodule detection with 3D R-CNN."><meta property="og:image" content="https://tmux.top/publication/vrcnn/featured.png">
-  <meta property="twitter:image" content="https://tmux.top/publication/vrcnn/featured.png"><meta property="og:locale" content="en-us">
+  <meta property="og:site_name" content="Yun Chen" />
+  <meta property="og:url" content="https://tmux.top/publication/vrcnn/" />
+  <meta property="og:title" content="Volume R-CNN: Unified Framework for CT Object Detection and Instance Segmentation | Yun Chen" />
+  <meta property="og:description" content="\[ISBI 2019\] Accurate and Efficient 3D Nodule detection with 3D R-CNN." /><meta property="og:image" content="https://tmux.top/publication/vrcnn/featured.png" />
+    <meta property="twitter:image" content="https://tmux.top/publication/vrcnn/featured.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="article:published_time" content="2017-01-01T00:00:00&#43;00:00">
+      <meta
+        property="article:published_time"
+        content="2017-01-01T00:00:00&#43;00:00"
+      />
     
     <meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00">
   
@@ -325,7 +350,7 @@
     "name": "Yun Chen",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://tmux.top/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "\\[ISBI 2019\\] Accurate and Efficient 3D Nodule detection with 3D R-CNN."
@@ -336,9 +361,7 @@
 
   
 
-
   
-
 
   
 
@@ -347,49 +370,25 @@
 
 
   <title>Volume R-CNN: Unified Framework for CT Object Detection and Instance Segmentation | Yun Chen</title>
-
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3eea6329f6d2bd056f06dceffb1d4eb1" >
 
   
   
   
   
   
-  <script src="/js/wowchemy-init.js"></script>
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.b8153d4570dcbb34350a2a846dba8c03.js"></script>
 
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
+  
 
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
 
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
-        
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
 
 
   <div class="page-header">
@@ -407,7 +406,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
+  <div class="container-xl">
 
     
     <div class="d-none d-lg-inline-flex">
@@ -417,7 +416,7 @@
 
     
     <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <span><i class="fas fa-bars"></i></span>
     </button>
     
@@ -658,11 +657,13 @@
     </div>
 
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
       
       
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
+        
+      
+
+      
       
 
       
@@ -685,6 +686,7 @@
       </li>
       
 
+      
       
 
     </ul>
@@ -743,8 +745,14 @@
   <div>
     
 
-  
-  <span >Yun Chen</span>, <span >Junxuan Chen</span>, <span >Bo Xiao</span>, <span >Zhengfang Wu</span>, <span >Ying Chi</span>, <span >Xuansong Xie</span>, <span >Xiansheng Hua</span>
+  <span >
+      <a href="/author/yun-chen/">Yun Chen</a></span>, <span >
+      <a href="/author/junxuan-chen/">Junxuan Chen</a></span>, <span >
+      <a href="/author/bo-xiao/">Bo Xiao</a></span>, <span >
+      <a href="/author/zhengfang-wu/">Zhengfang Wu</a></span>, <span >
+      <a href="/author/ying-chi/">Ying Chi</a></span>, <span >
+      <a href="/author/xuansong-xie/">Xuansong Xie</a></span>, <span >
+      <a href="/author/xiansheng-hua/">Xiansheng Hua</a></span>
   </div>
   
   
@@ -768,6 +776,7 @@
   
   
   
+  
 
   
   
@@ -776,17 +785,6 @@
 
     
 
-
-
-
-
-
-
-
-
-
-
-  
 
 
 
@@ -807,16 +805,16 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="/publication/vrcnn/isbi2019.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header" href="/publication/vrcnn/isbi2019.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
-<button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
+<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
         data-filename="/publication/vrcnn/cite.bib">
   Cite
-</button>
+</a>
 
 
 
@@ -830,7 +828,7 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://doi.org/10.1109/ISBI.2019.8759390" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header" href="https://doi.org/10.1109/ISBI.2019.8759390" target="_blank" rel="noopener">
   DOI
 </a>
 
@@ -849,7 +847,7 @@
       
     
   
-  <a class="btn btn-outline-primary my-1 mr-1" href="/publication/vrcnn/full.pdf" >
+  <a class="btn btn-outline-primary btn-page-header" href="/publication/vrcnn/full.pdf" >
     
     Full-Version
   </a>
@@ -905,22 +903,7 @@
 
     <div class="space-below"></div>
 
-    <div class="article-style"><h1 id="heading"></h1>
-<div class="alert alert-note">
-  <div>
-    <h1 id="click-the-cite-button-above-to-demo-the-feature-to-enable-visitors-to-import-publication-metadata-into-their-reference-management-software">Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.</h1>
-<h1 id="heading"></h1>
-  </div>
-</div>
-<h1 id="heading-1"></h1>
-<div class="alert alert-note">
-  <div>
-    <h1 id="click-the-slides-button-above-to-demo-academics-markdown-slides-feature">Click the <em>Slides</em> button above to demo Academic&rsquo;s Markdown slides feature.</h1>
-<h1 id="heading"></h1>
-  </div>
-</div>
-<h1 id="supplementary-notes-can-be-added-here-including-code-and-mathhttpssourcethemescomacademicdocswriting-markdown-latex">Supplementary notes can be added here, including <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/" target="_blank" rel="noopener">code and math</a>.</h1>
-</div>
+    <div class="article-style"></div>
 
     
 
@@ -1105,11 +1088,12 @@
     
     <div class="container">
       <footer class="site-footer">
+
   
 
-  <p class="powered-by">
-    
-  </p>
+  
+
+  
 
   
   
@@ -1162,6 +1146,7 @@
     
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
       
       
@@ -1169,8 +1154,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+      
+      
 
       
 
@@ -1186,53 +1171,6 @@
 
     
     
-
-    
-    
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    
-    
-    
-    
-    <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks",
-        'slides' : "Slides"
-        };
-    </script>
-    
-
-    
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
-      </div>
-      </div>
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
     
 
     
@@ -1247,6 +1185,14 @@
 
     
     
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
 
     
     
@@ -1257,12 +1203,7 @@
     
     
     
-      
-    
-    
-    
-    
-    <script src="/js/wowchemy.min.6a4d0b4efac1fa0917ed08f790cd66fc.js"></script>
+    <script src="/en/js/wowchemy.min.c7dbcd0a03997d954a216caf59fc7681.js"></script>
 
     
 
