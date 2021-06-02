@@ -34,7 +34,7 @@
   
     
   
-  <meta name="description" content="A geometry-aware image composition process (GeoSim) that synthesizes novel urban driving scenes by augmenting existing images with dynamic objects extracted from other scenes and rendered at novel poses.">
+  <meta name="description" content="\[CVPR 2021 Oral\] A geometry-aware image composition process (GeoSim) that synthesizes novel urban driving scenes by augmenting existing images with dynamic objects extracted from other scenes and rendered at novel poses.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://tmux.top/publication/geosim/">
@@ -276,7 +276,7 @@
   <meta property="og:site_name" content="Yun Chen">
   <meta property="og:url" content="https://tmux.top/publication/geosim/">
   <meta property="og:title" content="GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving | Yun Chen">
-  <meta property="og:description" content="A geometry-aware image composition process (GeoSim) that synthesizes novel urban driving scenes by augmenting existing images with dynamic objects extracted from other scenes and rendered at novel poses."><meta property="og:image" content="https://tmux.top/publication/geosim/featured.gif">
+  <meta property="og:description" content="\[CVPR 2021 Oral\] A geometry-aware image composition process (GeoSim) that synthesizes novel urban driving scenes by augmenting existing images with dynamic objects extracted from other scenes and rendered at novel poses."><meta property="og:image" content="https://tmux.top/publication/geosim/featured.gif">
   <meta property="twitter:image" content="https://tmux.top/publication/geosim/featured.gif"><meta property="og:locale" content="en-us">
   
     
@@ -328,7 +328,7 @@
       "url": "https://tmux.top/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "A geometry-aware image composition process (GeoSim) that synthesizes novel urban driving scenes by augmenting existing images with dynamic objects extracted from other scenes and rendered at novel poses."
+  "description": "\\[CVPR 2021 Oral\\] A geometry-aware image composition process (GeoSim) that synthesizes novel urban driving scenes by augmenting existing images with dynamic objects extracted from other scenes and rendered at novel poses."
 }
 </script>
 
@@ -800,8 +800,14 @@
 
 
   
+    
+  
 
 
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/pdf/2101.06543" target="_blank" rel="noopener">
+  PDF
+</a>
 
 
 
@@ -815,6 +821,14 @@
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="/publication/geosim/imgs/poster.pdf" target="_blank" rel="noopener">
+  Poster
+</a>
+
 
 
 
@@ -833,9 +847,9 @@
   
     
   
-  <a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/pdf/2101.06543" target="_blank" rel="noopener">
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://youtu.be/_VLXc_VN0fE" target="_blank" rel="noopener">
     
-    PDF
+    Youtube
   </a>
 
   
@@ -849,9 +863,9 @@
   
     
   
-  <a class="btn btn-outline-primary my-1 mr-1" href="https://www.youtube.com/watch?v=FVUPX5MTSvs" target="_blank" rel="noopener">
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://yun.sfo2.digitaloceanspaces.com/public/geosim/geosim-4K.mp4" target="_blank" rel="noopener">
     
-    Youtube
+    4K Qualitative Results
   </a>
 
 
@@ -902,13 +916,38 @@
 
     <div class="space-below"></div>
 
-    <div class="article-style">
+    <div class="article-style"><h3 id="overview-video">Overview Video</h3>
+<p><a href="https://youtu.be/_VLXc_VN0fE" target="_blank" rel="noopener">Youtube</a> or <a href="https://www.bilibili.com/video/BV1154y137jC/" target="_blank" rel="noopener">Bilibili</a>
+
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/FVUPX5MTSvs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/_VLXc_VN0fE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
+</p>
+<h3 id="abstract">Abstract</h3>
+<p>We present GeoSim, a geometry-guided simulation procedure to insert dynamic objects into videos with greater realism. It helps enable scalable sensor simulation for training and testing autonomy systems, as well as applications like AR, VR, and video editing.
+We first create 3D assets from real-world data and then use them for simulation.</p>
+<p><img src="featured.gif" alt="alternative text for search engines"></p>
+<h3 id="3d-asset-reconstruction">3D asset reconstruction</h3>
+<p>We propose a self-supervision model to automatically build vehicle asset bank from the wild without 3D groundtruth.</p>
+<ol>
+<li>Multi-sensor feature is extracted from camera and LiDAR.</li>
+<li>Per-vertex deformation is applied on a learnable mean-shape to predict shape.</li>
+<li>Silhouette is differentiably rendered from the predicted mesh and compared with the labels. LiDAR consisteny is also applied</li>
+</ol>
+<p><img src="imgs/meshnet.png" alt="img"></p>
+<p>Using the reconstructed 3D mesh, we can perform novel view warping of the source image to new target poses.</p>
+<p>We build a large and diverse asset bank for simulation with over 8 000 unique vehicles.</p>
+<p><img src="imgs/1.gif" alt="Asset 1">
+<img src="imgs/2.gif" alt="Asset 2">
+<img src="imgs/3.gif" alt="Asset 3"></p>
+<!-- ![Asset 4](imgs/4.gif) -->
+<h3 id="simulation-pipeline">Simulation Pipeline</h3>
+<p>GeoSim leverages the asset library to insert actors and simulate new images.</p>
+<ol>
+<li>
+<p>Step 1: <strong>Scenario Generation</strong>
+We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  An asset with a similar viewpoint is selected for rendering.
 
-<p>In this paper, we present GeoSim, a geometry-aware image composition process which synthesizes novel urban driving scenarios by augmenting existing images with dynamic objects extracted from other scenes and rendered at novel poses. Towards this goal, we first build a diverse bank of 3D objects with both realistic geometry and appearance from sensor data. During simulation, we perform a novel geometry-aware simulation-by-composition procedure which 1) proposes plausible and realistic object placements into a given scene, 2) render novel views of dynamic objects from the asset bank, and 3) composes and blends the rendered image segments. The resulting synthetic images are realistic, traffic-aware, and geometrically consistent, allowing our approach to scale to complex use cases. We demonstrate two such important applications long-range realistic video simulation across multiple camera sensors, and synthetic data generation for data augmentation on downstream segmentation tasks.</p>
-<p>
 
 
 
@@ -931,40 +970,132 @@
 
 
 
-<figure >
+<figure id="figure-occlussion-aware-novel-view-warping">
 
 
-  <a data-fancybox="" href="/publication/geosim/featured_hu88deca36fbb348d956643be7ec6aac53_906310_2000x2000_fit_lanczos.gif" >
+  <a data-fancybox="" href="/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_2000x2000_fit_lanczos_2.png" data-caption="Occlussion-aware novel view warping">
 
 
-  <img data-src="/publication/geosim/featured_hu88deca36fbb348d956643be7ec6aac53_906310_2000x2000_fit_lanczos.gif" class="lazyload" alt="" width="1824" height="944">
+  <img data-src="/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1096" height="435">
 </a>
 
 
+  
+  
+  <figcaption>
+    Occlussion-aware novel view warping
+  </figcaption>
+
 
 </figure>
-.</p>
-<!-- 
-
-
-<div class="alert alert-note">
-  <div>
-    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  </div>
-</div>
-
+</p>
+</li>
+<li>
+<p>Step 2: <strong>Occlussion-aware rendering</strong>
+We then render the selected asset at a new target pose.
+we account for occlusion by using dense depth from a pre-trained depth completion network.
+Additionally, since our assets are 3d, we can render them inside a graphics engines to obtain soft shadows.
 
 
 
-<div class="alert alert-note">
-  <div>
-    Click the <em>Slides</em> button above to demo Academic&rsquo;s Markdown slides feature.
-  </div>
-</div>
 
 
 
-Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/). -->
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-test">
+
+
+  <a data-fancybox="" href="/publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_2000x2000_fit_lanczos_2.png" data-caption="test">
+
+
+  <img data-src="/publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1266" height="360">
+</a>
+
+
+  
+  
+  <figcaption>
+    test
+  </figcaption>
+
+
+</figure>
+</p>
+</li>
+<li>
+<p>Step 3: <strong>Post composition:</strong> Finally, we perform post-image composition. We use a synthesis network to handle inconsistent illumination and inpaint the discrepancies at the boundary,  so that the vehicle fits in seamlessly.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-test">
+
+
+  <a data-fancybox="" href="/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_2000x2000_fit_lanczos_2.png" data-caption="test">
+
+
+  <img data-src="/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="852" height="263">
+</a>
+
+
+  
+  
+  <figcaption>
+    test
+  </figcaption>
+
+
+</figure>
+</p>
+</li>
+</ol>
+<h3 id="qualitative-results">Qualitative Results</h3>
+<p><a href="https://yun.sfo2.digitaloceanspaces.com/public/geosim/geosim-4K.mp4" target="_blank" rel="noopener">Video results in 4K resolution (4096x2160)</a></p>
+<p><a href="https://yun.sfo2.digitaloceanspaces.com/public/geosim/geosim-4K.mp4" target="_blank" rel="noopener"><img src="imgs/4KVideo.png" alt="4K video"></a></p>
+<p><img src="imgs/c4-small.gif" alt="ExampleSmall"></p>
+<h3 id="citation">Citation</h3>
+<pre><code>@inproceedings{chen2021geosim,
+ title={GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving},
+ author={Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam, Shangjie Xue, Ersin Yumer, Raquel Urtasun},
+ year={2021},
+ booktitle={CVPR},
+}
+</code></pre>
 </div>
 
     
