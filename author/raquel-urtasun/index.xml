@@ -40,7 +40,7 @@ We first create 3D assets from real-world data and then use them for simulation.
 &lt;p&gt;We build a large and diverse asset bank for simulation with over 8 000 unique vehicles.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;imgs/1.gif&#34; alt=&#34;Asset 1&#34;&gt;
 &lt;img src=&#34;imgs/2.gif&#34; alt=&#34;Asset 2&#34;&gt;
-&lt;img src=&#34;imgs/3.gif&#34; alt=&#34;Asset 3&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;imgs/0.gif&#34; alt=&#34;Asset 3&#34;&gt;&lt;/p&gt;
 &lt;!-- ![Asset 4](imgs/4.gif) --&gt;
 &lt;h3 id=&#34;simulation-pipeline&#34;&gt;Simulation Pipeline&lt;/h3&gt;
 &lt;p&gt;GeoSim leverages the asset library to insert actors and simulate new images.&lt;/p&gt;
