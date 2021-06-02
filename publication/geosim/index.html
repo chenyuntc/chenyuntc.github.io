@@ -934,7 +934,48 @@ We first create 3D assets from real-world data and then use them for simulation.
 <li>Per-vertex deformation is applied on a learnable mean-shape to predict shape.</li>
 <li>Silhouette is differentiably rendered from the predicted mesh and compared with the labels. LiDAR consisteny is also applied</li>
 </ol>
-<p><img src="imgs/meshnet.png" alt="img"></p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-self-supervised-mesh-reconstruction">
+
+
+  <a data-fancybox="" href="/publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_2000x2000_fit_lanczos_2.png" data-caption="Self-supervised mesh reconstruction">
+
+
+  <img data-src="/publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1625" height="554">
+</a>
+
+
+  
+  
+  <figcaption>
+    Self-supervised mesh reconstruction
+  </figcaption>
+
+
+</figure>
+
 <p>Using the reconstructed 3D mesh, we can perform novel view warping of the source image to new target poses.</p>
 <p>We build a large and diverse asset bank for simulation with over 8 000 unique vehicles.</p>
 <p><img src="imgs/1.gif" alt="Asset 1">
@@ -970,10 +1011,10 @@ We first automatically generate a plausible placement and trajectory that compli
 
 
 
-<figure id="figure-occlussion-aware-novel-view-warping">
+<figure id="figure-automatic-scenario-generation">
 
 
-  <a data-fancybox="" href="/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_2000x2000_fit_lanczos_2.png" data-caption="Occlussion-aware novel view warping">
+  <a data-fancybox="" href="/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_2000x2000_fit_lanczos_2.png" data-caption="Automatic scenario generation">
 
 
   <img data-src="/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1096" height="435">
@@ -983,7 +1024,7 @@ We first automatically generate a plausible placement and trajectory that compli
   
   
   <figcaption>
-    Occlussion-aware novel view warping
+    Automatic scenario generation
   </figcaption>
 
 
@@ -1063,10 +1104,10 @@ Additionally, since our assets are 3d, we can render them inside a graphics engi
 
 
 
-<figure id="figure-test">
+<figure id="figure-post-image-composition">
 
 
-  <a data-fancybox="" href="/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_2000x2000_fit_lanczos_2.png" data-caption="test">
+  <a data-fancybox="" href="/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_2000x2000_fit_lanczos_2.png" data-caption="Post-image composition">
 
 
   <img data-src="/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="852" height="263">
@@ -1076,7 +1117,7 @@ Additionally, since our assets are 3d, we can render them inside a graphics engi
   
   
   <figcaption>
-    test
+    Post-image composition
   </figcaption>
 
 
