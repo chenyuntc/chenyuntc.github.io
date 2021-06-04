@@ -18,7 +18,7 @@
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://tmux.top/publication/geosim/</guid>
       <description>&lt;h3 id=&#34;overview-video&#34;&gt;Overview Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://youtu.be/_VLXc_VN0fE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Youtube&lt;/a&gt; or &lt;a href=&#34;https://www.bilibili.com/video/BV1154y137jC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bilibili&lt;/a&gt;. You may also download it use this &lt;a href=&#34;http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/_VLXc_VN0fE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Youtube&lt;/a&gt; or &lt;a href=&#34;https://www.bilibili.com/video/BV1154y137jC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bilibili&lt;/a&gt;. You may also download it using this &lt;a href=&#34;http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/_VLXc_VN0fE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -75,7 +75,7 @@ We first create 3D assets from real-world data and then use the proposed simulat
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Step 1: &lt;strong&gt;Scenario Generation&lt;/strong&gt;
-We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  In order to select which asset to render at the chosen placement / trajectory, we propose to retrieve objects from the asset bank that were viewed with similar viewpoints and distance to the camera in the original footage
+We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  An asset with a similar viewpoint is selected for rendering.
 
 
 
@@ -108,7 +108,7 @@ We first automatically generate a plausible placement and trajectory that compli
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Step 2: &lt;strong&gt;Occlussion-aware rendering&lt;/strong&gt;
-We then render the selected asset at a new target pose.
+We render the selected asset at a new target pose.
 We account for occlusion by using dense depth from a pre-trained depth completion network.
 Additionally,  we render a soft-shadow corresponding to the selected 3D asset considering a cloudy HDRI as the environement map..
 

@@ -891,7 +891,7 @@
     <div class="space-below"></div>
 
     <div class="article-style"><h3 id="overview-video">Overview Video</h3>
-<p><a href="https://youtu.be/_VLXc_VN0fE" target="_blank" rel="noopener">Youtube</a> or <a href="https://www.bilibili.com/video/BV1154y137jC/" target="_blank" rel="noopener">Bilibili</a>. You may also download it use this <a href="http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4" target="_blank" rel="noopener">link</a>
+<p><a href="https://youtu.be/_VLXc_VN0fE" target="_blank" rel="noopener">Youtube</a> or <a href="https://www.bilibili.com/video/BV1154y137jC/" target="_blank" rel="noopener">Bilibili</a>. You may also download it using this <a href="http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4" target="_blank" rel="noopener">link</a>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/_VLXc_VN0fE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -948,7 +948,7 @@ We first create 3D assets from real-world data and then use the proposed simulat
 <ol>
 <li>
 <p>Step 1: <strong>Scenario Generation</strong>
-We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  In order to select which asset to render at the chosen placement / trajectory, we propose to retrieve objects from the asset bank that were viewed with similar viewpoints and distance to the camera in the original footage
+We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  An asset with a similar viewpoint is selected for rendering.
 
 
 
@@ -981,7 +981,7 @@ We first automatically generate a plausible placement and trajectory that compli
 </li>
 <li>
 <p>Step 2: <strong>Occlussion-aware rendering</strong>
-We then render the selected asset at a new target pose.
+We render the selected asset at a new target pose.
 We account for occlusion by using dense depth from a pre-trained depth completion network.
 Additionally,  we render a soft-shadow corresponding to the selected 3D asset considering a cloudy HDRI as the environement map..
 
