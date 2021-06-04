@@ -891,7 +891,7 @@
     <div class="space-below"></div>
 
     <div class="article-style"><h3 id="overview-video">Overview Video</h3>
-<p><a href="https://youtu.be/_VLXc_VN0fE" target="_blank" rel="noopener">Youtube</a> or <a href="https://www.bilibili.com/video/BV1154y137jC/" target="_blank" rel="noopener">Bilibili</a>
+<p><a href="https://youtu.be/_VLXc_VN0fE" target="_blank" rel="noopener">Youtube</a> or <a href="https://www.bilibili.com/video/BV1154y137jC/" target="_blank" rel="noopener">Bilibili</a>. You may also download it use this <a href="http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4" target="_blank" rel="noopener">link</a>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/_VLXc_VN0fE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -899,7 +899,7 @@
 </p>
 <h3 id="abstract">Abstract</h3>
 <p>We present GeoSim, a geometry-guided simulation procedure to insert dynamic objects into videos with greater realism. It helps enable scalable sensor simulation for training and testing autonomy systems, as well as applications like AR, VR, and video editing.
-We first create 3D assets from real-world data and then use them for simulation.</p>
+We first create 3D assets from real-world data and then use the proposed simulation pipeline to realistically composite 3D assets into existing camera imagery.</p>
 <p><img src="featured.gif" alt="alternative text for search engines"></p>
 <h3 id="3d-asset-reconstruction">3D asset reconstruction</h3>
 <p>We propose a self-supervision model to automatically build vehicle asset bank from the wild without 3D groundtruth.</p>
@@ -948,7 +948,7 @@ We first create 3D assets from real-world data and then use them for simulation.
 <ol>
 <li>
 <p>Step 1: <strong>Scenario Generation</strong>
-We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  An asset with a similar viewpoint is selected for rendering.
+We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  In order to select which asset to render at the chosen placement / trajectory, we propose to retrieve objects from the asset bank that were viewed with similar viewpoints and distance to the camera in the original footage
 
 
 
@@ -982,8 +982,8 @@ We first automatically generate a plausible placement and trajectory that compli
 <li>
 <p>Step 2: <strong>Occlussion-aware rendering</strong>
 We then render the selected asset at a new target pose.
-we account for occlusion by using dense depth from a pre-trained depth completion network.
-Additionally, since our assets are 3d, we can render them inside a graphics engines to obtain soft shadows.
+We account for occlusion by using dense depth from a pre-trained depth completion network.
+Additionally,  we render a soft-shadow corresponding to the selected 3D asset considering a cloudy HDRI as the environement map..
 
 
 
@@ -1015,7 +1015,7 @@ Additionally, since our assets are 3d, we can render them inside a graphics engi
     </figcaption></figure></p>
 </li>
 <li>
-<p>Step 3: <strong>Post composition:</strong> Finally, we perform post-image composition. We use a synthesis network to handle inconsistent illumination and inpaint the discrepancies at the boundary,  so that the vehicle fits in seamlessly.
+<p>Step 3: <strong>Post composition:</strong> Finally, we perform post-image composition. We use a synthesis network to handle inconsistent illumination and inpaint the discrepancies at the boundary,  so that the vehicle is composited into the image seamlessly.
 
 
 
