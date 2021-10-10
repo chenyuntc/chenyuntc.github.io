@@ -7,7 +7,7 @@
     <description>Ersin Yumer</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_2.png</url>
+      <url>https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
       <title>Ersin Yumer</title>
       <link>https://tmux.top/author/ersin-yumer/</link>
     </image>
@@ -55,10 +55,10 @@ We first create 3D assets from real-world data and then use the proposed simulat
     &lt;div class=&#34;w-100&#34; &gt;
         
         &lt;img alt=&#34;Self-supervised mesh reconstruction&#34; srcset=&#34;
-               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_d42a1f448855fbc659b1aeff21c473c2.png 400w,
-               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_f5d48d52c3d88501e860397316795abf.png 760w,
-               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_d42a1f448855fbc659b1aeff21c473c2.png&#34;
+               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_087bafcd518856f4b42d2461899558e9.png 400w,
+               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_a95251aaf6450023d9abe63dd54d81fa.png 760w,
+               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_087bafcd518856f4b42d2461899558e9.png&#34;
                width=&#34;760&#34;
                height=&#34;259&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -96,10 +96,10 @@ We first automatically generate a plausible placement and trajectory that compli
     &lt;div class=&#34;w-100&#34; &gt;
         
         &lt;img alt=&#34;Automatic scenario generation&#34; srcset=&#34;
-               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_4fd61080e6be05bd0920e755bc81af14.png 400w,
-               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_c42f8c6a22944a4cde6fcdb98cf32a16.png 760w,
-               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_4fd61080e6be05bd0920e755bc81af14.png&#34;
+               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_aec6bf9e36d16b2fccd33d33670489b7.png 400w,
+               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_5a5b8b99a08f6fb5b89709e67870fb8c.png 760w,
+               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_aec6bf9e36d16b2fccd33d33670489b7.png&#34;
                width=&#34;760&#34;
                height=&#34;302&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -131,10 +131,10 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
     &lt;div class=&#34;w-100&#34; &gt;
         
         &lt;img alt=&#34;Occlussion-aware rendering&#34; srcset=&#34;
-               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_381fee93ab154e4faee09a679735bcb2.png 400w,
-               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_ed8d6dd7dc8ae2a572f09487fe7d8897.png 760w,
-               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_381fee93ab154e4faee09a679735bcb2.png&#34;
+               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_68f0cc2fb126c120f8c3ee7aaa68063b.png 400w,
+               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_a3ec26ec660f1dfc75bd2a678c1f6c10.png 760w,
+               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_68f0cc2fb126c120f8c3ee7aaa68063b.png&#34;
                width=&#34;760&#34;
                height=&#34;216&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -163,10 +163,10 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
     &lt;div class=&#34;w-100&#34; &gt;
         
         &lt;img alt=&#34;Post-image composition&#34; srcset=&#34;
-               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_b92b6dc8f86d65d05401c2f77b9b4ec8.png 400w,
-               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_1f7aec25f7a53d92f7db67b1dfd79551.png 760w,
-               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_b92b6dc8f86d65d05401c2f77b9b4ec8.png&#34;
+               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_a2bdd08f45da3239e5b9345978518667.png 400w,
+               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_93fc981e5b6f23bd84317d8fee18ac01.png 760w,
+               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_a2bdd08f45da3239e5b9345978518667.png&#34;
                width=&#34;760&#34;
                height=&#34;235&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
