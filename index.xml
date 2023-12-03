@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
-    <link>https://example.com/</link>
-      <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
-    <description>Academic</description>
+    <title></title>
+    <link>https://tmux.top/</link>
+      <atom:link href="https://tmux.top/index.xml" rel="self" type="application/rss+xml" />
+    <description></description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
-      <title>Academic</title>
-      <link>https://example.com/</link>
+      <url>https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
+      <title></title>
+      <link>https://tmux.top/</link>
     </image>
     
     <item>
       <title>Real-Time Neural Rasterization for Large Scenes</title>
-      <link>https://example.com/publication/neuras/</link>
+      <link>https://tmux.top/publication/neuras/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/neuras/</guid>
+      <guid>https://tmux.top/publication/neuras/</guid>
       <description>&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0;URL=&#39;https://waabi.ai/neuras/&#39;&#34; /&gt;
 </description>
     </item>
     
     <item>
       <title>UniSim: A Neural Closed-Loop Sensor Simulator</title>
-      <link>https://example.com/publication/unisim/</link>
+      <link>https://tmux.top/publication/unisim/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/unisim/</guid>
+      <guid>https://tmux.top/publication/unisim/</guid>
       <description>&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0;URL=&#39;https://waabi.ai/unisim/&#39;&#34; /&gt;
 </description>
     </item>
     
     <item>
       <title>GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving</title>
-      <link>https://example.com/publication/geosim/</link>
+      <link>https://tmux.top/publication/geosim/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/geosim/</guid>
+      <guid>https://tmux.top/publication/geosim/</guid>
       <description>&lt;p style=&#34;color:red;&#34;&gt; &lt;b&gt; GeoSim is nominated as a best paper candidate in CVPR &lt;/b&gt;&lt;/p&gt;
 ### Overview Video
 &lt;p&gt;&lt;a href=&#34;https://youtu.be/_VLXc_VN0fE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Youtube&lt;/a&gt; or &lt;a href=&#34;https://www.bilibili.com/video/BV1154y137jC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bilibili&lt;/a&gt;. You may also download it using this &lt;a href=&#34;http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
@@ -65,7 +65,7 @@ We first create 3D assets from real-world data and then use the proposed simulat
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;alternative text for search engines&#34;
-           src=&#34;https://example.com/publication/geosim/featured.gif&#34;
+           src=&#34;https://tmux.top/publication/geosim/featured.gif&#34;
            loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -100,7 +100,7 @@ We first create 3D assets from real-world data and then use the proposed simulat
                /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_06c997bf2e8eb76c6d82ac0a26ac986c.webp 400w,
                /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_e02c9f6389caf0a8c3ee605d65ba83bd.webp 760w,
                /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://example.com/publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_06c997bf2e8eb76c6d82ac0a26ac986c.webp&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_06c997bf2e8eb76c6d82ac0a26ac986c.webp&#34;
                width=&#34;760&#34;
                height=&#34;259&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -129,7 +129,7 @@ We first create 3D assets from real-world data and then use the proposed simulat
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Asset 1&#34;
-           src=&#34;https://example.com/publication/geosim/imgs/1.gif&#34;
+           src=&#34;https://tmux.top/publication/geosim/imgs/1.gif&#34;
            loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 
@@ -152,7 +152,7 @@ We first create 3D assets from real-world data and then use the proposed simulat
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Asset 2&#34;
-           src=&#34;https://example.com/publication/geosim/imgs/2.gif&#34;
+           src=&#34;https://tmux.top/publication/geosim/imgs/2.gif&#34;
            loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 
@@ -175,7 +175,7 @@ We first create 3D assets from real-world data and then use the proposed simulat
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Asset 3&#34;
-           src=&#34;https://example.com/publication/geosim/imgs/0.gif&#34;
+           src=&#34;https://tmux.top/publication/geosim/imgs/0.gif&#34;
            loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -210,7 +210,7 @@ We first automatically generate a plausible placement and trajectory that compli
                /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_f1985eecbb5a2eed5b7ea5cf726d91ed.webp 400w,
                /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_a4d20ea95e8efb73662e47fea1083191.webp 760w,
                /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://example.com/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_f1985eecbb5a2eed5b7ea5cf726d91ed.webp&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_f1985eecbb5a2eed5b7ea5cf726d91ed.webp&#34;
                width=&#34;760&#34;
                height=&#34;302&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -248,7 +248,7 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
                /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_3d0147da10bd3cff8f1c4150660955e2.webp 400w,
                /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_f02635ed6d4b5f242d9d1d6d988f0b40.webp 760w,
                /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://example.com/publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_3d0147da10bd3cff8f1c4150660955e2.webp&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_3d0147da10bd3cff8f1c4150660955e2.webp&#34;
                width=&#34;760&#34;
                height=&#34;216&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -283,7 +283,7 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
                /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_0db21464c77272f81885bee00e548dd1.webp 400w,
                /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_0dfc38743c0c21f4ceeb69aa72ecb056.webp 760w,
                /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://example.com/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_0db21464c77272f81885bee00e548dd1.webp&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_0db21464c77272f81885bee00e548dd1.webp&#34;
                width=&#34;760&#34;
                height=&#34;235&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -317,7 +317,7 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
                /publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_c066b4a27626b5a4a9e428b4b6b36b5d.webp 400w,
                /publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_aad446c436fc95827416489a646be50a.webp 760w,
                /publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://example.com/publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_c066b4a27626b5a4a9e428b4b6b36b5d.webp&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_c066b4a27626b5a4a9e428b4b6b36b5d.webp&#34;
                width=&#34;760&#34;
                height=&#34;343&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -342,7 +342,7 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;ExampleSmall&#34;
-           src=&#34;https://example.com/publication/geosim/imgs/c4-small.gif&#34;
+           src=&#34;https://tmux.top/publication/geosim/imgs/c4-small.gif&#34;
            loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -358,65 +358,65 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
     
     <item>
       <title>Learning Lane Graph Representations for Motion Forecasting</title>
-      <link>https://example.com/publication/lanegcn/</link>
+      <link>https://tmux.top/publication/lanegcn/</link>
       <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/lanegcn/</guid>
+      <guid>https://tmux.top/publication/lanegcn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dsdnet: Deep structured self-driving network</title>
-      <link>https://example.com/publication/dsdnet/</link>
+      <link>https://tmux.top/publication/dsdnet/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/dsdnet/</guid>
+      <guid>https://tmux.top/publication/dsdnet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PnPNet: End-to-End Perception and Prediction with Tracking in the Loop</title>
-      <link>https://example.com/publication/pnpnet/</link>
+      <link>https://tmux.top/publication/pnpnet/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/pnpnet/</guid>
+      <guid>https://tmux.top/publication/pnpnet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning Joint 2D-3D Representations for Depth Completion</title>
-      <link>https://example.com/publication/fusenet/</link>
+      <link>https://tmux.top/publication/fusenet/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/fusenet/</guid>
+      <guid>https://tmux.top/publication/fusenet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multi-task multi-sensor fusion for 3d object detection</title>
-      <link>https://example.com/publication/mmf/</link>
+      <link>https://tmux.top/publication/mmf/</link>
       <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/mmf/</guid>
+      <guid>https://tmux.top/publication/mmf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Volume R-CNN: Unified Framework for CT Object Detection and Instance Segmentation</title>
-      <link>https://example.com/publication/vrcnn/</link>
+      <link>https://tmux.top/publication/vrcnn/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/vrcnn/</guid>
+      <guid>https://tmux.top/publication/vrcnn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Faster R-CNN</title>
-      <link>https://example.com/project/rcnn/</link>
+      <link>https://tmux.top/project/rcnn/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/rcnn/</guid>
+      <guid>https://tmux.top/project/rcnn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Technical Book</title>
-      <link>https://example.com/project/pytorch-book/</link>
+      <link>https://tmux.top/project/pytorch-book/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/pytorch-book/</guid>
+      <guid>https://tmux.top/project/pytorch-book/</guid>
       <description></description>
     </item>
     

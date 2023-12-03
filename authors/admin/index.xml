@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yun Chen | Academic</title>
-    <link>https://example.com/authors/admin/</link>
-      <atom:link href="https://example.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <title>Yun Chen | </title>
+    <link>https://tmux.top/authors/admin/</link>
+      <atom:link href="https://tmux.top/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Yun Chen</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
     <image>
-      <url>https://example.com/authors/admin/avatar_hue4b62144c5389277b12479d6f757d441_87842_270x270_fill_q75_lanczos_center.jpg</url>
+      <url>https://tmux.top/authors/admin/avatar_hue4b62144c5389277b12479d6f757d441_87842_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Yun Chen</title>
-      <link>https://example.com/authors/admin/</link>
+      <link>https://tmux.top/authors/admin/</link>
     </image>
     
   </channel>

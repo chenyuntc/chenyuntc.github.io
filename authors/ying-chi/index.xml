@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ying Chi | Academic</title>
-    <link>https://example.com/authors/ying-chi/</link>
-      <atom:link href="https://example.com/authors/ying-chi/index.xml" rel="self" type="application/rss+xml" />
+    <title>Ying Chi | </title>
+    <link>https://tmux.top/authors/ying-chi/</link>
+      <atom:link href="https://tmux.top/authors/ying-chi/index.xml" rel="self" type="application/rss+xml" />
     <description>Ying Chi</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
+      <url>https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
       <title>Ying Chi</title>
-      <link>https://example.com/authors/ying-chi/</link>
+      <link>https://tmux.top/authors/ying-chi/</link>
     </image>
     
     <item>
       <title>Volume R-CNN: Unified Framework for CT Object Detection and Instance Segmentation</title>
-      <link>https://example.com/publication/vrcnn/</link>
+      <link>https://tmux.top/publication/vrcnn/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/vrcnn/</guid>
+      <guid>https://tmux.top/publication/vrcnn/</guid>
       <description></description>
     </item>
     
