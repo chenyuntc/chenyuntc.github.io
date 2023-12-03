@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ersin Yumer | Academic</title>
+    <link>https://example.com/authors/ersin-yumer/</link>
+      <atom:link href="https://example.com/authors/ersin-yumer/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ersin Yumer</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
+      <title>Ersin Yumer</title>
+      <link>https://example.com/authors/ersin-yumer/</link>
+    </image>
+    
+    <item>
+      <title>GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving</title>
+      <link>https://example.com/publication/geosim/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/geosim/</guid>
+      <description>&lt;p style=&#34;color:red;&#34;&gt; &lt;b&gt; GeoSim is nominated as a best paper candidate in CVPR &lt;/b&gt;&lt;/p&gt;
+### Overview Video
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/_VLXc_VN0fE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Youtube&lt;/a&gt; or &lt;a href=&#34;https://www.bilibili.com/video/BV1154y137jC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bilibili&lt;/a&gt;. You may also download it using this &lt;a href=&#34;http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/_VLXc_VN0fE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
+&lt;p&gt;We present GeoSim, a geometry-guided simulation procedure to insert dynamic objects into videos with greater realism. It helps enable scalable sensor simulation for training and testing autonomy systems, as well as applications like AR, VR, and video editing.
+We first create 3D assets from real-world data and then use the proposed simulation pipeline to realistically composite 3D assets into existing camera imagery.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;alternative text for search engines&#34;
+           src=&#34;https://example.com/publication/geosim/featured.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;3d-asset-reconstruction&#34;&gt;3D asset reconstruction&lt;/h3&gt;
+&lt;p&gt;We propose a self-supervision model to automatically build vehicle asset bank from the wild without 3D groundtruth.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Multi-sensor feature is extracted from camera and LiDAR.&lt;/li&gt;
+&lt;li&gt;Per-vertex deformation is applied on a learnable mean-shape to predict shape.&lt;/li&gt;
+&lt;li&gt;Silhouette is differentiably rendered from the predicted mesh and compared with the labels. LiDAR consisteny is also applied&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-self-supervised-mesh-reconstruction&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Self-supervised mesh reconstruction&#34; srcset=&#34;
+               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_06c997bf2e8eb76c6d82ac0a26ac986c.webp 400w,
+               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_e02c9f6389caf0a8c3ee605d65ba83bd.webp 760w,
+               /publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/publication/geosim/imgs/meshnet_hua733d4b986cd68c9f0c34a5745b2df96_315378_06c997bf2e8eb76c6d82ac0a26ac986c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;259&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Self-supervised mesh reconstruction
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Using the reconstructed 3D mesh, we can perform novel view warping of the source image to new target poses.&lt;/p&gt;
+&lt;p&gt;We build a large and diverse asset bank for simulation with over 8 000 unique vehicles.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Asset 1&#34;
+           src=&#34;https://example.com/publication/geosim/imgs/1.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Asset 2&#34;
+           src=&#34;https://example.com/publication/geosim/imgs/2.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Asset 3&#34;
+           src=&#34;https://example.com/publication/geosim/imgs/0.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;!-- ![Asset 4](imgs/4.gif) --&gt;
+&lt;h3 id=&#34;simulation-pipeline&#34;&gt;Simulation Pipeline&lt;/h3&gt;
+&lt;p&gt;GeoSim leverages the asset library to insert actors and simulate new images.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Step 1: &lt;strong&gt;Scenario Generation&lt;/strong&gt;
+We first automatically generate a plausible placement and trajectory that complies with the existing traffic.  An asset with a similar viewpoint is selected for rendering.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-automatic-scenario-generation&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Automatic scenario generation&#34; srcset=&#34;
+               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_f1985eecbb5a2eed5b7ea5cf726d91ed.webp 400w,
+               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_a4d20ea95e8efb73662e47fea1083191.webp 760w,
+               /publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/publication/geosim/imgs/scengen_hu44638c53dbe5dca9fe7c87469bc378b6_189941_f1985eecbb5a2eed5b7ea5cf726d91ed.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;302&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Automatic scenario generation
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 2: &lt;strong&gt;Occlussion-aware rendering&lt;/strong&gt;
+We render the selected asset at a new target pose.
+We account for occlusion by using dense depth from a pre-trained depth completion network.
+Additionally,  we render a soft-shadow corresponding to the selected 3D asset considering a cloudy HDRI as the environement map..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-occlussion-aware-rendering&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Occlussion-aware rendering&#34; srcset=&#34;
+               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_3d0147da10bd3cff8f1c4150660955e2.webp 400w,
+               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_f02635ed6d4b5f242d9d1d6d988f0b40.webp 760w,
+               /publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/publication/geosim/imgs/occ-render_hu1402a7164d44a2700c8e9a8bdd06e53a_175614_3d0147da10bd3cff8f1c4150660955e2.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;216&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Occlussion-aware rendering
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 3: &lt;strong&gt;Post composition:&lt;/strong&gt; Finally, we perform post-image composition. We use a synthesis network to handle inconsistent illumination and inpaint the discrepancies at the boundary,  so that the vehicle is composited into the image seamlessly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-post-image-composition&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Post-image composition&#34; srcset=&#34;
+               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_0db21464c77272f81885bee00e548dd1.webp 400w,
+               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_0dfc38743c0c21f4ceeb69aa72ecb056.webp 760w,
+               /publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/publication/geosim/imgs/postcom_hu7e0ca6932088dd1dc406509373265a13_150365_0db21464c77272f81885bee00e548dd1.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;235&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Post-image composition
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;qualitative-results&#34;&gt;Qualitative Results&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://yun.sfo2.digitaloceanspaces.com/public/geosim/geosim-4K.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video results in 4K resolution (4096x2160)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://yun.sfo2.digitaloceanspaces.com/public/geosim/geosim-4K.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;4K video&#34; srcset=&#34;
+               /publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_c066b4a27626b5a4a9e428b4b6b36b5d.webp 400w,
+               /publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_aad446c436fc95827416489a646be50a.webp 760w,
+               /publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/publication/geosim/imgs/4KVideo_hudbc3d67638616a6f39424efc26c80dd1_1263320_c066b4a27626b5a4a9e428b4b6b36b5d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;343&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;ExampleSmall&#34;
+           src=&#34;https://example.com/publication/geosim/imgs/c4-small.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;citation&#34;&gt;Citation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@inproceedings{chen2021geosim,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; title={GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; author={Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam, Shangjie Xue, Ersin Yumer, Raquel Urtasun},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; year={2021},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; booktitle={CVPR},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

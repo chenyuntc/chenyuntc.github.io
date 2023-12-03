@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bin Yang | Academic</title>
+    <link>https://example.com/authors/bin-yang/</link>
+      <atom:link href="https://example.com/authors/bin-yang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Bin Yang</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 02 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
+      <title>Bin Yang</title>
+      <link>https://example.com/authors/bin-yang/</link>
+    </image>
+    
+    <item>
+      <title>Learning Lane Graph Representations for Motion Forecasting</title>
+      <link>https://example.com/publication/lanegcn/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/lanegcn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dsdnet: Deep structured self-driving network</title>
+      <link>https://example.com/publication/dsdnet/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/dsdnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PnPNet: End-to-End Perception and Prediction with Tracking in the Loop</title>
+      <link>https://example.com/publication/pnpnet/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/pnpnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning Joint 2D-3D Representations for Depth Completion</title>
+      <link>https://example.com/publication/fusenet/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/fusenet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-task multi-sensor fusion for 3d object detection</title>
+      <link>https://example.com/publication/mmf/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/mmf/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
