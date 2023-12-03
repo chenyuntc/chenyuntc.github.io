@@ -2,134 +2,201 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tmux.top/authors/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/ersin-yumer/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/frieda-rong/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/jeffrey-yunfan-liu/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication/geosim/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/jingkang-wang/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/publication/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/raquel-urtasun/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/raquel-urtasun/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/shangjie-xue/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/publication/neuras/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/shenlong-wang/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/siva-manivasagam/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/shivam-duggal/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/yun-chen/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/sivabalan-manivasagam/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/ze-yang/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/xinchen-yan/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/anqi-joyce-yang/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/publication/unisim/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/yun-chen/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/authors/wei-chiu-ma/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication-type/1/</loc>
+    <loc>https://example.com/authors/ersin-yumer/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/authors/frieda-rong/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/publication/geosim/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/authors/shangjie-xue/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/authors/shenlong-wang/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/authors/shivam-duggal/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/authors/sivabalan-manivasagam/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/authors/xinchen-yan/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/publication-type/1/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/bin-yang/</loc>
+    <loc>https://example.com/authors/bin-yang/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication/lanegcn/</loc>
+    <loc>https://example.com/publication/lanegcn/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/ming-liang/</loc>
+    <loc>https://example.com/authors/ming-liang/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication_types/</loc>
+    <loc>https://example.com/publication_types/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/renjie-liao/</loc>
+    <loc>https://example.com/authors/renjie-liao/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/rui-hu/</loc>
+    <loc>https://example.com/authors/rui-hu/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/song-feng/</loc>
+    <loc>https://example.com/authors/song-feng/</loc>
     <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/yun-chen/</loc>
-    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tmux.top/publication/dsdnet/</loc>
+    <loc>https://example.com/publication/dsdnet/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/wenyuan-zeng/</loc>
+    <loc>https://example.com/authors/wenyuan-zeng/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication/pnpnet/</loc>
+    <loc>https://example.com/publication/pnpnet/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/sergio-casas/</loc>
+    <loc>https://example.com/authors/sergio-casas/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication/fusenet/</loc>
+    <loc>https://example.com/publication/fusenet/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication/mmf/</loc>
+    <loc>https://example.com/publication/mmf/</loc>
     <lastmod>2019-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/bo-xiao/</loc>
+    <loc>https://example.com/authors/bo-xiao/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/junxuan-chen/</loc>
+    <loc>https://example.com/authors/junxuan-chen/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/tag/source-themes/</loc>
+    <loc>https://example.com/tag/source-themes/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/tags/</loc>
+    <loc>https://example.com/tags/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/publication/vrcnn/</loc>
+    <loc>https://example.com/publication/vrcnn/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/xiansheng-hua/</loc>
+    <loc>https://example.com/authors/xiansheng-hua/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/xuansong-xie/</loc>
+    <loc>https://example.com/authors/xuansong-xie/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/ying-chi/</loc>
+    <loc>https://example.com/authors/ying-chi/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/author/zhengfang-wu/</loc>
+    <loc>https://example.com/authors/zhengfang-wu/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/project/rcnn/</loc>
+    <loc>https://example.com/project/rcnn/</loc>
     <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/project/</loc>
+    <loc>https://example.com/project/</loc>
     <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/project/pytorch-book/</loc>
+    <loc>https://example.com/project/pytorch-book/</loc>
     <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/categories/</loc>
+    <loc>https://example.com/categories/</loc>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/post/</loc>
+    <loc>https://example.com/talk/</loc>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/post/summary/</loc>
-  </url><url>
-    <loc>https://tmux.top/talk/</loc>
-  </url><url>
-    <loc>https://tmux.top/author/yun-chen/</loc>
+    <loc>https://example.com/authors/admin/</loc>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>

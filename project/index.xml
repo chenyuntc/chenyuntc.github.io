@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Yun Chen</title>
-    <link>https://tmux.top/project/</link>
-      <atom:link href="https://tmux.top/project/index.xml" rel="self" type="application/rss+xml" />
+    <title>Projects | Academic</title>
+    <link>https://example.com/project/</link>
+      <atom:link href="https://example.com/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
+      <url>https://example.com/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
-      <link>https://tmux.top/project/</link>
+      <link>https://example.com/project/</link>
     </image>
     
     <item>
       <title>Faster R-CNN</title>
-      <link>https://tmux.top/project/rcnn/</link>
+      <link>https://example.com/project/rcnn/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://tmux.top/project/rcnn/</guid>
+      <guid>https://example.com/project/rcnn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Technical Book</title>
-      <link>https://tmux.top/project/pytorch-book/</link>
+      <link>https://example.com/project/pytorch-book/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://tmux.top/project/pytorch-book/</guid>
+      <guid>https://example.com/project/pytorch-book/</guid>
       <description></description>
     </item>
     

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | Yun Chen</title>
-    <link>https://tmux.top/authors/</link>
-      <atom:link href="https://tmux.top/authors/index.xml" rel="self" type="application/rss+xml" />
+    <title>Authors | Academic</title>
+    <link>https://example.com/authors/</link>
+      <atom:link href="https://example.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
+      <url>https://example.com/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
       <title>Authors</title>
-      <link>https://tmux.top/authors/</link>
+      <link>https://example.com/authors/</link>
     </image>
     
   </channel>

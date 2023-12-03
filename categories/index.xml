@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | Yun Chen</title>
-    <link>https://tmux.top/categories/</link>
-      <atom:link href="https://tmux.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <title>Categories | Academic</title>
+    <link>https://example.com/categories/</link>
+      <atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
     <image>
-      <url>https://tmux.top/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
+      <url>https://example.com/media/icon_hu5808d785a5c00079bc419102df9b60d0_8490_512x512_fill_lanczos_center_3.png</url>
       <title>Categories</title>
-      <link>https://tmux.top/categories/</link>
+      <link>https://example.com/categories/</link>
     </image>
     
   </channel>
