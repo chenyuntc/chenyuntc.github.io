@@ -1,6 +1,6 @@
 # Netlify headers
 # Automatically generated
-# Documentation: https://hugoblox.com/docs/hugo-tutorials/security/
+# Documentation: https://docs.hugoblox.com/hugo-tutorials/security/
 /*
   
   X-XSS-Protection: 1; mode=block
