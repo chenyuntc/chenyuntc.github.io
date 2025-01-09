@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Yun Chen</title>
+    <link>https://tmux.top/project/</link>
+      <atom:link href="https://tmux.top/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <title>Projects</title>
+      <link>https://tmux.top/project/</link>
+    </image>
+    
+    <item>
+      <title>Faster R-CNN</title>
+      <link>https://tmux.top/project/rcnn/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/project/rcnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technical Book</title>
+      <link>https://tmux.top/project/pytorch-book/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/project/pytorch-book/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

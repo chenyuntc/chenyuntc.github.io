@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wenyuan Zeng | Yun Chen</title>
+    <link>https://tmux.top/authors/wenyuan-zeng/</link>
+      <atom:link href="https://tmux.top/authors/wenyuan-zeng/index.xml" rel="self" type="application/rss+xml" />
+    <description>Wenyuan Zeng</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <title>Wenyuan Zeng</title>
+      <link>https://tmux.top/authors/wenyuan-zeng/</link>
+    </image>
+    
+    <item>
+      <title>Dsdnet: Deep structured self-driving network</title>
+      <link>https://tmux.top/publication/dsdnet/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/dsdnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PnPNet: End-to-End Perception and Prediction with Tracking in the Loop</title>
+      <link>https://tmux.top/publication/pnpnet/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/pnpnet/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

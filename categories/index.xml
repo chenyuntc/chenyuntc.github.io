@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories | Yun Chen</title>
+    <link>https://tmux.top/categories/</link>
+      <atom:link href="https://tmux.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <title>Categories</title>
+      <link>https://tmux.top/categories/</link>
+    </image>
+    
+  </channel>
+</rss>

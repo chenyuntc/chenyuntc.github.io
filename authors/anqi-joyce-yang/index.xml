@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anqi Joyce Yang | Yun Chen</title>
+    <link>https://tmux.top/authors/anqi-joyce-yang/</link>
+      <atom:link href="https://tmux.top/authors/anqi-joyce-yang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Anqi Joyce Yang</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <title>Anqi Joyce Yang</title>
+      <link>https://tmux.top/authors/anqi-joyce-yang/</link>
+    </image>
+    
+    <item>
+      <title>UniSim: A Neural Closed-Loop Sensor Simulator</title>
+      <link>https://tmux.top/publication/unisim/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/unisim/</guid>
+      <description>&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0;URL=&#39;https://waabi.ai/unisim/&#39;&#34; /&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

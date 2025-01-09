@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Yun Chen</title>
+    <link>https://tmux.top/publication-type/1/</link>
+      <atom:link href="https://tmux.top/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 02 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <title>1</title>
+      <link>https://tmux.top/publication-type/1/</link>
+    </image>
+    
+    <item>
+      <title>Learning Lane Graph Representations for Motion Forecasting</title>
+      <link>https://tmux.top/publication/lanegcn/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/lanegcn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dsdnet: Deep structured self-driving network</title>
+      <link>https://tmux.top/publication/dsdnet/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/dsdnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PnPNet: End-to-End Perception and Prediction with Tracking in the Loop</title>
+      <link>https://tmux.top/publication/pnpnet/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/pnpnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning Joint 2D-3D Representations for Depth Completion</title>
+      <link>https://tmux.top/publication/fusenet/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/fusenet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-task multi-sensor fusion for 3d object detection</title>
+      <link>https://tmux.top/publication/mmf/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/mmf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Volume R-CNN: Unified Framework for CT Object Detection and Instance Segmentation</title>
+      <link>https://tmux.top/publication/vrcnn/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://tmux.top/publication/vrcnn/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
