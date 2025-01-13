@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Yun Chen</title>
+    <link>https://tmux.top/post/</link>
+      <atom:link href="https://tmux.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 08 Jan 2025 23:41:15 -0500</lastBuildDate>
+    <image>
+      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <title>Posts</title>
+      <link>https://tmux.top/post/</link>
+    </image>
+    
+    <item>
+      <title>Research Projects</title>
+      <link>https://tmux.top/post/my-projects/</link>
+      <pubDate>Wed, 08 Jan 2025 23:41:15 -0500</pubDate>
+      <guid>https://tmux.top/post/my-projects/</guid>
+      <description>&lt;h2 id=&#34;a-new-paradigm-for-3d-reconstruction&#34;&gt;A new paradigm for 3D reconstruction&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-comparison-with-other-reconstruction-paradigms&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with other Reconstruction paradigms&#34; srcset=&#34;
+               /post/my-projects/g3r-comp_hu13425361371163089232.webp 400w,
+               /post/my-projects/g3r-comp_hu240286161426563418.webp 760w,
+               /post/my-projects/g3r-comp_hu14741760900794255102.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/g3r-comp_hu13425361371163089232.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;334&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Comparison with other Reconstruction paradigms
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-comparison-with-other-reconstruction-paradigms&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with other Reconstruction paradigms&#34; srcset=&#34;
+               /post/my-projects/g3r-res_hu8132165747301824787.webp 400w,
+               /post/my-projects/g3r-res_hu6230508818649829345.webp 760w,
+               /post/my-projects/g3r-res_hu7354960465485393694.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/g3r-res_hu8132165747301824787.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;248&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Comparison with other Reconstruction paradigms
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;a-nerf-with-the-speed-of-3dgs&#34;&gt;A NeRF with the speed of 3DGS&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-comparison-with-nerf-and-3dgs&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with NeRF and 3DGS&#34; srcset=&#34;
+               /post/my-projects/salf-comp_hu10111306649448795647.webp 400w,
+               /post/my-projects/salf-comp_hu8203590364094795138.webp 760w,
+               /post/my-projects/salf-comp_hu17372613610472851908.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/salf-comp_hu10111306649448795647.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;303&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Comparison with NeRF and 3DGS
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-results&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Results&#34; srcset=&#34;
+               /post/my-projects/salf-res_hu2762988319930002398.webp 400w,
+               /post/my-projects/salf-res_hu4288802309329859339.webp 760w,
+               /post/my-projects/salf-res_hu1724431710363176919.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/salf-res_hu2762988319930002398.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;497&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Results
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+
+
+&lt;ul class=&#34;cta-group&#34;&gt;
+  
+  &lt;li&gt;
+    &lt;a href=&#34;https://tmux.top/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Do something&lt;/a&gt;
+  &lt;/li&gt;
+  
+  
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I&amp;rsquo;m an external link&lt;/a&gt;
+&lt;a href=&#34;https://tmux.top/post/my-projects/&#34;&gt;A post&lt;/a&gt;
+&lt;a href=&#34;https://tmux.top/publication/geosim/&#34;&gt;A publication&lt;/a&gt;
+&lt;a href=&#34;#hi&#34;&gt;Scroll down to a page section with heading &lt;em&gt;Hi&lt;/em&gt;&lt;/a&gt;
+
+
+&lt;ul class=&#34;cta-group&#34;&gt;
+  
+  &lt;li&gt;
+    &lt;a href=&#34;https://tmux.top/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Do something&lt;/a&gt;
+  &lt;/li&gt;
+  
+  
+  &lt;li&gt;
+    &lt;a href=&#34;https://tmux.top/&#34; &gt;
+      Alternative action &lt;i class=&#34;fas fa-angle-right&#34;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  
+&lt;/ul&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
