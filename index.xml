@@ -7,7 +7,7 @@
     <description>Yun Chen</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 08 Jan 2025 23:41:15 -0500</lastBuildDate>
     <image>
-      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <url>https://tmux.top/media/icon_hu_e01690ce589688e5.png</url>
       <title>Yun Chen</title>
       <link>https://tmux.top/</link>
     </image>
@@ -39,10 +39,10 @@
 &lt;figure  id=&#34;figure-comparison-with-other-reconstruction-paradigms&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with other Reconstruction paradigms&#34; srcset=&#34;
-               /post/my-projects/g3r-comp_hu13425361371163089232.webp 400w,
-               /post/my-projects/g3r-comp_hu240286161426563418.webp 760w,
-               /post/my-projects/g3r-comp_hu14741760900794255102.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/g3r-comp_hu13425361371163089232.webp&#34;
+               /post/my-projects/g3r-comp_hu_bc8c52579ddc4c09.webp 400w,
+               /post/my-projects/g3r-comp_hu_9a10d5bcdbbaa8f7.webp 760w,
+               /post/my-projects/g3r-comp_hu_6de0f3aa2e615b95.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/g3r-comp_hu_bc8c52579ddc4c09.webp&#34;
                width=&#34;760&#34;
                height=&#34;334&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -71,10 +71,10 @@
 &lt;figure  id=&#34;figure-comparison-with-other-reconstruction-paradigms&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with other Reconstruction paradigms&#34; srcset=&#34;
-               /post/my-projects/g3r-res_hu8132165747301824787.webp 400w,
-               /post/my-projects/g3r-res_hu6230508818649829345.webp 760w,
-               /post/my-projects/g3r-res_hu7354960465485393694.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/g3r-res_hu8132165747301824787.webp&#34;
+               /post/my-projects/g3r-res_hu_7b6b99f55ef80b5a.webp 400w,
+               /post/my-projects/g3r-res_hu_4981a666e93b03d.webp 760w,
+               /post/my-projects/g3r-res_hu_6f36f8dbaeb9996e.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/g3r-res_hu_7b6b99f55ef80b5a.webp&#34;
                width=&#34;760&#34;
                height=&#34;248&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -104,10 +104,10 @@
 &lt;figure  id=&#34;figure-comparison-with-nerf-and-3dgs&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with NeRF and 3DGS&#34; srcset=&#34;
-               /post/my-projects/salf-comp_hu10111306649448795647.webp 400w,
-               /post/my-projects/salf-comp_hu8203590364094795138.webp 760w,
-               /post/my-projects/salf-comp_hu17372613610472851908.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/salf-comp_hu10111306649448795647.webp&#34;
+               /post/my-projects/salf-comp_hu_cdc601fabcd2ce6.webp 400w,
+               /post/my-projects/salf-comp_hu_6c6ef5d563219355.webp 760w,
+               /post/my-projects/salf-comp_hu_41bc5b001ef2504f.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/salf-comp_hu_cdc601fabcd2ce6.webp&#34;
                width=&#34;760&#34;
                height=&#34;303&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -136,10 +136,10 @@
 &lt;figure  id=&#34;figure-results&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Results&#34; srcset=&#34;
-               /post/my-projects/salf-res_hu2762988319930002398.webp 400w,
-               /post/my-projects/salf-res_hu4288802309329859339.webp 760w,
-               /post/my-projects/salf-res_hu1724431710363176919.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/salf-res_hu2762988319930002398.webp&#34;
+               /post/my-projects/salf-res_hu_5745ecc3c12b8d31.webp 400w,
+               /post/my-projects/salf-res_hu_8c1e78bc6eed3396.webp 760w,
+               /post/my-projects/salf-res_hu_b45a29431fa65707.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/salf-res_hu_5745ecc3c12b8d31.webp&#34;
                width=&#34;760&#34;
                height=&#34;497&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -217,8 +217,7 @@
       <description>&lt;p style=&#34;color:red;&#34;&gt; &lt;b&gt; GeoSim is nominated as a best paper candidate in CVPR &lt;/b&gt;&lt;/p&gt;
 &lt;h3 id=&#34;overview-video&#34;&gt;Overview Video&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://youtu.be/_VLXc_VN0fE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Youtube&lt;/a&gt; or &lt;a href=&#34;https://www.bilibili.com/video/BV1154y137jC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bilibili&lt;/a&gt;. You may also download it using this &lt;a href=&#34;http://yun.sfo2.digitaloceanspaces.com/public/geosim/video-5min.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
-
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_VLXc_VN0fE?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/p&gt;
@@ -276,10 +275,10 @@ We first create 3D assets from real-world data and then use the proposed simulat
 &lt;figure  id=&#34;figure-self-supervised-mesh-reconstruction&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Self-supervised mesh reconstruction&#34; srcset=&#34;
-               /publication/geosim/imgs/meshnet_hu14726990325513313621.webp 400w,
-               /publication/geosim/imgs/meshnet_hu7824858682263507312.webp 760w,
-               /publication/geosim/imgs/meshnet_hu9205196568582146239.webp 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/meshnet_hu14726990325513313621.webp&#34;
+               /publication/geosim/imgs/meshnet_hu_12a0c245d7992b65.webp 400w,
+               /publication/geosim/imgs/meshnet_hu_a30bdf1dd7d23dc3.webp 760w,
+               /publication/geosim/imgs/meshnet_hu_42431582baa04323.webp 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/meshnet_hu_12a0c245d7992b65.webp&#34;
                width=&#34;760&#34;
                height=&#34;259&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -386,10 +385,10 @@ We first automatically generate a plausible placement and trajectory that compli
 &lt;figure  id=&#34;figure-automatic-scenario-generation&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Automatic scenario generation&#34; srcset=&#34;
-               /publication/geosim/imgs/scengen_hu17228559523395806439.webp 400w,
-               /publication/geosim/imgs/scengen_hu7593826461448922121.webp 760w,
-               /publication/geosim/imgs/scengen_hu17505261919300152006.webp 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/scengen_hu17228559523395806439.webp&#34;
+               /publication/geosim/imgs/scengen_hu_9352e6c02cee657.webp 400w,
+               /publication/geosim/imgs/scengen_hu_39915ab26c6a8ae1.webp 760w,
+               /publication/geosim/imgs/scengen_hu_9f9bb2b663bd37db.webp 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/scengen_hu_9352e6c02cee657.webp&#34;
                width=&#34;760&#34;
                height=&#34;302&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -424,10 +423,10 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
 &lt;figure  id=&#34;figure-occlussion-aware-rendering&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Occlussion-aware rendering&#34; srcset=&#34;
-               /publication/geosim/imgs/occ-render_hu7166820852866800339.webp 400w,
-               /publication/geosim/imgs/occ-render_hu1007558711550261750.webp 760w,
-               /publication/geosim/imgs/occ-render_hu10333425194328495524.webp 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/occ-render_hu7166820852866800339.webp&#34;
+               /publication/geosim/imgs/occ-render_hu_9897d6d2386e804f.webp 400w,
+               /publication/geosim/imgs/occ-render_hu_837673f943baedca.webp 760w,
+               /publication/geosim/imgs/occ-render_hu_b4b6dcc25b81ec65.webp 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/occ-render_hu_9897d6d2386e804f.webp&#34;
                width=&#34;760&#34;
                height=&#34;216&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -459,10 +458,10 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
 &lt;figure  id=&#34;figure-post-image-composition&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Post-image composition&#34; srcset=&#34;
-               /publication/geosim/imgs/postcom_hu2806500562790163754.webp 400w,
-               /publication/geosim/imgs/postcom_hu12405713915928727962.webp 760w,
-               /publication/geosim/imgs/postcom_hu17819452429766046953.webp 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/postcom_hu2806500562790163754.webp&#34;
+               /publication/geosim/imgs/postcom_hu_8d5408a4a189c3c1.webp 400w,
+               /publication/geosim/imgs/postcom_hu_58e825ba9ff6becb.webp 760w,
+               /publication/geosim/imgs/postcom_hu_f04b925938f8160d.webp 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/postcom_hu_8d5408a4a189c3c1.webp&#34;
                width=&#34;760&#34;
                height=&#34;235&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -493,10 +492,10 @@ Additionally,  we render a soft-shadow corresponding to the selected 3D asset co
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;4K video&#34; srcset=&#34;
-               /publication/geosim/imgs/4KVideo_hu133652890725648407.webp 400w,
-               /publication/geosim/imgs/4KVideo_hu12813288391205365642.webp 760w,
-               /publication/geosim/imgs/4KVideo_hu17283489823076975975.webp 1200w&#34;
-               src=&#34;https://tmux.top/publication/geosim/imgs/4KVideo_hu133652890725648407.webp&#34;
+               /publication/geosim/imgs/4KVideo_hu_658be2148e60782b.webp 400w,
+               /publication/geosim/imgs/4KVideo_hu_ec7679c7fcc4e136.webp 760w,
+               /publication/geosim/imgs/4KVideo_hu_977f290df4483f30.webp 1200w&#34;
+               src=&#34;https://tmux.top/publication/geosim/imgs/4KVideo_hu_658be2148e60782b.webp&#34;
                width=&#34;760&#34;
                height=&#34;343&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

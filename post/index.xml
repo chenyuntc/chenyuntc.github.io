@@ -7,7 +7,7 @@
     <description>Posts</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 08 Jan 2025 23:41:15 -0500</lastBuildDate>
     <image>
-      <url>https://tmux.top/media/icon_hu9443299162589431023.png</url>
+      <url>https://tmux.top/media/icon_hu_e01690ce589688e5.png</url>
       <title>Posts</title>
       <link>https://tmux.top/post/</link>
     </image>
@@ -39,10 +39,10 @@
 &lt;figure  id=&#34;figure-comparison-with-other-reconstruction-paradigms&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with other Reconstruction paradigms&#34; srcset=&#34;
-               /post/my-projects/g3r-comp_hu13425361371163089232.webp 400w,
-               /post/my-projects/g3r-comp_hu240286161426563418.webp 760w,
-               /post/my-projects/g3r-comp_hu14741760900794255102.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/g3r-comp_hu13425361371163089232.webp&#34;
+               /post/my-projects/g3r-comp_hu_bc8c52579ddc4c09.webp 400w,
+               /post/my-projects/g3r-comp_hu_9a10d5bcdbbaa8f7.webp 760w,
+               /post/my-projects/g3r-comp_hu_6de0f3aa2e615b95.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/g3r-comp_hu_bc8c52579ddc4c09.webp&#34;
                width=&#34;760&#34;
                height=&#34;334&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -71,10 +71,10 @@
 &lt;figure  id=&#34;figure-comparison-with-other-reconstruction-paradigms&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with other Reconstruction paradigms&#34; srcset=&#34;
-               /post/my-projects/g3r-res_hu8132165747301824787.webp 400w,
-               /post/my-projects/g3r-res_hu6230508818649829345.webp 760w,
-               /post/my-projects/g3r-res_hu7354960465485393694.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/g3r-res_hu8132165747301824787.webp&#34;
+               /post/my-projects/g3r-res_hu_7b6b99f55ef80b5a.webp 400w,
+               /post/my-projects/g3r-res_hu_4981a666e93b03d.webp 760w,
+               /post/my-projects/g3r-res_hu_6f36f8dbaeb9996e.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/g3r-res_hu_7b6b99f55ef80b5a.webp&#34;
                width=&#34;760&#34;
                height=&#34;248&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -104,10 +104,10 @@
 &lt;figure  id=&#34;figure-comparison-with-nerf-and-3dgs&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Comparison with NeRF and 3DGS&#34; srcset=&#34;
-               /post/my-projects/salf-comp_hu10111306649448795647.webp 400w,
-               /post/my-projects/salf-comp_hu8203590364094795138.webp 760w,
-               /post/my-projects/salf-comp_hu17372613610472851908.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/salf-comp_hu10111306649448795647.webp&#34;
+               /post/my-projects/salf-comp_hu_cdc601fabcd2ce6.webp 400w,
+               /post/my-projects/salf-comp_hu_6c6ef5d563219355.webp 760w,
+               /post/my-projects/salf-comp_hu_41bc5b001ef2504f.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/salf-comp_hu_cdc601fabcd2ce6.webp&#34;
                width=&#34;760&#34;
                height=&#34;303&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -136,10 +136,10 @@
 &lt;figure  id=&#34;figure-results&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Results&#34; srcset=&#34;
-               /post/my-projects/salf-res_hu2762988319930002398.webp 400w,
-               /post/my-projects/salf-res_hu4288802309329859339.webp 760w,
-               /post/my-projects/salf-res_hu1724431710363176919.webp 1200w&#34;
-               src=&#34;https://tmux.top/post/my-projects/salf-res_hu2762988319930002398.webp&#34;
+               /post/my-projects/salf-res_hu_5745ecc3c12b8d31.webp 400w,
+               /post/my-projects/salf-res_hu_8c1e78bc6eed3396.webp 760w,
+               /post/my-projects/salf-res_hu_b45a29431fa65707.webp 1200w&#34;
+               src=&#34;https://tmux.top/post/my-projects/salf-res_hu_5745ecc3c12b8d31.webp&#34;
                width=&#34;760&#34;
                height=&#34;497&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
