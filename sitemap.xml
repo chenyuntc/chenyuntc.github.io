@@ -2,16 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tmux.top/post/</loc>
-    <lastmod>2025-01-08T23:41:15-05:00</lastmod>
+    <loc>https://tmux.top/project/</loc>
+    <lastmod>2026-09-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://tmux.top/post/my-projects/</loc>
-    <lastmod>2025-01-08T23:41:15-05:00</lastmod>
+    <loc>https://tmux.top/project/viggle-turbo/</loc>
+    <lastmod>2026-09-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://tmux.top/</loc>
-    <lastmod>2025-01-08T23:41:15-05:00</lastmod>
+    <lastmod>2026-09-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://tmux.top/project/meridian/</loc>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://tmux.top/project/viggle-animate/</loc>
+    <lastmod>2026-08-31T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://tmux.top/authors/</loc>
@@ -191,10 +199,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://tmux.top/project/rcnn/</loc>
-    <lastmod>2018-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://tmux.top/project/</loc>
     <lastmod>2018-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
